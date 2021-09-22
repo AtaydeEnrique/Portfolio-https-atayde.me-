@@ -1,24 +1,15 @@
-import logo from "./logo.svg";
-import "./App.css";
-import TypeWriter from "./components/UI/TypeWriter/TypeWriter";
+import { Fragment } from "react";
+
+import MainHeader from "./components/Layout/Header/MainHeader";
 import Cursor from "./components/UI/Cursor/Cursor";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
+    <Fragment>
       <Cursor />
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <TypeWriter
-          speed={100}
-          delay1={1000}
-          delay2={300}
-          text="mind blowing"
-          emoji={["😵‍💫", "💥", "🤯", "🔥", "💣"]}
-        />
-      </header>
-    </div>
+      <MainHeader />
+    </Fragment>
   );
-}
+};
 
 export default App;
