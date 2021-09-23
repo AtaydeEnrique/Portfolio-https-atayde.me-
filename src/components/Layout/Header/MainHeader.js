@@ -30,7 +30,9 @@ const MainHeader = () => {
             <div className="line"></div>
           </li>
           <Transition in={menu} timeout={1000} mountOnEnter unmountOnExit>
-            {(state) => state && <MenuModal show={state} />}
+            {(state) =>
+              state && <MenuModal close={menuButtonHandler} show={state} />
+            }
           </Transition>
         </ul>
       </nav>

@@ -1,7 +1,7 @@
 import { Transition } from "react-transition-group";
 import "./Menu.css";
 
-const Menu = ({ entered, hovered }) => {
+const Menu = ({ entered, hovered, close }) => {
   const hoverClass = hovered ? "menu-focus" : "menu-unfocused";
   return (
     <Transition in={entered} timeout={500} mountOnEnter unmountOnExit>
@@ -9,17 +9,17 @@ const Menu = ({ entered, hovered }) => {
         <div className="modal-menu">
           <ul className={hoverClass}>
             <li>
-              <a href="#about" alt="About">
+              <a onClick={close} href="#about" alt="About">
                 About<i></i>
               </a>
             </li>
             <li>
-              <a href="#skills" alt="Skills">
+              <a onClick={close} href="#skills" alt="Skills">
                 Skills<i></i>
               </a>
             </li>
             <li>
-              <a href="#contact" alt="Contact">
+              <a onClick={close} href="#contact" alt="Contact">
                 Contact<i></i>
               </a>
             </li>

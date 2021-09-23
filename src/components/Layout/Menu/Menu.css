@@ -34,7 +34,7 @@
 
 .modal-menu ul li a:hover > i {
   transition: 3s cubic-bezier(0.77, 0, 0.175, 1) all;
-  width: 60%;
+  width: calc(40%);
 }
 
 .modal-menu ul li a {
@@ -46,31 +46,23 @@
 
 .modal-menu ul li > a {
   color: rgb(0, 0, 0) !important;
-  transition: color 500ms ease-in;
+  transition: 500ms ease-in;
 }
 
 .menu-focus li:nth-child(1) > a {
   color: var(--brand-color1) !important;
-  transition: color 400ms ease-out;
+  transition: color 100ms ease-out;
 }
 .menu-focus li:nth-child(2) > a {
   color: var(--brand-color2) !important;
-  transition: color 650ms ease-out;
+  transition: color 500ms ease-out;
 }
 .menu-focus li:nth-child(3) > a {
   color: var(--brand-color3) !important;
-  transition: color 900ms ease-out;
+  transition: color 1000ms ease-out;
 }
 
-.modal-menu ul li:nth-child(1) > a:hover {
-  opacity: 1 !important;
-  transition: opacity 1s;
-}
-.modal-menu ul li:nth-child(2) > a:hover {
-  opacity: 1 !important;
-  transition: opacity 1s;
-}
-.modal-menu ul li:nth-child(3) > a:hover {
+.modal-menu ul li > a:hover {
   opacity: 1 !important;
   transition: opacity 1s;
 }

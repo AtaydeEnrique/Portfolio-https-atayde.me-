@@ -1,0 +1,14 @@
+.trainer-img {
+  flex-basis: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 1rem;
+}
+
+.trainer-img img {
+  width: 75%;
+  height: 75%;
+  transition: transform 1s;
+  border-radius: 50%;
+}
