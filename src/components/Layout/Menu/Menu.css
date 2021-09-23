@@ -1,0 +1,85 @@
+.modal-menu {
+  transform: translateX(-200px);
+  display: flex;
+  align-items: center;
+  justify-content: left;
+
+  animation: in 500ms forwards;
+  height: inherit;
+  width: auto;
+  min-width: 100vw;
+}
+.modal-menu ul {
+  width: 100%;
+}
+.modal-menu li {
+  display: inline-block;
+  list-style: none;
+  font-size: 5rem;
+  text-decoration: none;
+  padding: 20px;
+  width: 100%;
+}
+
+.modal-menu i {
+  display: inline-block;
+  height: 5px;
+  background: #000;
+  width: 25px;
+  margin: inherit;
+  top: -15px;
+  left: 15px;
+  position: relative;
+}
+
+.modal-menu ul li a:hover > i {
+  transition: 3s cubic-bezier(0.77, 0, 0.175, 1) all;
+  width: 60%;
+}
+
+.modal-menu ul li a {
+  opacity: 0.5;
+  text-decoration: none;
+  color: black;
+  transition: opacity 1s;
+}
+
+.modal-menu ul li > a {
+  color: rgb(0, 0, 0) !important;
+  transition: color 500ms ease-in;
+}
+
+.menu-focus li:nth-child(1) > a {
+  color: var(--brand-color1) !important;
+  transition: color 400ms ease-out;
+}
+.menu-focus li:nth-child(2) > a {
+  color: var(--brand-color2) !important;
+  transition: color 650ms ease-out;
+}
+.menu-focus li:nth-child(3) > a {
+  color: var(--brand-color3) !important;
+  transition: color 900ms ease-out;
+}
+
+.modal-menu ul li:nth-child(1) > a:hover {
+  opacity: 1 !important;
+  transition: opacity 1s;
+}
+.modal-menu ul li:nth-child(2) > a:hover {
+  opacity: 1 !important;
+  transition: opacity 1s;
+}
+.modal-menu ul li:nth-child(3) > a:hover {
+  opacity: 1 !important;
+  transition: opacity 1s;
+}
+
+@keyframes in {
+  from {
+    transform: translateX(-200px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}

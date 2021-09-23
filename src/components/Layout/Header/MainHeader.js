@@ -1,7 +1,8 @@
 import { useState } from "react";
 
 import Brand from "./Brand";
-import Modal from "../../UI/Modals/MenuModal";
+import MenuModal from "../../UI/Modals/MenuModal";
+import { Transition } from "react-transition-group";
 import "./MainHeader.css";
 
 const MainHeader = () => {
@@ -20,7 +21,6 @@ const MainHeader = () => {
           <li className="brand">
             <Brand />
           </li>
-          {menu && <Modal />}
           <li
             onClick={menuButtonHandler}
             className={`nav-menu${isCollapsed ? " collapsed" : ""}`}
@@ -29,6 +29,9 @@ const MainHeader = () => {
             <div className="line"></div>
             <div className="line"></div>
           </li>
+          <Transition in={menu} timeout={1000} mountOnEnter unmountOnExit>
+            {(state) => state && <MenuModal show={state} />}
+          </Transition>
         </ul>
       </nav>
     </header>

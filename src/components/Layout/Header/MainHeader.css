@@ -33,13 +33,13 @@
 
 .line {
   width: 100%;
-  height: 1px;
+  height: 3px;
   background-color: black;
   transition: 100ms ease-in;
 }
 
 .collapsed .line:first-child {
-  transform: rotate(45deg) translatey(9px);
+  transform: rotate(45deg) translatey(10px);
   transition: 100ms ease-in;
 }
 
@@ -47,6 +47,6 @@
   display: none;
 }
 .collapsed .line:nth-child(3) {
-  transform: rotate(-45deg) translatey(-9px);
+  transform: rotate(-45deg) translatey(-10px);
   transition: 100ms ease-in;
 }

@@ -19,5 +19,8 @@ body {
 }
 
 :root {
-  --nav-size: 60px;
+  --nav-size: 100px;
+  --brand-color1: #ff206e;
+  --brand-color2: #fbff12;
+  --brand-color3: #8c00ff;
 }

@@ -6,9 +6,8 @@
 }
 
 .cursor-small {
-  transition: transform 250ms ease-out;
+  transition: 250ms ease-out;
   width: 20px;
-  filter: invert(75%);
   height: 20px;
   left: -9px;
   top: -7px;
@@ -17,9 +16,32 @@
   background: rgb(136, 255, 0);
   opacity: 0.8;
 }
+.cursor.big {
+  transition: width 1000ms ease-out;
+  transition: height 1000ms ease-out;
+  transition: transform 250ms ease-out;
+  width: 80px;
+  height: 80px;
+  left: -40px;
+  top: -40px;
+  border-radius: 50%;
+  z-index: 11000;
+  opacity: 0.8;
+  mix-blend-mode: lighten;
+}
 
-/* .cursor-canvas {
-    width: 100vw;
-    height: 100vh;
-    z-index: 12000;
-  } */
+.cursor-about {
+  background: var(--brand-color1);
+}
+.cursor-skills {
+  background: var(--brand-color2);
+}
+.cursor-contact {
+  background: var(--brand-color3);
+}
+
+.cursor-canvas {
+  width: 100vw;
+  height: 100vh;
+  z-index: 12000;
+}
