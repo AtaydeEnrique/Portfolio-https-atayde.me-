@@ -1,7 +1,53 @@
-.navbar {
+.header-wrap {
   margin: 0;
+  transition: 1s;
+
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0;
+  width: 100%;
+  min-width: 85%;
+}
+
+.navbar {
   height: var(--nav-size);
-  background-color: rgb(255, 255, 255);
+  transition: 1s;
+}
+
+.scrolled {
+  background-color: transparent;
+}
+
+.brand-logo {
+  margin-top: 78.9px;
+  margin-right: 93.9px;
+  /* transition: 500ms; */
+}
+
+.brand-logo.scrolled {
+  margin-top: 88.2px;
+  margin-right: 80px;
+  /* transition: 500ms; */
+}
+
+.scale {
+  transform: scale(1.4);
+}
+
+.scale #TA,
+.scale #Y,
+.scale #DE {
+  transition: transform 1s;
+
+  transform: translateY(0) translateX(0);
+}
+.scale .scrolled #TA {
+  transform: translateY(33px) translateX(-30px);
+}
+.scale .scrolled #Y {
+  transform: translateY(60px) translateX(-60px);
+}
+.scale .scrolled #DE {
+  transform: translateY(93px) translateX(-90px);
 }
 
 .navbar-nav {
@@ -22,6 +68,7 @@
 }
 
 .nav-menu {
+  flex-grow: 0;
   display: flex;
   padding: 5px;
   flex-direction: column;

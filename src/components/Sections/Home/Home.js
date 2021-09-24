@@ -1,10 +1,13 @@
+import { useState } from "react";
+
 import TypeWriter from "../../UI/TypeWriter/TypeWriter";
-import "./Home.css";
 import HomeImage from "./HomeImage";
+import "./Home.css";
 
 const Home = () => {
+  const [colors, setColors] = useState(false);
   return (
-    <section className="home-container">
+    <section id="home-container">
       <div className="trainer">
         <div className="trainer-headline">
           <p>hi, my name is Ricardo Atayde</p>
@@ -14,11 +17,24 @@ const Home = () => {
               speed={100}
               delay1={1000}
               delay2={300}
-              text="Mechatronics Engineer"
-              emoji={["🤖", "🔧", "💻"]}
+              text={["Mechatronics Engineer", "FullStack"]}
+              emoji={["🤖", "🔧", "💻", "🦾"]}
+              classes="typewriter"
             />
-            , focused on creating....
+            , focused on creating... asdasdd
           </p>
+          <span className="country">
+            <p>based in México</p>
+          </span>
+          <button
+            onMouseEnter={() => setColors(true)}
+            onMouseLeave={() => {
+              setColors(false);
+            }}
+            className={`contact-btn${colors ? " fillup" : ""}`}
+          >
+            Contact me ;)
+          </button>
         </div>
         <HomeImage />
       </div>

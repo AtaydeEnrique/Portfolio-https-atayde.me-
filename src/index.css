@@ -1,8 +1,14 @@
+@font-face {
+  font-family: Honoka;
+  src: url("./assets/Honoka.woff2");
+}
 * {
   box-sizing: border-box;
   margin: 0;
 }
-
+html * {
+  font-family: "Honoka";
+}
 html,
 body {
   min-height: 100vh;
@@ -19,10 +25,11 @@ body {
 }
 
 :root {
-  --nav-size: 100px;
+  --nav-size: 120px;
   --brand-color1: #ff206e;
   --brand-color2: #fbff12;
   --brand-color3: #8c00ff;
+  --brand-color4: #80ffdb;
 }
 
 ::-webkit-scrollbar {
@@ -39,5 +46,5 @@ body {
 
 ::selection {
   color: rgb(0, 0, 0);
-  background: #80ffdb;
+  background: var(--brand-color4);
 }

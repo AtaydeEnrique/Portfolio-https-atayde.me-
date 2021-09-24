@@ -3,9 +3,11 @@
   left: 0;
   top: 0;
   pointer-events: none;
+  mix-blend-mode: difference;
 }
 
 .cursor-small {
+  display: block;
   transition: 250ms ease-out;
   width: 20px;
   height: 20px;
@@ -17,9 +19,8 @@
   opacity: 0.8;
 }
 .cursor.big {
-  transition: width 1000ms ease-out;
-  transition: height 1000ms ease-out;
-  transition: transform 250ms ease-out;
+  display: block;
+  transition: all 250ms ease-out;
   width: 80px;
   height: 80px;
   left: -40px;
@@ -27,17 +28,24 @@
   border-radius: 50%;
   z-index: 11000;
   opacity: 0.8;
-  mix-blend-mode: lighten;
 }
 
 .cursor-about {
   background: var(--brand-color1);
+  mix-blend-mode: lighten;
 }
 .cursor-skills {
   background: var(--brand-color2);
+  mix-blend-mode: lighten;
 }
 .cursor-contact {
   background: var(--brand-color3);
+  mix-blend-mode: lighten;
+}
+
+.cursor-text {
+  background: var(--brand-color4);
+  mix-blend-mode: normal;
 }
 
 .cursor-canvas {

@@ -1,11 +1,92 @@
+#home-container {
+  margin-top: calc(25vh);
+}
+
 .trainer {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-top: 140px;
+  background: transparent;
 }
 .trainer-headline {
   flex-basis: 50%;
   font-weight: 900;
   font-size: 2.5vw;
+  /* font-family: Chihaya; */
+}
+.country {
+  display: block;
+  margin-top: 50px;
+  font-size: 1.5vw;
+  font-weight: 400;
+  color: #110f10bf;
+}
+
+.contact-btn {
+  margin-top: 80px;
+  background: transparent;
+  padding: 18px 55px 18px;
+  border-radius: 50px;
+  color: black;
+  font-size: 22px;
+  margin-right: 2em;
+  border: 1px solid #161616;
+  box-shadow: 0 0 0 #161616;
+  white-space: nowrap;
+  box-shadow: -3px 3px 0 #161616;
+  transition: 0.2s ease;
+  animation: fill-up 1s ease-in;
+}
+
+.contact-btn:hover {
+  cursor: pointer;
+  box-shadow: -10px 10px 0 #161616;
+  transition: 0.2s ease;
+}
+.contact-btn:active {
+  background-color: rgb(0, 0, 0);
+  color: white;
+  transition: 0.1s;
+  box-shadow: -5px 5px 0 #161616;
+}
+
+.contact-btn.fillup {
+  animation: fill-down 1s ease-in;
+}
+
+@keyframes fill-up {
+  20% {
+    background-color: white;
+  }
+  40% {
+    background-color: var(--brand-color3);
+  }
+  60% {
+    background-color: var(--brand-color2);
+  }
+  80% {
+    background-color: var(--brand-color1);
+  }
+  100% {
+    background-color: white;
+  }
+}
+
+@keyframes fill-down {
+  20% {
+    background-color: white;
+  }
+  40% {
+    background-color: var(--brand-color1);
+  }
+  60% {
+    background-color: var(--brand-color2);
+  }
+  80% {
+    background-color: var(--brand-color3);
+  }
+  100% {
+    background-color: white;
+  }
 }

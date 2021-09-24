@@ -22,6 +22,8 @@ const Cursor = () => {
           setOnlink("skills big");
         } else if (e.target.closest('li a[href="#contact"]') !== null) {
           setOnlink("contact big");
+        } else if (e.target.closest('div[class="trainer"]') !== null) {
+          setOnlink("text big");
         } else {
           setOnlink("small");
         }

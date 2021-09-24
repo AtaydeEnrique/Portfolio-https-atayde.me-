@@ -4,11 +4,13 @@
   align-items: center;
   justify-content: center;
   padding: 1rem 1rem;
+  user-select: none;
 }
 
 .trainer-img img {
+  -webkit-user-drag: none;
   width: 75%;
   height: 75%;
-  transition: transform 1s;
+  transition: transform 0.75s;
   border-radius: 50%;
 }
