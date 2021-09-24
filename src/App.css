@@ -1,7 +1,6 @@
-/* .App {
+.App {
   text-align: center;
-  min-height: 100vh;
-} */
+}
 
 section {
   width: 75%;
@@ -10,5 +9,6 @@ section {
 }
 
 .hidden {
+  /* position: fixed; */
   overflow-y: hidden;
 }

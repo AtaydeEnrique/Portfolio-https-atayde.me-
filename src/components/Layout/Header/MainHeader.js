@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-import Brand from "./Brand";
+import Brand from "../../UI/Brand/Brand";
 import MenuModal from "../../UI/Modals/MenuModal";
 import { Transition } from "react-transition-group";
 import "./MainHeader.css";
@@ -30,7 +30,7 @@ const MainHeader = ({ overflowHandler }) => {
       <nav className={`navbar${offset === 0 ? "" : " scrolled"}`}>
         <ul className="navbar-nav">
           <li className="brand">
-            <Brand classes={brandClass} scrolled={offset} />
+            <Brand verticalOptn={true} classes={brandClass} scrolled={offset} />
           </li>
           <li
             onClick={menuButtonHandler}

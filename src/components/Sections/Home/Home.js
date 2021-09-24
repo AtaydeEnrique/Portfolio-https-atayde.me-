@@ -10,7 +10,17 @@ const Home = () => {
     <section id="home-container">
       <div className="trainer">
         <div className="trainer-headline">
-          <p>hi, my name is Ricardo Atayde</p>
+          <p>
+            hi, my name is Ricardo{" "}
+            <TypeWriter
+              speed={100}
+              delay1={6000}
+              delay2={300}
+              text={["Atayde", "アタイで"]}
+              emoji={["✌"]}
+              classes="typewriter"
+            />
+          </p>
           <p>
             I'm a{" "}
             <TypeWriter

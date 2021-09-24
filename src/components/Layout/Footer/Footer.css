@@ -1,0 +1,17 @@
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: #6cf;
+  z-index: 1;
+  height: 460px;
+}
+
+.footer-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  width: 85%;
+  margin: auto;
+}

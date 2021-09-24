@@ -1,6 +1,14 @@
-const Brand = ({ classes, scrolled }) => {
-  const scrWidth = scrolled > 0 ? "141" : "130";
-  const scrHeight = scrolled > 0 ? "141" : "130";
+const Brand = ({ classes, scrolled, verticalOptn = false }) => {
+  let scrWidth = "";
+  let scrHeight = "";
+
+  if (verticalOptn) {
+    scrWidth = scrolled > 0 ? "141" : "130";
+    scrHeight = scrolled > 0 ? "141" : "130";
+  } else {
+    scrWidth = "141";
+    scrHeight = "52";
+  }
 
   return (
     <div className="scale">
