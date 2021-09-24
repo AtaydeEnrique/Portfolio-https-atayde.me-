@@ -6,12 +6,10 @@ import { Transition } from "react-transition-group";
 import "./MainHeader.css";
 
 const MainHeader = ({ overflowHandler }) => {
-  const [isCollapsed, setIsCollapsed] = useState(false);
   const [menu, setMenu] = useState(false);
   const [offset, setOffset] = useState(0);
 
   const menuButtonHandler = () => {
-    setIsCollapsed((btn) => !btn);
     setMenu((m) => !m);
     overflowHandler(menu);
   };
@@ -34,7 +32,7 @@ const MainHeader = ({ overflowHandler }) => {
           </li>
           <li
             onClick={menuButtonHandler}
-            className={`nav-menu${isCollapsed ? " collapsed" : ""}`}
+            className={`nav-menu${menu ? " collapsed" : ""}`}
           >
             <div className="line"></div>
             <div className="line"></div>

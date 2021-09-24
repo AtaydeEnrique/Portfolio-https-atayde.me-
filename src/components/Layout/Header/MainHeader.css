@@ -1,8 +1,7 @@
 .header-wrap {
   margin: 0;
   transition: 1s;
-
-  position: fixed; /* Set the navbar to fixed position */
+  position: fixed;
   top: 0;
   width: 100%;
   min-width: 85%;

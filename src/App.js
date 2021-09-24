@@ -22,16 +22,16 @@ const App = () => {
   });
 
   const overflowHandler = (menu) => {
+    menu = !menu;
     if (menu) {
-      setOverflow(true);
+      document.body.classList.add("hidden");
     } else {
-      setOverflow(false);
+      document.body.classList.remove("hidden");
     }
   };
 
   const wheelEventeHandler = (e) => {
     if (bottom) {
-      setOverflow(true);
       if (e.deltaY < 0) {
         setScroll((scroll) => scroll - 1);
       } else if (e.deltaY > 0) {
@@ -42,10 +42,7 @@ const App = () => {
   console.log(scroll);
   return (
     <Fragment>
-      <div
-        onWheel={wheelEventeHandler}
-        className={`app${overflow ? "" : " hidden"}`}
-      >
+      <div onWheel={wheelEventeHandler} className={`app${overflow ? "" : ""}`}>
         <Cursor />
         <MainHeader overflowHandler={overflowHandler} />
         <Home />
