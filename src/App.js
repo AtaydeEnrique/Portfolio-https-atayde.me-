@@ -1,13 +1,12 @@
-import { Fragment, useState } from "react";
+import { useState } from "react";
 
 import MainHeader from "./components/Layout/Header/MainHeader";
 import Home from "./components/Sections/Home/Home";
 import Cursor from "./components/UI/Cursor/Cursor";
-import "./App.css";
 import Footer from "./components/Layout/Footer/Footer";
+import "./App.css";
 
 const App = () => {
-  const [overflow, setOverflow] = useState(false);
   const [scroll, setScroll] = useState(0);
   const [bottom, setBottom] = useState(false);
 
@@ -40,164 +39,158 @@ const App = () => {
     }
   };
   console.log(scroll);
-  return (
-    <Fragment>
-      <div onWheel={wheelEventeHandler} className={`app${overflow ? "" : ""}`}>
-        <Cursor />
-        <MainHeader overflowHandler={overflowHandler} />
-        <Home />
 
-        <section className="last">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus,
-            reprehenderit. Fuga suscipit aperiam, corrupti maxime a, optio
-            laborum nostrum alias hic quaerat reiciendis iste cupiditate ab
-            adipisci, nihil atque voluptatem. Lorem ipsum dolor sit amet,
-            consectetur adipisicing elit. Doloribus, reprehenderit. Fuga
-            suscipit aperiam, corrupti maxime a, optio laborum nostrum alias hic
-            quaerat reiciendis iste cupiditate ab adipisci, nihil atque
-            voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing
-            elit. Doloribus, reprehenderit. Fuga suscipit aperiam, corrupti
-            maxime a, optio laborum nostrum alias hic quaerat reiciendis iste
-            cupiditate ab adipisci, nihil atque voluptatem. Lorem ipsum dolor
-            sit amet, consectetur adipisicing elit. Doloribus, reprehenderit.
-            Fuga suscipit aperiam, corrupti maxime a, optio laborum nostrum
-            alias hic quaerat reiciendis iste cupiditate ab adipisci, nihil
-            atque voluptatem. Lorem ipsum dolor sit amet, consectetur
-            adipisicing elit. Doloribus, reprehenderit. Fuga suscipit aperiam,
-            corrupti maxime a, optio laborum nostrum alias hic quaerat
-            reiciendis iste cupiditate ab adipisci, nihil atque voluptatem.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus,
-            reprehenderit. Fuga suscipit aperiam, corrupti maxime a, optio
-            laborum nostrum alias hic quaerat reiciendis iste cupiditate ab
-            adipisci, nihil atque voluptatem. Lorem ipsum dolor sit amet,
-            consectetur adipisicing elit. Doloribus, reprehenderit. Fuga
-            suscipit aperiam, corrupti maxime a, optio laborum nostrum alias hic
-            quaerat reiciendis iste cupiditate ab adipisci, nihil atque
-            voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing
-            elit. Doloribus, reprehenderit. Fuga suscipit aperiam, corrupti
-            maxime a, optio laborum nostrum alias hic quaerat reiciendis iste
-            cupiditate ab adipisci, nihil atque voluptatem.Lorem ipsum dolor sit
-            amet, consectetur adipisicing elit. Doloribus, reprehenderit. Fuga
-            suscipit aperiam, corrupti maxime a, optio laborum nostrum alias hic
-            quaerat reiciendis iste cupiditate ab adipisci, nihil atque
-            voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing
-            elit. Doloribus, reprehenderit. Fuga suscipit aperiam, corrupti
-            maxime a, optio laborum nostrum alias hic quaerat reiciendis iste
-            cupiditate ab adipisci, nihil atque voluptatem. Lorem ipsum dolor
-            sit amet, consectetur adipisicing elit. Doloribus, reprehenderit.
-            Fuga suscipit aperiam, corrupti maxime a, optio laborum nostrum
-            alias hic quaerat reiciendis iste cupiditate ab adipisci, nihil
-            atque voluptatem. Lorem ipsum dolor sit amet, consectetur
-            adipisicing elit. Doloribus, reprehenderit. Fuga suscipit aperiam,
-            corrupti maxime a, optio laborum nostrum alias hic quaerat
-            reiciendis iste cupiditate ab adipisci, nihil atque voluptatem.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus,
-            reprehenderit. Fuga suscipit aperiam, corrupti maxime a, optio
-            laborum nostrum alias hic quaerat reiciendis iste cupiditate ab
-            adipisci, nihil atque voluptatem. Lorem ipsum dolor sit amet,
-            consectetur adipisicing elit. Doloribus, reprehenderit. Fuga
-            suscipit aperiam, corrupti maxime a, optio laborum nostrum alias hic
-            quaerat reiciendis iste cupiditate ab adipisci, nihil atque
-            voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing
-            elit. Doloribus, reprehenderit. Fuga suscipit aperiam, corrupti
-            maxime a, optio laborum nostrum alias hic quaerat reiciendis iste
-            cupiditate ab adipisci, nihil atque voluptatem. Lorem ipsum dolor
-            sit amet, consectetur adipisicing elit. Doloribus, reprehenderit.
-            Fuga suscipit aperiam, corrupti maxime a, optio laborum nostrum
-            alias hic quaerat reiciendis iste cupiditate ab adipisci, nihil
-            atque voluptatem.Lorem ipsum dolor sit amet, consectetur adipisicing
-            elit. Doloribus, reprehenderit. Fuga suscipit aperiam, corrupti
-            maxime a, optio laborum nostrum alias hic quaerat reiciendis iste
-            cupiditate ab adipisci, nihil atque voluptatem. Lorem ipsum dolor
-            sit amet, consectetur adipisicing elit. Doloribus, reprehenderit.
-            Fuga suscipit aperiam, corrupti maxime a, optio laborum nostrum
-            alias hic quaerat reiciendis iste cupiditate ab adipisci, nihil
-            atque voluptatem. Lorem ipsum dolor sit amet, consectetur
-            adipisicing elit. Doloribus, reprehenderit. Fuga suscipit aperiam,
-            corrupti maxime a, optio laborum nostrum alias hic quaerat
-            reiciendis iste cupiditate ab adipisci, nihil atque voluptatem.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus,
-            reprehenderit. Fuga suscipit aperiam, corrupti maxime a, optio
-            laborum nostrum alias hic quaerat reiciendis iste cupiditate ab
-            adipisci, nihil atque voluptatem. Lorem ipsum dolor sit amet,
-            consectetur adipisicing elit. Doloribus, reprehenderit. Fuga
-            suscipit aperiam, corrupti maxime a, optio laborum nostrum alias hic
-            quaerat reiciendis iste cupiditate ab adipisci, nihil atque
-            voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing
-            elit. Doloribus, reprehenderit. Fuga suscipit aperiam, corrupti
-            maxime a, optio laborum nostrum alias hic quaerat reiciendis iste
-            cupiditate ab adipisci, nihil atque voluptatem. Lorem ipsum dolor
-            sit amet, consectetur adipisicing elit. Doloribus, reprehenderit.
-            Fuga suscipit aperiam, corrupti maxime a, optio laborum nostrum
-            alias hic quaerat reiciendis iste cupiditate ab adipisci, nihil
-            atque voluptatem. Lorem ipsum dolor sit amet, consectetur
-            adipisicing elit. Doloribus, reprehenderit. Fuga suscipit aperiam,
-            corrupti maxime a, optio laborum nostrum alias hic quaerat
-            reiciendis iste cupiditate ab adipisci, nihil atque voluptatem.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus,
-            reprehenderit. Fuga suscipit aperiam, corrupti maxime a, optio
-            laborum nostrum alias hic quaerat reiciendis iste cupiditate ab
-            adipisci, nihil atque voluptatem. Lorem ipsum dolor sit amet,
-            consectetur adipisicing elit. Doloribus, reprehenderit. Fuga
-            suscipit aperiam, corrupti maxime a, optio laborum nostrum alias hic
-            quaerat reiciendis iste cupiditate ab adipisci, nihil atque
-            voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing
-            elit. Doloribus, reprehenderit. Fuga suscipit aperiam, corrupti
-            maxime a, optio laborum nostrum alias hic quaerat reiciendis iste
-            cupiditate ab adipisci, nihil atque voluptatem. Lorem ipsum dolor
-            sit amet, consectetur adipisicing elit. Doloribus, reprehenderit.
-            Fuga suscipit aperiam, corrupti maxime a, optio laborum nostrum
-            alias hic quaerat reiciendis iste cupiditate ab adipisci, nihil
-            atque voluptatem. Lorem ipsum dolor sit amet, consectetur
-            adipisicing elit. Doloribus, reprehenderit. Fuga suscipit aperiam,
-            corrupti maxime a, optio laborum nostrum alias hic quaerat
-            reiciendis iste cupiditate ab adipisci, nihil atque voluptatem.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus,
-            reprehenderit. Fuga suscipit aperiam, corrupti maxime a, optio
-            laborum nostrum alias hic quaerat reiciendis iste cupiditate ab
-            adipisci, nihil atque voluptatem. Lorem ipsum dolor sit amet,
-            consectetur adipisicing elit. Doloribus, reprehenderit. Fuga
-            suscipit aperiam, corrupti maxime a, optio laborum nostrum alias hic
-            quaerat reiciendis iste cupiditate ab adipisci, nihil atque
-            voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing
-            elit. Doloribus, reprehenderit. Fuga suscipit aperiam, corrupti
-            maxime a, optio laborum nostrum alias hic quaerat reiciendis iste
-            cupiditate ab adipisci, nihil atque voluptatem.Lorem ipsum dolor sit
-            amet, consectetur adipisicing elit. Doloribus, reprehenderit. Fuga
-            suscipit aperiam, corrupti maxime a, optio laborum nostrum alias hic
-            quaerat reiciendis iste cupiditate ab adipisci, nihil atque
-            voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing
-            elit. Doloribus, reprehenderit. Fuga suscipit aperiam, corrupti
-            maxime a, optio laborum nostrum alias hic quaerat reiciendis iste
-            cupiditate ab adipisci, nihil atque voluptatem. Lorem ipsum dolor
-            sit amet, consectetur adipisicing elit. Doloribus, reprehenderit.
-            Fuga suscipit aperiam, corrupti maxime a, optio laborum nostrum
-            alias hic quaerat reiciendis iste cupiditate ab adipisci, nihil
-            atque voluptatem. Lorem ipsum dolor sit amet, consectetur
-            adipisicing elit. Doloribus, reprehenderit. Fuga suscipit aperiam,
-            corrupti maxime a, optio laborum nostrum alias hic quaerat
-            reiciendis iste cupiditate ab adipisci, nihil atque voluptatem.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus,
-            reprehenderit. Fuga suscipit aperiam, corrupti maxime a, optio
-            laborum nostrum alias hic quaerat reiciendis iste cupiditate ab
-            adipisci, nihil atque voluptatem. Lorem ipsum dolor sit amet,
-            consectetur adipisicing elit. Doloribus, reprehenderit. Fuga
-            suscipit aperiam, corrupti maxime a, optio laborum nostrum alias hic
-            quaerat reiciendis iste cupiditate ab adipisci, nihil atque
-            voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing
-            elit. Doloribus, reprehenderit. Fuga suscipit aperiam, corrupti
-            maxime a, optio laborum nostrum alias hic quaerat reiciendis iste
-            cupiditate ab adipisci, nihil atque voluptatem. Lorem ipsum dolor
-            sit amet, consectetur adipisicing elit. Doloribus, reprehenderit.
-            Fuga suscipit aperiam, corrupti maxime a, optio laborum nostrum
-            alias hic quaerat reiciendis iste cupiditate ab adipisci, nihil
-            atque voluptatem.
-          </p>
-        </section>
-        <Footer />
-      </div>
-    </Fragment>
+  return (
+    <div
+      onWheel={wheelEventeHandler}
+      className={`app${bottom ? " fixed" : ""}`}
+    >
+      <Cursor />
+      <MainHeader overflowHandler={overflowHandler} />
+      <Home />
+
+      <section className="last">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus,
+          reprehenderit. Fuga suscipit aperiam, corrupti maxime a, optio laborum
+          nostrum alias hic quaerat reiciendis iste cupiditate ab adipisci,
+          nihil atque voluptatem. Lorem ipsum dolor sit amet, consectetur
+          adipisicing elit. Doloribus, reprehenderit. Fuga suscipit aperiam,
+          corrupti maxime a, optio laborum nostrum alias hic quaerat reiciendis
+          iste cupiditate ab adipisci, nihil atque voluptatem. Lorem ipsum dolor
+          sit amet, consectetur adipisicing elit. Doloribus, reprehenderit. Fuga
+          suscipit aperiam, corrupti maxime a, optio laborum nostrum alias hic
+          quaerat reiciendis iste cupiditate ab adipisci, nihil atque
+          voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Doloribus, reprehenderit. Fuga suscipit aperiam, corrupti maxime a,
+          optio laborum nostrum alias hic quaerat reiciendis iste cupiditate ab
+          adipisci, nihil atque voluptatem. Lorem ipsum dolor sit amet,
+          consectetur adipisicing elit. Doloribus, reprehenderit. Fuga suscipit
+          aperiam, corrupti maxime a, optio laborum nostrum alias hic quaerat
+          reiciendis iste cupiditate ab adipisci, nihil atque voluptatem. Lorem
+          ipsum dolor sit amet, consectetur adipisicing elit. Doloribus,
+          reprehenderit. Fuga suscipit aperiam, corrupti maxime a, optio laborum
+          nostrum alias hic quaerat reiciendis iste cupiditate ab adipisci,
+          nihil atque voluptatem. Lorem ipsum dolor sit amet, consectetur
+          adipisicing elit. Doloribus, reprehenderit. Fuga suscipit aperiam,
+          corrupti maxime a, optio laborum nostrum alias hic quaerat reiciendis
+          iste cupiditate ab adipisci, nihil atque voluptatem. Lorem ipsum dolor
+          sit amet, consectetur adipisicing elit. Doloribus, reprehenderit. Fuga
+          suscipit aperiam, corrupti maxime a, optio laborum nostrum alias hic
+          quaerat reiciendis iste cupiditate ab adipisci, nihil atque
+          voluptatem.Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Doloribus, reprehenderit. Fuga suscipit aperiam, corrupti maxime a,
+          optio laborum nostrum alias hic quaerat reiciendis iste cupiditate ab
+          adipisci, nihil atque voluptatem. Lorem ipsum dolor sit amet,
+          consectetur adipisicing elit. Doloribus, reprehenderit. Fuga suscipit
+          aperiam, corrupti maxime a, optio laborum nostrum alias hic quaerat
+          reiciendis iste cupiditate ab adipisci, nihil atque voluptatem. Lorem
+          ipsum dolor sit amet, consectetur adipisicing elit. Doloribus,
+          reprehenderit. Fuga suscipit aperiam, corrupti maxime a, optio laborum
+          nostrum alias hic quaerat reiciendis iste cupiditate ab adipisci,
+          nihil atque voluptatem. Lorem ipsum dolor sit amet, consectetur
+          adipisicing elit. Doloribus, reprehenderit. Fuga suscipit aperiam,
+          corrupti maxime a, optio laborum nostrum alias hic quaerat reiciendis
+          iste cupiditate ab adipisci, nihil atque voluptatem. Lorem ipsum dolor
+          sit amet, consectetur adipisicing elit. Doloribus, reprehenderit. Fuga
+          suscipit aperiam, corrupti maxime a, optio laborum nostrum alias hic
+          quaerat reiciendis iste cupiditate ab adipisci, nihil atque
+          voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Doloribus, reprehenderit. Fuga suscipit aperiam, corrupti maxime a,
+          optio laborum nostrum alias hic quaerat reiciendis iste cupiditate ab
+          adipisci, nihil atque voluptatem. Lorem ipsum dolor sit amet,
+          consectetur adipisicing elit. Doloribus, reprehenderit. Fuga suscipit
+          aperiam, corrupti maxime a, optio laborum nostrum alias hic quaerat
+          reiciendis iste cupiditate ab adipisci, nihil atque voluptatem. Lorem
+          ipsum dolor sit amet, consectetur adipisicing elit. Doloribus,
+          reprehenderit. Fuga suscipit aperiam, corrupti maxime a, optio laborum
+          nostrum alias hic quaerat reiciendis iste cupiditate ab adipisci,
+          nihil atque voluptatem.Lorem ipsum dolor sit amet, consectetur
+          adipisicing elit. Doloribus, reprehenderit. Fuga suscipit aperiam,
+          corrupti maxime a, optio laborum nostrum alias hic quaerat reiciendis
+          iste cupiditate ab adipisci, nihil atque voluptatem. Lorem ipsum dolor
+          sit amet, consectetur adipisicing elit. Doloribus, reprehenderit. Fuga
+          suscipit aperiam, corrupti maxime a, optio laborum nostrum alias hic
+          quaerat reiciendis iste cupiditate ab adipisci, nihil atque
+          voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Doloribus, reprehenderit. Fuga suscipit aperiam, corrupti maxime a,
+          optio laborum nostrum alias hic quaerat reiciendis iste cupiditate ab
+          adipisci, nihil atque voluptatem. Lorem ipsum dolor sit amet,
+          consectetur adipisicing elit. Doloribus, reprehenderit. Fuga suscipit
+          aperiam, corrupti maxime a, optio laborum nostrum alias hic quaerat
+          reiciendis iste cupiditate ab adipisci, nihil atque voluptatem. Lorem
+          ipsum dolor sit amet, consectetur adipisicing elit. Doloribus,
+          reprehenderit. Fuga suscipit aperiam, corrupti maxime a, optio laborum
+          nostrum alias hic quaerat reiciendis iste cupiditate ab adipisci,
+          nihil atque voluptatem. Lorem ipsum dolor sit amet, consectetur
+          adipisicing elit. Doloribus, reprehenderit. Fuga suscipit aperiam,
+          corrupti maxime a, optio laborum nostrum alias hic quaerat reiciendis
+          iste cupiditate ab adipisci, nihil atque voluptatem. Lorem ipsum dolor
+          sit amet, consectetur adipisicing elit. Doloribus, reprehenderit. Fuga
+          suscipit aperiam, corrupti maxime a, optio laborum nostrum alias hic
+          quaerat reiciendis iste cupiditate ab adipisci, nihil atque
+          voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Doloribus, reprehenderit. Fuga suscipit aperiam, corrupti maxime a,
+          optio laborum nostrum alias hic quaerat reiciendis iste cupiditate ab
+          adipisci, nihil atque voluptatem. Lorem ipsum dolor sit amet,
+          consectetur adipisicing elit. Doloribus, reprehenderit. Fuga suscipit
+          aperiam, corrupti maxime a, optio laborum nostrum alias hic quaerat
+          reiciendis iste cupiditate ab adipisci, nihil atque voluptatem. Lorem
+          ipsum dolor sit amet, consectetur adipisicing elit. Doloribus,
+          reprehenderit. Fuga suscipit aperiam, corrupti maxime a, optio laborum
+          nostrum alias hic quaerat reiciendis iste cupiditate ab adipisci,
+          nihil atque voluptatem. Lorem ipsum dolor sit amet, consectetur
+          adipisicing elit. Doloribus, reprehenderit. Fuga suscipit aperiam,
+          corrupti maxime a, optio laborum nostrum alias hic quaerat reiciendis
+          iste cupiditate ab adipisci, nihil atque voluptatem. Lorem ipsum dolor
+          sit amet, consectetur adipisicing elit. Doloribus, reprehenderit. Fuga
+          suscipit aperiam, corrupti maxime a, optio laborum nostrum alias hic
+          quaerat reiciendis iste cupiditate ab adipisci, nihil atque
+          voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Doloribus, reprehenderit. Fuga suscipit aperiam, corrupti maxime a,
+          optio laborum nostrum alias hic quaerat reiciendis iste cupiditate ab
+          adipisci, nihil atque voluptatem. Lorem ipsum dolor sit amet,
+          consectetur adipisicing elit. Doloribus, reprehenderit. Fuga suscipit
+          aperiam, corrupti maxime a, optio laborum nostrum alias hic quaerat
+          reiciendis iste cupiditate ab adipisci, nihil atque voluptatem. Lorem
+          ipsum dolor sit amet, consectetur adipisicing elit. Doloribus,
+          reprehenderit. Fuga suscipit aperiam, corrupti maxime a, optio laborum
+          nostrum alias hic quaerat reiciendis iste cupiditate ab adipisci,
+          nihil atque voluptatem. Lorem ipsum dolor sit amet, consectetur
+          adipisicing elit. Doloribus, reprehenderit. Fuga suscipit aperiam,
+          corrupti maxime a, optio laborum nostrum alias hic quaerat reiciendis
+          iste cupiditate ab adipisci, nihil atque voluptatem.Lorem ipsum dolor
+          sit amet, consectetur adipisicing elit. Doloribus, reprehenderit. Fuga
+          suscipit aperiam, corrupti maxime a, optio laborum nostrum alias hic
+          quaerat reiciendis iste cupiditate ab adipisci, nihil atque
+          voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Doloribus, reprehenderit. Fuga suscipit aperiam, corrupti maxime a,
+          optio laborum nostrum alias hic quaerat reiciendis iste cupiditate ab
+          adipisci, nihil atque voluptatem. Lorem ipsum dolor sit amet,
+          consectetur adipisicing elit. Doloribus, reprehenderit. Fuga suscipit
+          aperiam, corrupti maxime a, optio laborum nostrum alias hic quaerat
+          reiciendis iste cupiditate ab adipisci, nihil atque voluptatem. Lorem
+          ipsum dolor sit amet, consectetur adipisicing elit. Doloribus,
+          reprehenderit. Fuga suscipit aperiam, corrupti maxime a, optio laborum
+          nostrum alias hic quaerat reiciendis iste cupiditate ab adipisci,
+          nihil atque voluptatem. Lorem ipsum dolor sit amet, consectetur
+          adipisicing elit. Doloribus, reprehenderit. Fuga suscipit aperiam,
+          corrupti maxime a, optio laborum nostrum alias hic quaerat reiciendis
+          iste cupiditate ab adipisci, nihil atque voluptatem. Lorem ipsum dolor
+          sit amet, consectetur adipisicing elit. Doloribus, reprehenderit. Fuga
+          suscipit aperiam, corrupti maxime a, optio laborum nostrum alias hic
+          quaerat reiciendis iste cupiditate ab adipisci, nihil atque
+          voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Doloribus, reprehenderit. Fuga suscipit aperiam, corrupti maxime a,
+          optio laborum nostrum alias hic quaerat reiciendis iste cupiditate ab
+          adipisci, nihil atque voluptatem. Lorem ipsum dolor sit amet,
+          consectetur adipisicing elit. Doloribus, reprehenderit. Fuga suscipit
+          aperiam, corrupti maxime a, optio laborum nostrum alias hic quaerat
+          reiciendis iste cupiditate ab adipisci, nihil atque voluptatem.
+        </p>
+      </section>
+      <Footer />
+    </div>
   );
 };
 
