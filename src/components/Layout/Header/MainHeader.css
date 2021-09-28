@@ -19,7 +19,12 @@
 .brand-logo {
   margin-top: 78.9px;
   margin-right: 93.9px;
+  overflow: hidden;
   /* transition: 500ms; */
+}
+
+.brand-logo:hover {
+  filter: invert();
 }
 
 .brand-logo.scrolled {
@@ -79,9 +84,32 @@
 
 .line {
   width: 100%;
-  height: 3px;
+  height: 5px;
   background-color: black;
   transition: 100ms ease-in;
+}
+
+li:hover .line:first-child {
+  display: none;
+}
+li:hover .line:nth-child(2) {
+  transform: translateY(10px) rotate(90deg) scale(0.8);
+}
+li:hover .line:last-child {
+  transform: translateY(-5px) scale(0.8);
+}
+
+li.nav-menu.collapsed:hover .line:first-child {
+  display: flex;
+  transform: rotate(45deg) translatey(10px);
+  background: #c70000;
+  width: 100%;
+}
+
+li.nav-menu.collapsed:hover .line:last-child {
+  transform: rotate(-45deg) translatey(-10px);
+  background: #c70000;
+  width: 100%;
 }
 
 .collapsed .line:first-child {

@@ -1,10 +1,10 @@
-import { Fragment, useState } from "react";
-import { useEffect } from "react/cjs/react.development";
+import { Fragment, useState, useEffect } from "react";
 
 import "./Cursor.css";
 
 const Cursor = () => {
   const [onLink, setOnlink] = useState("small");
+
   useEffect(() => {
     let clientX = -100;
     let clientY = -100;
@@ -15,6 +15,7 @@ const Cursor = () => {
         clientX = e.clientX;
         clientY = e.clientY;
       });
+
       document.addEventListener("mouseover", (e) => {
         if (e.target.closest('li a[href="#about"]') !== null) {
           setOnlink("about big");
@@ -28,6 +29,7 @@ const Cursor = () => {
           setOnlink("small");
         }
       });
+
       const render = () => {
         innerCursor.style.transform = `translate(${clientX}px, ${clientY}px)`;
         requestAnimationFrame(render);

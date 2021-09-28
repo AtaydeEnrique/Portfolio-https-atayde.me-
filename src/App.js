@@ -31,6 +31,7 @@ const App = () => {
 
   const wheelEventeHandler = (e) => {
     if (bottom) {
+      document.body.classList.add("hidden");
       if (e.deltaY < 0) {
         setScroll((scroll) => scroll - 1);
       } else if (e.deltaY > 0) {

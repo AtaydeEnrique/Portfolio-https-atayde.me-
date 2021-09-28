@@ -17,7 +17,6 @@ const Brand = ({ classes, scrolled, verticalOptn = false }) => {
         width={scrWidth}
         height={scrHeight}
         viewBox={`0 0 ${scrWidth} ${scrHeight}`}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
         <g id="Atayde">
