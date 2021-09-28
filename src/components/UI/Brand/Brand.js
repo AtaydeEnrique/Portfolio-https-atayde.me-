@@ -1,18 +1,11 @@
-const Brand = ({ classes, scrolled, verticalOptn = false }) => {
-  let scrWidth = "";
-  let scrHeight = "";
-
-  if (verticalOptn) {
-    scrWidth = scrolled > 0 ? "141" : "130";
-    scrHeight = scrolled > 0 ? "141" : "130";
-  } else {
-    scrWidth = "141";
-    scrHeight = "52";
-  }
+const Brand = ({ classes }) => {
+  let scrWidth = "141";
+  let scrHeight = "52";
 
   return (
     <div className="scale">
       <svg
+        overflow="visible"
         className={classes}
         width={scrWidth}
         height={scrHeight}
