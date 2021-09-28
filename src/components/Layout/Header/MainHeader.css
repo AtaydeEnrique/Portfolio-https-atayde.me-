@@ -17,9 +17,8 @@
 }
 
 .brand-logo {
-  margin-top: 78.9px;
-  margin-right: 93.9px;
-  overflow: hidden;
+  /* margin-top: 78.9px;
+  margin-right: 93.9px; */
   /* transition: 500ms; */
 }
 
@@ -28,8 +27,8 @@
 }
 
 .brand-logo.scrolled {
-  margin-top: 88.2px;
-  margin-right: 80px;
+  /* margin-top: 88.2px;
+  margin-right: 80px; */
   /* transition: 500ms; */
 }
 

@@ -28,7 +28,7 @@ const MainHeader = ({ overflowHandler }) => {
       <nav className={`navbar${offset === 0 ? "" : " scrolled"}`}>
         <ul className="navbar-nav">
           <li className="brand">
-            <Brand verticalOptn={true} classes={brandClass} scrolled={offset} />
+            <Brand classes={brandClass} />
           </li>
           <li
             onClick={menuButtonHandler}
