@@ -16,20 +16,22 @@
   background-color: transparent;
 }
 
-.brand-logo {
-  /* margin-top: 78.9px;
-  margin-right: 93.9px; */
-  /* transition: 500ms; */
+.brand-logo path {
+  fill: black;
+  transition: ease-in 0.5s !important;
 }
 
-.brand-logo:hover {
-  filter: invert();
+.brand-logo path:nth-child(4):hover {
+  fill: var(--brand-color1);
 }
-
-.brand-logo.scrolled {
-  /* margin-top: 88.2px;
-  margin-right: 80px; */
-  /* transition: 500ms; */
+.brand-logo path:nth-child(3):hover {
+  fill: var(--brand-color2);
+}
+.brand-logo path:nth-child(2):hover {
+  fill: var(--brand-color3);
+}
+.brand-logo path:nth-child(1):hover {
+  fill: var(--brand-color4);
 }
 
 .scale {

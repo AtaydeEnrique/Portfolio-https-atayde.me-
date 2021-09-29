@@ -16,28 +16,29 @@ const HomeImage = () => {
     let _y = rect.offsetTop + Math.floor(rect.offsetHeight / 2);
     setXY({
       x: e.clientX - _x,
-      y: (e.clientY - _y) * -1,
+      y: (e.clientY - 35 - _y * 2) * -1,
     });
     setRectImg({ rX: inner.offsetWidth, rY: inner.offsetHeight });
+    console.log(xy.x, xy.y);
   };
 
   let rotX = 0;
   let rotY = 0;
   if (xy.y > 0 && xy.x > 0) {
-    rotX = "rotateX(" + (xy.x / rectImg.rX / 2).toFixed(2) * -100 + "deg)";
-    rotY = "rotateY(" + (xy.y / rectImg.rY / 2).toFixed(2) * -100 + "deg)";
+    rotX = "rotateX(" + (xy.x / rectImg.rX / 2).toFixed(2) * 50 + "deg)";
+    rotY = "rotateY(" + (xy.y / rectImg.rY / 2).toFixed(2) * 50 + "deg)";
   }
   if (xy.y > 0 && xy.x < 0) {
-    rotX = "rotateX(" + (xy.x / rectImg.rX / 2).toFixed(2) * -100 + "deg)";
-    rotY = "rotateY(" + (xy.y / rectImg.rY / 2).toFixed(2) * -100 + "deg)";
+    rotX = "rotateX(" + (xy.x / rectImg.rX / 2).toFixed(2) * -50 + "deg)";
+    rotY = "rotateY(" + (xy.y / rectImg.rY / 2).toFixed(2) * -50 + "deg)";
   }
   if (xy.y < 0 && xy.x < 0) {
-    rotX = "rotateX(" + (xy.x / rectImg.rX / 2).toFixed(2) * -100 + "deg)";
-    rotY = "rotateY(" + (xy.y / rectImg.rY / 2).toFixed(2) * -100 + "deg)";
+    rotX = "rotateX(" + (xy.x / rectImg.rX / 2).toFixed(2) * 50 + "deg)";
+    rotY = "rotateY(" + (xy.y / rectImg.rY / 2).toFixed(2) * 50 + "deg)";
   }
   if (xy.y < 0 && xy.x > 0) {
-    rotX = "rotateX(" + (xy.x / rectImg.rX / 2).toFixed(2) * 100 + "deg)";
-    rotY = "rotateY(" + (xy.y / rectImg.rY / 2).toFixed(2) * 100 + "deg)";
+    rotX = "rotateX(" + (xy.x / rectImg.rX / 2).toFixed(2) * -50 + "deg)";
+    rotY = "rotateY(" + (xy.y / rectImg.rY / 2).toFixed(2) * -50 + "deg)";
   }
 
   return (
@@ -50,11 +51,10 @@ const HomeImage = () => {
       ref={boxRef}
     >
       <img
-        className="sex"
         style={
           style
             ? {
-                transform: rotX + rotY,
+                transform: "perspective(800px)" + rotX + rotY,
               }
             : {}
         }

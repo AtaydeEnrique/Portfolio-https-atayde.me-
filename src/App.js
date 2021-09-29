@@ -29,9 +29,12 @@ const App = () => {
     }
   };
 
-  const wheelEventeHandler = (e) => {
+  const wheelEventHandler = (e) => {
     if (bottom) {
       document.body.classList.add("hidden");
+      document.querySelector("#root").classList.add("hidden");
+
+      console.log(bottom);
       if (e.deltaY < 0) {
         setScroll((scroll) => scroll - 1);
       } else if (e.deltaY > 0) {
@@ -42,10 +45,7 @@ const App = () => {
   console.log(scroll);
 
   return (
-    <div
-      onWheel={wheelEventeHandler}
-      className={`app${bottom ? " fixed" : ""}`}
-    >
+    <div onWheel={wheelEventHandler} className={`app${bottom ? " fixed" : ""}`}>
       <Cursor />
       <MainHeader overflowHandler={overflowHandler} />
       <Home />
