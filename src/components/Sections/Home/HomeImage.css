@@ -11,6 +11,6 @@
   -webkit-user-drag: none;
   width: 75%;
   height: 75%;
-  transition: transform 0.75s;
+  transition: transform 0.4s;
   border-radius: 3%;
 }

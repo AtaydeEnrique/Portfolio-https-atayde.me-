@@ -19,7 +19,6 @@ const HomeImage = () => {
       y: (e.clientY - 35 - _y * 2) * -1,
     });
     setRectImg({ rX: inner.offsetWidth, rY: inner.offsetHeight });
-    console.log(xy.x, xy.y);
   };
 
   let rotX = 0;

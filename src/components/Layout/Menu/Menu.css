@@ -31,6 +31,7 @@
   top: -15px;
   left: 15px;
   position: relative;
+  transition: 3s cubic-bezier(0.77, 0, 0.175, 1) all;
 }
 
 .modal-menu ul li a:hover > i {
