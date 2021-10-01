@@ -45,11 +45,19 @@
 
 .cursor-text {
   background: var(--brand-color4);
-  mix-blend-mode: normal;
+  mix-blend-mode: screen;
+}
+
+.cursor-inf {
+  background: var(--brand-color1);
+  mix-blend-mode: exclusion;
 }
 
 .cursor-canvas {
+  touch-action: none;
+  opacity: 0.05;
+  position: fixed;
   width: 100vw;
   height: 100vh;
-  z-index: 12000;
+  z-index: -12000;
 }

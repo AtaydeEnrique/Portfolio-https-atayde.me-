@@ -1,12 +1,11 @@
 #home-container {
-  margin-top: calc(25vh);
+  margin-top: 12vh;
 }
 
 .trainer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 140px;
   background: transparent;
 }
 .trainer-headline {
@@ -25,7 +24,7 @@
 
 .contact-btn {
   margin-top: 80px;
-  background: transparent;
+  background: white;
   padding: 18px 55px 18px;
   border-radius: 50px;
   color: black;

@@ -4,7 +4,10 @@ import MainHeader from "./components/Layout/Header/MainHeader";
 import Home from "./components/Sections/Home/Home";
 import Cursor from "./components/UI/Cursor/Cursor";
 import Footer from "./components/Layout/Footer/Footer";
+
 import "./App.css";
+import ScrollingText from "./components/UI/ScrollingText/ScrollingText";
+import Goo from "./components/UI/Goo/Goo";
 
 const App = () => {
   const [scroll, setScroll] = useState(0);
@@ -31,8 +34,7 @@ const App = () => {
 
   const wheelEventHandler = (e) => {
     if (bottom) {
-      document.body.classList.add("hidden");
-      document.querySelector("#root").classList.add("hidden");
+      // document.body.classList.add("hidden");
 
       console.log(bottom);
       if (e.deltaY < 0) {
@@ -47,9 +49,10 @@ const App = () => {
   return (
     <div onWheel={wheelEventHandler} className={`app${bottom ? " fixed" : ""}`}>
       <Cursor />
+      {/* <Goo /> */}
       <MainHeader overflowHandler={overflowHandler} />
       <Home />
-
+      <ScrollingText />
       <section className="last">
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus,
