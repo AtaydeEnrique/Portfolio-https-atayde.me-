@@ -26,7 +26,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 #root {
-  background: rgb(255, 255, 255);
 }
 :root {
   --nav-size: 120px;
