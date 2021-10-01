@@ -25,6 +25,8 @@ const Cursor = () => {
           setOnlink("contact big");
         } else if (e.target.closest('div[class="trainer"]') !== null) {
           setOnlink("text big");
+        } else if (e.target.closest('div[class="infinite"]') !== null) {
+          setOnlink("inf big");
         } else {
           setOnlink("small");
         }
@@ -43,7 +45,7 @@ const Cursor = () => {
   return (
     <Fragment>
       <div className={`cursor cursor-${onLink}`}></div>
-      <canvas className="cursor cursor-canvas" resize="true"></canvas>
+      {/* <canvas className="cursor cursor-canvas" resize="true"></canvas> */}
     </Fragment>
   );
 };

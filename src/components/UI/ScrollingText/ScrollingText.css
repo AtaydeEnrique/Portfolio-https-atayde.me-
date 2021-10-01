@@ -1,0 +1,99 @@
+.infinite {
+  position: relative;
+  height: fit-content;
+  z-index: -1;
+}
+
+.infinite-container {
+  left: 7%;
+  /* position: absolute; */
+  display: inline-flex;
+  bottom: 0;
+}
+
+.infinite-text {
+  background-color: white;
+  -webkit-text-stroke: 2px black;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap;
+  font-size: 6vw;
+  color: black;
+  white-space: nowrap;
+  padding: 0 12px;
+}
+
+.infinite-text:hover {
+  animation: rainbow-text-animation 0.5s ease forwards;
+}
+
+.infinite-text.right {
+  animation: move 30s linear infinite;
+  animation-delay: -30s;
+}
+
+.infinite-text.left {
+  animation: move3 30s linear infinite;
+  animation-delay: -30s;
+}
+
+.infinite-text.right:nth-child(2) {
+  animation: move2 30s linear infinite;
+  animation-delay: -15s;
+}
+
+.infinite-text.left:nth-child(2) {
+  animation: move4 30s linear infinite;
+  animation-delay: -15s;
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes move2 {
+  0% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes move3 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes move4 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+}
+
+@keyframes rainbow-text-animation {
+  0% {
+    background-size: 57%;
+    background-position: 0 0;
+  }
+  20% {
+    background-size: 57%;
+    background-position: 0 1em;
+  }
+  100% {
+    background-size: 300%;
+    background-position: -9em 1em;
+  }
+}

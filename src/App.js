@@ -4,6 +4,8 @@ import MainHeader from "./components/Layout/Header/MainHeader";
 import Home from "./components/Sections/Home/Home";
 import Cursor from "./components/UI/Cursor/Cursor";
 import Footer from "./components/Layout/Footer/Footer";
+import ScrollingText from "./components/UI/ScrollingText/ScrollingText";
+
 import "./App.css";
 
 const App = () => {
@@ -49,7 +51,7 @@ const App = () => {
       <Cursor />
       <MainHeader overflowHandler={overflowHandler} />
       <Home />
-
+      <ScrollingText />
       <section className="last">
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus,
