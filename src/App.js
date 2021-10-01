@@ -33,8 +33,8 @@ const App = () => {
 
   const wheelEventHandler = (e) => {
     if (bottom) {
-      document.body.classList.add("hidden");
-      document.querySelector("#root").classList.add("hidden");
+      // document.body.classList.add("hidden");
+      // document.querySelector("#root").classList.add("hidden");
 
       console.log(bottom);
       if (e.deltaY < 0) {
