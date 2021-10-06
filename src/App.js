@@ -7,7 +7,7 @@ import Footer from "./components/Layout/Footer/Footer";
 
 import "./App.css";
 import ScrollingText from "./components/UI/ScrollingText/ScrollingText";
-import Goo from "./components/UI/Goo/Goo";
+// import Goo from "./components/UI/Goo/Goo";
 
 const App = () => {
   const [scroll, setScroll] = useState(0);
