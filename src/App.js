@@ -48,6 +48,7 @@ const App = () => {
 
   return (
     <div onWheel={wheelEventHandler} className={`app${bottom ? " fixed" : ""}`}>
+      {/* <Goo /> */}
       <Cursor />
       {/* <Goo /> */}
       <MainHeader overflowHandler={overflowHandler} />

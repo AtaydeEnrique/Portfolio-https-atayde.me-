@@ -54,6 +54,11 @@
   animation: fill-down 1s ease-in;
 }
 
+.menu-scrText {
+  transform: rotate(30deg) translateY(-28vw);
+  opacity: 0.1;
+}
+
 @keyframes fill-up {
   20% {
     background-color: white;
