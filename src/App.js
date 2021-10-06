@@ -53,7 +53,7 @@ const App = () => {
       <Cursor />
       <MainHeader overflowHandler={overflowHandler} />
       <Home />
-      <ScrollingText />
+      <ScrollingText text="RESEARCH. STUDY. PRACTICE. BUILD." />
       <section className="last">
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus,

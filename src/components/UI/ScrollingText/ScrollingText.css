@@ -11,6 +11,10 @@
   bottom: 0;
 }
 
+.infinite-absolute {
+  position: absolute;
+}
+
 .infinite-text {
   background-color: white;
   -webkit-text-stroke: 2px black;
@@ -20,7 +24,7 @@
   font-size: 6vw;
   color: black;
   white-space: nowrap;
-  padding: 0 12px;
+  padding: 0 10px;
 }
 
 .infinite-text:hover {
