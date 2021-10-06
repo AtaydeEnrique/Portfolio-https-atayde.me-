@@ -1,5 +1,5 @@
 import { Fragment, useEffect } from "react";
-import * as Utils from "../../../assets/utils";
+import * as Utils from "../../../assets/js/utils";
 
 import "./Goo.css";
 
@@ -7,6 +7,8 @@ const Goo = () => {
   useEffect(() => {
     const canvas = Utils.qs("canvas");
     const ctx = canvas.getContext("2d");
+
+    const controls = Utils.qsa(".js-control");
 
     const TAU = Math.PI * 2;
 
@@ -120,7 +122,7 @@ const Goo = () => {
     canvas.addEventListener("touchmove", onPointerMove);
 
     loop();
-  }, []);
+  });
   return <canvas class="canvas js-canvas"></canvas>;
 };
 

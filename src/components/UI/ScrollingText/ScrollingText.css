@@ -1,7 +1,7 @@
 .infinite {
   position: relative;
   height: fit-content;
-  z-index: 1;
+  z-index: -1;
 }
 
 .infinite-container {
@@ -9,10 +9,6 @@
   /* position: absolute; */
   display: inline-flex;
   bottom: 0;
-}
-
-.infinite-absolute {
-  position: absolute;
 }
 
 .infinite-text {
@@ -24,7 +20,7 @@
   font-size: 6vw;
   color: black;
   white-space: nowrap;
-  padding: 0 10px;
+  padding: 0 12px;
 }
 
 .infinite-text:hover {

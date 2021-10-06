@@ -55,6 +55,7 @@
 
 .cursor-canvas {
   touch-action: none;
+  opacity: 0.05;
   position: fixed;
   width: 100vw;
   height: 100vh;

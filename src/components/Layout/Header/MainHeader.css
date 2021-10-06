@@ -10,6 +10,9 @@
 .sticky {
   position: sticky;
 }
+.sticky {
+  position: sticky;
+}
 
 .navbar {
   height: var(--nav-size);
