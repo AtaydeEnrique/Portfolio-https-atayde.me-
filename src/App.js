@@ -7,6 +7,7 @@ import Footer from "./components/Layout/Footer/Footer";
 import ScrollingText from "./components/UI/ScrollingText/ScrollingText";
 
 import "./App.css";
+// import Goo from "./components/UI/Goo/Goo";
 
 const App = () => {
   const [scroll, setScroll] = useState(0);
@@ -48,6 +49,7 @@ const App = () => {
 
   return (
     <div onWheel={wheelEventHandler} className={`app${bottom ? " fixed" : ""}`}>
+      {/* <Goo /> */}
       <Cursor />
       <MainHeader overflowHandler={overflowHandler} />
       <Home />
