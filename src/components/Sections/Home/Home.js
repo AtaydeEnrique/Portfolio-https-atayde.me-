@@ -5,7 +5,7 @@ import HomeImage from "./HomeImage";
 import "./Home.css";
 import ScrollingText from "../../UI/ScrollingText/ScrollingText";
 
-const Home = () => {
+const Home = ({ onClick }) => {
   const [colors, setColors] = useState(false);
   return (
     <section id="home-container">
@@ -38,6 +38,7 @@ const Home = () => {
             <p>based in México</p>
           </span>
           <button
+            onClick={onClick}
             onMouseEnter={() => setColors(true)}
             onMouseLeave={() => {
               setColors(false);

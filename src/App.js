@@ -4,6 +4,7 @@ import MainHeader from "./components/Layout/Header/MainHeader";
 import Home from "./components/Sections/Home/Home";
 import Form from "./components/Sections/Form/Form";
 import Cursor from "./components/UI/Cursor/Cursor";
+import ContactMenu from "./components/Layout/ContactMenu/ContactMenu";
 import Footer from "./components/Layout/Footer/Footer";
 
 import "./App.css";
@@ -13,6 +14,7 @@ import ScrollingText from "./components/UI/ScrollingText/ScrollingText";
 const App = () => {
   const [scroll, setScroll] = useState(0);
   const [bottom, setBottom] = useState(false);
+  const [kraken, setKraken] = useState(false);
 
   window.onbeforeunload = () => {
     window.scrollTo(0, 0);
@@ -33,9 +35,13 @@ const App = () => {
     }
   };
 
+  const closeKraken = () => {
+    setKraken(false);
+  };
+
   const wheelEventHandler = (e) => {
     if (bottom) {
-      // document.body.classList.add("hidden");
+      setKraken(true);
 
       console.log(bottom);
       if (e.deltaY < 0) {
@@ -51,9 +57,16 @@ const App = () => {
     <div onWheel={wheelEventHandler} className={`app${bottom ? " fixed" : ""}`}>
       {/* <Goo /> */}
       <Cursor />
-      {/* <Goo /> */}
-      <MainHeader overflowHandler={overflowHandler} />
-      <Home />
+      <MainHeader
+        overflowHandler={overflowHandler}
+        closeContactMenu={closeKraken}
+        kraken={kraken}
+      />
+      <Home
+        onClick={() => {
+          setKraken(true);
+        }}
+      />
       <ScrollingText text="RESEARCH. STUDY. PRACTICE. BUILD." />
       <Form />
       <section className="last">
@@ -69,59 +82,6 @@ const App = () => {
           suscipit aperiam, corrupti maxime a, optio laborum nostrum alias hic
           quaerat reiciendis iste cupiditate ab adipisci, nihil atque
           voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-          Doloribus, reprehenderit. Fuga suscipit aperiam, corrupti maxime a,
-          optio laborum nostrum alias hic quaerat reiciendis iste cupiditate ab
-          adipisci, nihil atque voluptatem. Lorem ipsum dolor sit amet,
-          consectetur adipisicing elit. Doloribus, reprehenderit. Fuga suscipit
-          aperiam, corrupti maxime a, optio laborum nostrum alias hic quaerat
-          reiciendis iste cupiditate ab adipisci, nihil atque voluptatem. Lorem
-          ipsum dolor sit amet, consectetur adipisicing elit. Doloribus,
-          reprehenderit. Fuga suscipit aperiam, corrupti maxime a, optio laborum
-          nostrum alias hic quaerat reiciendis iste cupiditate ab adipisci,
-          nihil atque voluptatem. Lorem ipsum dolor sit amet, consectetur
-          adipisicing elit. Doloribus, reprehenderit. Fuga suscipit aperiam,
-          corrupti maxime a, optio laborum nostrum alias hic quaerat reiciendis
-          iste cupiditate ab adipisci, nihil atque voluptatem. Lorem ipsum dolor
-          sit amet, consectetur adipisicing elit. Doloribus, reprehenderit. Fuga
-          suscipit aperiam, corrupti maxime a, optio laborum nostrum alias hic
-          quaerat reiciendis iste cupiditate ab adipisci, nihil atque
-          voluptatem.Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-          Doloribus, reprehenderit. Fuga suscipit aperiam, corrupti maxime a,
-          optio laborum nostrum alias hic quaerat reiciendis iste cupiditate ab
-          adipisci, nihil atque voluptatem. Lorem ipsum dolor sit amet,
-          consectetur adipisicing elit. Doloribus, reprehenderit. Fuga suscipit
-          aperiam, corrupti maxime a, optio laborum nostrum alias hic quaerat
-          reiciendis iste cupiditate ab adipisci, nihil atque voluptatem. Lorem
-          ipsum dolor sit amet, consectetur adipisicing elit. Doloribus,
-          reprehenderit. Fuga suscipit aperiam, corrupti maxime a, optio laborum
-          nostrum alias hic quaerat reiciendis iste cupiditate ab adipisci,
-          nihil atque voluptatem. Lorem ipsum dolor sit amet, consectetur
-          adipisicing elit. Doloribus, reprehenderit. Fuga suscipit aperiam,
-          corrupti maxime a, optio laborum nostrum alias hic quaerat reiciendis
-          iste cupiditate ab adipisci, nihil atque voluptatem. Lorem ipsum dolor
-          sit amet, consectetur adipisicing elit. Doloribus, reprehenderit. Fuga
-          suscipit aperiam, corrupti maxime a, optio laborum nostrum alias hic
-          quaerat reiciendis iste cupiditate ab adipisci, nihil atque
-          voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-          Doloribus, reprehenderit. Fuga suscipit aperiam, corrupti maxime a,
-          optio laborum nostrum alias hic quaerat reiciendis iste cupiditate ab
-          adipisci, nihil atque voluptatem. Lorem ipsum dolor sit amet,
-          consectetur adipisicing elit. Doloribus, reprehenderit. Fuga suscipit
-          aperiam, corrupti maxime a, optio laborum nostrum alias hic quaerat
-          reiciendis iste cupiditate ab adipisci, nihil atque voluptatem. Lorem
-          ipsum dolor sit amet, consectetur adipisicing elit. Doloribus,
-          reprehenderit. Fuga suscipit aperiam, corrupti maxime a, optio laborum
-          nostrum alias hic quaerat reiciendis iste cupiditate ab adipisci,
-          nihil atque voluptatem.Lorem ipsum dolor sit amet, consectetur
-          adipisicing elit. Doloribus, reprehenderit. Fuga suscipit aperiam,
-          corrupti maxime a, optio laborum nostrum alias hic quaerat reiciendis
-          iste cupiditate ab adipisci, nihil atque voluptatem. Lorem ipsum dolor
-          sit amet, consectetur adipisicing elit. Doloribus, reprehenderit. Fuga
-          suscipit aperiam, corrupti maxime a, optio laborum nostrum alias hic
-          quaerat reiciendis iste cupiditate ab adipisci, nihil atque
-          voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-          Doloribus, reprehenderit. Fuga suscipit aperiam, corrupti maxime a,
-          optio laborum nostrum alias hic quaerat reiciendis iste cupiditate ab
           adipisci, nihil atque voluptatem. Lorem ipsum dolor sit amet,
           consectetur adipisicing elit. Doloribus, reprehenderit. Fuga suscipit
           aperiam, corrupti maxime a, optio laborum nostrum alias hic quaerat
@@ -196,6 +156,13 @@ const App = () => {
           reiciendis iste cupiditate ab adipisci, nihil atque voluptatem.
         </p>
       </section>
+      {kraken && (
+        <ContactMenu
+          onClose={() => {
+            setKraken(false);
+          }}
+        />
+      )}
       <Footer />
     </div>
   );

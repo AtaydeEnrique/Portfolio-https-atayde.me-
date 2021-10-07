@@ -1,0 +1,77 @@
+#kraken1 {
+  animation: kraken1 7s linear infinite;
+}
+
+#kraken2 {
+  animation: kraken1 10s linear infinite;
+}
+
+#kraken3 {
+  animation: kraken1 10s linear infinite;
+  animation-direction: reverse;
+}
+#kraken4 {
+  animation: kraken1 15s linear infinite;
+}
+
+#kraken5 {
+  animation: kraken1 10s linear infinite;
+  animation-direction: alternate-reverse;
+}
+#kraken6 {
+  animation: kraken1 15s linear infinite;
+  animation-direction: alternate-reverse;
+}
+
+#kraken7 {
+  animation: kraken1 7s linear infinite;
+}
+#kraken8 {
+  animation: kraken1 10s linear infinite;
+  animation-direction: alternate-reverse;
+}
+
+.KRAKEN {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+  animation: kraken 3s ease-in-out;
+}
+
+@keyframes kraken1 {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  15% {
+    transform: translateY(100px) rotate(-5deg);
+  }
+  30% {
+    transform: translateY(70px) rotate(0deg);
+  }
+  45% {
+    transform: translateY(50px) rotate(5deg);
+  }
+  60% {
+    transform: translateY(30px) rotate(8deg);
+  }
+  75% {
+    transform: translateY(70px) rotate(0deg);
+  }
+  90% {
+    transform: translateY(40px) rotate(-2deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+@keyframes kraken {
+  from {
+    bottom: -100%;
+  }
+  to {
+    bottom: 0%;
+  }
+}

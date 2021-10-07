@@ -16,6 +16,7 @@ const MenuModal = ({ close, show }) => {
       setHover(false);
     }, 500);
   };
+
   return (
     <Fragment>
       {ReactDOM.createPortal(

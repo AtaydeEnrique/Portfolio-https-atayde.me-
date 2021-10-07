@@ -5,13 +5,17 @@ import MenuModal from "../../UI/Modals/MenuModal";
 import { Transition } from "react-transition-group";
 import "./MainHeader.css";
 
-const MainHeader = ({ overflowHandler }) => {
+const MainHeader = ({ overflowHandler, kraken, closeContactMenu }) => {
   const [menu, setMenu] = useState(false);
   const [offset, setOffset] = useState(0);
 
   const menuButtonHandler = () => {
     setMenu((m) => !m);
     overflowHandler(menu);
+  };
+
+  const closeContactMenuHandler = () => {
+    closeContactMenu();
   };
 
   useEffect(() => {
@@ -30,14 +34,25 @@ const MainHeader = ({ overflowHandler }) => {
           <li className="brand">
             <Brand classes={brandClass} />
           </li>
-          <li
-            onClick={menuButtonHandler}
-            className={`nav-menu${menu ? " collapsed" : ""}`}
-          >
-            <div className="line"></div>
-            <div className="line"></div>
-            <div className="line"></div>
-          </li>
+          {!kraken ? (
+            <li
+              onClick={menuButtonHandler}
+              className={`nav-menu${menu ? " collapsed" : ""}`}
+            >
+              <div className="line"></div>
+              <div className="line"></div>
+              <div className="line"></div>
+            </li>
+          ) : (
+            <li
+              onClick={closeContactMenuHandler}
+              className={`nav-menu collapsed`}
+            >
+              <div className="line"></div>
+              <div className="line"></div>
+              <div className="line"></div>
+            </li>
+          )}
           <Transition in={menu} timeout={1000} mountOnEnter unmountOnExit>
             {(state) =>
               state && <MenuModal close={menuButtonHandler} show={state} />

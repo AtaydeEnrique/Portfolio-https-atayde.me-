@@ -1,0 +1,27 @@
+.wave {
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+  background-color: black;
+  animation: slide-kraken 1s linear forwards;
+}
+
+@keyframes slide-kraken {
+  0% {
+    opacity: 0;
+    top: 100%;
+  }
+  80% {
+    opacity: 1;
+    top: 0;
+  }
+  100% {
+    background-color: white;
+    opacity: 1;
+    top: 0;
+  }
+}
