@@ -84,7 +84,7 @@
 }
 
 .contact-submit-enabled:hover {
-  box-shadow: 0 0 3px 3px black;
+  box-shadow: 0 0 3px 3px silver;
   transition: 0.2s ease-out;
   cursor: pointer;
   transition: 1s;

@@ -37,7 +37,14 @@
   left: 0;
   bottom: 0;
   z-index: 1;
-  animation: kraken 3s ease-in-out;
+}
+
+.kraken-up {
+  animation: kraken-up 4s ease-in-out;
+}
+
+.kraken-down {
+  animation: kraken-down 2s ease-in-out;
 }
 
 @keyframes kraken1 {
@@ -67,11 +74,20 @@
   }
 }
 
-@keyframes kraken {
+@keyframes kraken-up {
   from {
-    bottom: -100%;
+    bottom: -130%;
   }
   to {
     bottom: 0%;
+  }
+}
+
+@keyframes kraken-down {
+  from {
+    bottom: 0%;
+  }
+  to {
+    bottom: -150%;
   }
 }

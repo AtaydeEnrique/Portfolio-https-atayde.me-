@@ -41,14 +41,12 @@ const App = () => {
   };
 
   const closeKraken = () => {
-    setKraken(false);
+    setKraken((k) => !k);
   };
 
   const wheelEventHandler = (e) => {
     if (bottom) {
-      setKraken(true);
-
-      console.log(bottom);
+      setKraken((k) => !k);
       if (e.deltaY < 0) {
         setScroll((scroll) => scroll - 1);
       } else if (e.deltaY > 0) {
@@ -56,7 +54,6 @@ const App = () => {
       }
     }
   };
-  console.log(scroll);
 
   return (
     <div onWheel={wheelEventHandler} className={`app${bottom ? " fixed" : ""}`}>
@@ -69,7 +66,7 @@ const App = () => {
       />
       <Home
         onClick={() => {
-          setKraken(true);
+          setKraken((k) => !k);
         }}
       />
       <ScrollingText text="RESEARCH. STUDY. PRACTICE. BUILD." />
@@ -160,13 +157,12 @@ const App = () => {
           reiciendis iste cupiditate ab adipisci, nihil atque voluptatem.
         </p>
       </section>
-      {kraken && (
-        <ContactMenu
-          onClose={() => {
-            setKraken(false);
-          }}
-        />
-      )}
+      <ContactMenu
+        kraken={kraken}
+        onClose={() => {
+          setKraken((k) => !k);
+        }}
+      />
       <Footer />
     </div>
   );

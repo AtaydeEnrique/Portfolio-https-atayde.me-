@@ -1,10 +1,11 @@
 import React from "react";
 
 import "./Kraken.css";
-const Kraken = ({ onClose }) => {
+const Kraken = ({ onClose, show }) => {
+  const exiting = show === "exiting" ? "kraken-down" : "kraken-up";
   return (
     <svg
-      className="KRAKEN"
+      className={`KRAKEN ${exiting}`}
       onClick={onClose}
       viewBox="0 0 1365 758"
       fill="none"

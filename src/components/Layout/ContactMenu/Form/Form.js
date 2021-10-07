@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./Form.css";
 
-const Form = ({ sendData }) => {
+const Form = ({ sendData, isLoading }) => {
   const [visitorName, setVisitorName] = useState("");
   const [visitorEmail, setVisitorEmail] = useState("");
   const [visitorMessage, setVisitorMessage] = useState("");
@@ -59,7 +59,10 @@ const Form = ({ sendData }) => {
   const disabled = !nameIsValid || !emailIsValid || !messageIsValid;
 
   return (
-    <form className="contact-form" onSubmit={sendMessage}>
+    <form
+      className={`contact-form${isLoading ? " loading" : ""}`}
+      onSubmit={sendMessage}
+    >
       <div className="form-group">
         <div className="form-label-wrap">
           <label htmlFor="name">Name</label>

@@ -55,6 +55,9 @@
 .rainbow-border span:last-child:after {
   background: var(--brand-color4);
 }
+.loading {
+  opacity: 0.4;
+}
 
 .contact {
   display: flex;
@@ -78,6 +81,20 @@
   font-size: 1.8rem;
 }
 
+.send-fail {
+  display: block;
+  top: 0;
+  font-size: small;
+  color: white;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  position: absolute;
+  background: red;
+  width: 100%;
+  text-align: center;
+  animation: failed ease-in 1s;
+}
+
 @keyframes round {
   0% {
     transform: rotate(0);
@@ -85,5 +102,17 @@
 
   100% {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes failed {
+  0% {
+    opacity: 0;
+    top: -5%;
+  }
+
+  100% {
+    opacity: 1;
+    top: 0;
   }
 }

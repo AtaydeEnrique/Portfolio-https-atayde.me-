@@ -54,9 +54,7 @@ const MainHeader = ({ overflowHandler, kraken, closeContactMenu }) => {
             </li>
           )}
           <Transition in={menu} timeout={1000} mountOnEnter unmountOnExit>
-            {(state) =>
-              state && <MenuModal close={menuButtonHandler} show={state} />
-            }
+            {(state) => <MenuModal close={menuButtonHandler} show={state} />}
           </Transition>
         </ul>
       </nav>

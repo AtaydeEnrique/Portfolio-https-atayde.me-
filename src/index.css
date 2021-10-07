@@ -34,6 +34,8 @@ body {
   --brand-color2: #fbff12;
   --brand-color3: #8c00ff;
   --brand-color4: #80ffdb;
+  --spinner-offset: 187;
+  --spinner-duration: 1.4s;
 }
 
 ::-webkit-scrollbar {
