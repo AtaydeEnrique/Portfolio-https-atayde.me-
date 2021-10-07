@@ -2,6 +2,7 @@ import { useState } from "react";
 
 import MainHeader from "./components/Layout/Header/MainHeader";
 import Home from "./components/Sections/Home/Home";
+import Form from "./components/Sections/Form/Form";
 import Cursor from "./components/UI/Cursor/Cursor";
 import Footer from "./components/Layout/Footer/Footer";
 
@@ -53,7 +54,8 @@ const App = () => {
       {/* <Goo /> */}
       <MainHeader overflowHandler={overflowHandler} />
       <Home />
-      <ScrollingText />
+      <ScrollingText text="RESEARCH. STUDY. PRACTICE. BUILD." />
+      <Form />
       <section className="last">
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus,
