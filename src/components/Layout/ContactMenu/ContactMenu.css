@@ -11,7 +11,7 @@
   z-index: 30;
   display: inline-block;
   width: 500px;
-  height: 400px;
+  height: 450px;
   position: relative;
   color: #fff;
   font-size: 22px;
@@ -75,7 +75,7 @@
 }
 .contact-title {
   font-weight: bold;
-  font-size: 2vw;
+  font-size: 1.8rem;
 }
 
 @keyframes round {

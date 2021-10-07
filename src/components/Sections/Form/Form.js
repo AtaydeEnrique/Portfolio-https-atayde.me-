@@ -1,123 +1,136 @@
 import { useState } from "react";
 import "./Form.css";
-const Form = () => {
+
+const Form = ({ sendData }) => {
   const [visitorName, setVisitorName] = useState("");
   const [visitorEmail, setVisitorEmail] = useState("");
   const [visitorMessage, setVisitorMessage] = useState("");
-  const [nameIsValid, setNameIsValid] = useState({
-    focus: false,
-    valid: false,
-  });
-  const [emailIsValid, setEmailIsValid] = useState({
-    focus: false,
-    valid: false,
-  });
-  const [messageIsValid, setMessageIsValid] = useState({
-    focus: false,
-    valid: false,
-  });
+  const [nameIsValid, setNameIsValid] = useState(false);
+  const [emailIsValid, setEmailIsValid] = useState(false);
+  const [messageIsValid, setMessageIsValid] = useState(false);
+  const [nameFocus, setNameFocus] = useState(false);
+  const [emailFocus, setEmailFocus] = useState(false);
+  const [messageFocus, setMessageFocus] = useState(false);
 
   const nameValidation = (e) => {
     const name = e.target.value.trim();
     setVisitorName(name);
-    if (name && name.length < 30) {
-      setNameIsValid({ valid: true });
+    if (name && name.length < 30 && nameFocus) {
+      setNameIsValid(true);
     } else {
-      setNameIsValid({ valid: false });
+      setNameIsValid(false);
     }
   };
 
   const emailValidation = (e) => {
     const email = e.target.value.trim();
     setVisitorEmail(email);
-    setEmailIsValid({ focus: true });
-    if (email && email.includes("@")) {
-      setEmailIsValid({ valid: true });
+    if (email && email.includes("@" && ".") && emailFocus) {
+      setEmailIsValid(true);
     } else {
-      setEmailIsValid({ valid: false });
+      setEmailIsValid(false);
     }
   };
 
   const messageValidation = (e) => {
     const message = e.target.value.trim();
     setVisitorMessage(message);
-    if (message && message.length > 20 && message.length < 200) {
-      setMessageIsValid({ valid: true });
+    if (message && message.length > 10 && message.length < 200 && emailFocus) {
+      setMessageIsValid(true);
     } else {
-      setMessageIsValid({ valid: false });
+      setMessageIsValid(false);
     }
   };
+  const validForm = nameIsValid && emailIsValid && messageIsValid;
 
-  const sendMessage = async (e) => {
+  const sendMessage = (e) => {
     e.preventDefault();
     const data = {
       email: visitorEmail,
       name: visitorName,
       message: visitorMessage,
     };
-    if (nameIsValid.valid && emailIsValid.valid && messageIsValid.valid) {
-      const promise = await fetch(
-        "https://send.pageclip.co/1KVcle4hvDDKpiHxudAkQ2r38p6ZvT5k",
-        {
-          method: "POST",
-          body: JSON.stringify(data),
-          headers: {
-            "X-REQMETHOD": "form-v1",
-            "Content-Type": "application/json",
-          },
-        }
-      );
-      console.log(promise);
-    }
+    sendData(data, validForm);
   };
+
+  const validName = nameIsValid || !nameFocus;
+  const validEmail = emailIsValid || !emailFocus;
+  const validMessage = messageIsValid || !messageFocus;
+  const disabled = !nameIsValid || !emailIsValid || !messageIsValid;
+
   return (
     <form className="contact-form" onSubmit={sendMessage}>
-      <input
-        className={`contact-name${
-          nameIsValid.valid || !nameIsValid.focus ? "" : " error"
-        }`}
-        type="text"
-        name="name"
-        value={visitorName}
-        onChange={nameValidation}
-        onFocus={() => {
-          setNameIsValid({ focus: true });
-        }}
-        placeholder="Enter your name"
-        required
-      />
-      <input
-        className={`contact-email${
-          emailIsValid.valid || !emailIsValid.focus ? "" : " error"
-        }`}
-        onChange={emailValidation}
-        onFocus={() => {
-          setEmailIsValid({ focus: true });
-        }}
-        type="email"
-        name="email"
-        value={visitorEmail}
-        placeholder="Enter your email"
-        required
-      />
-      <textarea
-        className={`contact-message${messageIsValid.valid ? "" : " error"}`}
-        minlength="20"
-        maxLength="200"
-        onChange={messageValidation}
-        name="message"
-        value={visitorMessage}
-        placeholder="Want to say something?"
-        required
-      ></textarea>
+      <div className="form-group">
+        <div className="form-label-wrap">
+          <label htmlFor="name">Name</label>
+          {validName ? null : <span>Required</span>}
+        </div>
+        <input
+          id="name"
+          className={`contact-name${validName ? "" : " error"}${
+            nameIsValid ? " complete" : ""
+          }`}
+          type="text"
+          name="name"
+          value={visitorName}
+          onChange={nameValidation}
+          onFocus={() => {
+            setNameFocus(true);
+          }}
+          placeholder="Your name"
+          required
+        />
+      </div>
+      <div className="form-group">
+        <div className="form-label-wrap">
+          <label htmlFor="email">Email</label>
+          {validEmail ? null : <span>Please, enter a valid Email</span>}
+        </div>
+        <input
+          id="email"
+          className={`contact-email${validEmail ? "" : " error"}${
+            emailIsValid ? " complete" : ""
+          }`}
+          onChange={emailValidation}
+          onFocus={() => {
+            setEmailFocus(true);
+          }}
+          type="email"
+          name="email"
+          value={visitorEmail}
+          placeholder="you@yourdomain.com"
+          required
+        />
+      </div>
+      <div className="form-group">
+        <div className="form-label-wrap">
+          <label htmlFor="message">Message</label>
+          {validMessage ? null : <span>Enter a small message :)</span>}
+        </div>
+        <textarea
+          id="message"
+          className={`contact-message${validMessage ? "" : " error"}${
+            messageIsValid ? " complete" : ""
+          }`}
+          minLength="20"
+          maxLength="200"
+          onChange={messageValidation}
+          onFocus={() => {
+            setMessageFocus(true);
+          }}
+          name="message"
+          value={visitorMessage}
+          placeholder="Want to say something?"
+          required
+        ></textarea>
+      </div>
 
-      <br />
       <button
         type="submit"
-        className="contact-submit"
-        disabled={
-          !nameIsValid.valid || !emailIsValid.valid || !messageIsValid.valid
+        className={
+          disabled ? "contact-submit-disabled" : "contact-submit-enabled"
         }
+        disabled={disabled}
       >
         <span>Send</span>
       </button>
