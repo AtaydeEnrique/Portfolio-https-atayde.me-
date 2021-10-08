@@ -27,6 +27,8 @@ const Cursor = () => {
           setOnlink("text big");
         } else if (e.target.closest('div[class="infinite"]') !== null) {
           setOnlink("inf big");
+        } else if (e.target.closest('div[class="skill-card"]') !== null) {
+          setOnlink("skill big");
         } else {
           setOnlink("small");
         }

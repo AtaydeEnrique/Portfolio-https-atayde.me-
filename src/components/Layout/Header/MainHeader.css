@@ -8,9 +8,7 @@
 }
 
 .sticky {
-  position: sticky;
-}
-.sticky {
+  position: -webkit-sticky;
   position: sticky;
 }
 

@@ -1,0 +1,58 @@
+.skill-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.skill-title {
+  font-size: var(--title-font);
+}
+
+.skill-group {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 50px;
+  animation: pop-up 1s ease-in;
+}
+
+.skill-thinking {
+  display: inherit;
+  align-items: left;
+  justify-content: center;
+  flex-direction: column;
+  flex-basis: 20%;
+  font-size: 3.2vw;
+  background: url("https://i.imgur.com/aU0lEX3.gif");
+  background-size: 7%;
+  background-attachment: fixed;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.skill-descrption {
+  flex-direction: column;
+  flex-basis: 71%;
+}
+
+.skill-descrption h2 {
+  background-color: white;
+  -webkit-text-stroke: 1px black;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap;
+  font-weight: 100;
+  font-size: 3vw;
+}
+
+@keyframes pop-up {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}

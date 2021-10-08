@@ -53,6 +53,13 @@
   mix-blend-mode: exclusion;
 }
 
+.cursor-skill {
+  background: var(--brand-color2);
+  mix-blend-mode: difference;
+  width: 120px !important;
+  height: 120px !important;
+}
+
 .cursor-canvas {
   touch-action: none;
   opacity: 0.05;

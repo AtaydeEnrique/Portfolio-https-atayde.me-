@@ -13,9 +13,9 @@ const Form = ({ sendData, isLoading }) => {
   const [messageFocus, setMessageFocus] = useState(false);
 
   const nameValidation = (e) => {
-    const name = e.target.value.trim();
+    const name = e.target.value;
     setVisitorName(name);
-    if (name && name.length < 30 && nameFocus) {
+    if (name.trim().length > 1 && name.length < 30 && nameFocus) {
       setNameIsValid(true);
     } else {
       setNameIsValid(false);
@@ -33,9 +33,9 @@ const Form = ({ sendData, isLoading }) => {
   };
 
   const messageValidation = (e) => {
-    const message = e.target.value.trim();
+    const message = e.target.value;
     setVisitorMessage(message);
-    if (message && message.length > 10 && message.length < 200 && emailFocus) {
+    if (message.length > 10 && message.length < 200 && messageFocus) {
       setMessageIsValid(true);
     } else {
       setMessageIsValid(false);

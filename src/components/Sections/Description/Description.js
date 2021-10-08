@@ -1,8 +1,8 @@
 const Description = () => {
   return (
-    <section>
+    <section className="description">
       <div>
-        <p>I'm</p>
+        <p>I and refined strategy by using technology</p>
       </div>
       <div></div>
       <div></div>

@@ -36,6 +36,7 @@ body {
   --brand-color4: #80ffdb;
   --spinner-offset: 187;
   --spinner-duration: 1.4s;
+  --title-font: 5vw;
 }
 
 ::-webkit-scrollbar {

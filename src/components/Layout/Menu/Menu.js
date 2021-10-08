@@ -1,7 +1,7 @@
 import { Transition } from "react-transition-group";
 import "./Menu.css";
 
-const Menu = ({ entered, hovered, close }) => {
+const Menu = ({ entered, hovered, close, setKraken }) => {
   const hoverClass = hovered ? "menu-focus" : "menu-unfocused";
   return (
     <Transition in={entered} timeout={500} mountOnEnter unmountOnExit>
