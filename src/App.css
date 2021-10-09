@@ -7,7 +7,15 @@ section {
   margin: 30px auto;
   min-width: 75%;
 }
-
+.color-waves {
+  width: 100%;
+  height: 544px;
+  background: url("./assets/waves.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  z-index: -2;
+}
 .last {
   margin-bottom: 0;
 }

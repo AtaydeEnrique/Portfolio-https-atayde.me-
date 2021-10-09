@@ -11,6 +11,10 @@ import pythonFront from "../../../assets/langs/pythonfront.svg";
 import pythonBack from "../../../assets/langs/pythonback.svg";
 import mongodbFront from "../../../assets/langs/mongodbfront.svg";
 import mongodbBack from "../../../assets/langs/mongodbback.svg";
+import postgresqlFront from "../../../assets/langs/postgresqlfront.svg";
+import postgresqlBack from "../../../assets/langs/postgresqlback.svg";
+import mysqlFront from "../../../assets/langs/mysqlfront.svg";
+import mysqlBack from "../../../assets/langs/mysqlback.svg";
 import nodejsFront from "../../../assets/langs/nodejsfront.svg";
 import nodejsBack from "../../../assets/langs/nodejsback.svg";
 
@@ -24,6 +28,22 @@ const SkillBE = () => {
           bottom={mongodbBack}
           desc="MongoDB"
           alt="MongoDB"
+        />
+      </SwiperSlide>
+      <SwiperSlide>
+        <SkillCard
+          top={postgresqlFront}
+          bottom={postgresqlBack}
+          desc="PostgreSQL"
+          alt="PostgreSQL"
+        />
+      </SwiperSlide>
+      <SwiperSlide>
+        <SkillCard
+          top={mysqlFront}
+          bottom={mysqlBack}
+          desc="MySQL"
+          alt="MySQL"
         />
       </SwiperSlide>
       <SwiperSlide>

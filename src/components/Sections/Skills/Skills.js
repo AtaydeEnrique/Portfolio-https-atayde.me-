@@ -1,20 +1,15 @@
-import gitFront from "../../../assets/langs/gitfront.svg";
-import gitBack from "../../../assets/langs/gitback.svg";
-import figmaFront from "../../../assets/langs/figmafront.svg";
-import figmaBack from "../../../assets/langs/figmaback.svg";
-import photoshopFront from "../../../assets/langs/photoshopfront.svg";
-import photoshopBack from "../../../assets/langs/photoshopback.svg";
-
 import "./Skills.css";
 import SkillFE from "./SkillFE";
 import SkillBE from "./SkillBE";
+import SkillUX from "./SkillUX";
+import SkillTEC from "./SkillTEC";
 
 const Skills = () => {
   return (
     <section id="skills">
       <div className="skill-container">
-        <h1 className="skill-title">.skills</h1>
-        <div className="skill-group">
+        <h1 className="skill-title lax lax_preset_fadeInOut:309:0 ">.skills</h1>
+        <div className="skill-group lax lax_preset_fadeInOut:309:0">
           <div className="skill-thinking">
             <h3>design.</h3>
           </div>
@@ -23,10 +18,10 @@ const Skills = () => {
             <p>blablablablablabla</p>
           </div>
         </div>
-        <div className="skill-set">
+        <div className="skill-set ">
           <SkillFE />
         </div>
-        <div className="skill-group">
+        <div className="skill-group lax lax_preset_fadeInOut:309:0">
           <div className="skill-thinking">
             <h3>develop.</h3>
           </div>
@@ -38,14 +33,29 @@ const Skills = () => {
         <div className="skill-set">
           <SkillBE />
         </div>
-        <div className="skill-group">
+        <div className="skill-group lax lax_preset_fadeInOut:309:0">
           <div className="skill-thinking">
             <h3>create.</h3>
           </div>
           <div className="skill-description">
-            <h2>UX // UI // TYPOGRAPHY // STRATEGY </h2>
+            <h2>UX // UI // TYPOGRAPHY // </h2>
             <p>blablablablablabla</p>
           </div>
+        </div>
+        <div className="skill-set2">
+          <SkillUX />
+        </div>
+        <div className="skill-group lax lax_preset_fadeInOut:309:0">
+          <div className="skill-thinking">
+            <h3>connect.</h3>
+          </div>
+          <div className="skill-description">
+            <h2>TECHNOLOGIES // </h2>
+            <p>blablablablablabla</p>
+          </div>
+        </div>
+        <div className="skill-set2">
+          <SkillTEC />
         </div>
       </div>
     </section>

@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import lax from "lax.js";
 
 import MainHeader from "./components/Layout/Header/MainHeader";
 import Home from "./components/Sections/Home/Home";
@@ -12,6 +13,14 @@ import Skills from "./components/Sections/Skills/Skills";
 // import Goo from "./components/UI/Goo/Goo";
 
 const App = () => {
+  useEffect(() => {
+    window.onload = function () {
+      lax.init();
+      lax.addDriver("scrollY", function () {
+        return window.scrollY;
+      });
+    };
+  }, []);
   const [kraken, setKraken] = useState(false);
 
   window.onbeforeunload = () => {
@@ -39,6 +48,8 @@ const App = () => {
 
   return (
     <div className={`app`}>
+      <div className="color-waves lax lax_preset_fadeOut:309:0 "></div>
+
       {/* <Goo /> */}
       <Cursor />
       <MainHeader
