@@ -18,27 +18,31 @@ const Skills = () => {
           <div className="skill-thinking">
             <h3>design.</h3>
           </div>
-          <div className="skill-descrption">
+          <div className="skill-description">
             <h2>FRONT-END // </h2>
             <p>blablablablablabla</p>
           </div>
         </div>
-        <SkillFE />
+        <div className="skill-set">
+          <SkillFE />
+        </div>
         <div className="skill-group">
           <div className="skill-thinking">
             <h3>develop.</h3>
           </div>
-          <div className="skill-descrption">
+          <div className="skill-description">
             <h2>BACK-END // </h2>
             <p>blablablablablabla</p>
           </div>
         </div>
-        <SkillBE />
+        <div className="skill-set">
+          <SkillBE />
+        </div>
         <div className="skill-group">
           <div className="skill-thinking">
             <h3>create.</h3>
           </div>
-          <div className="skill-descrption">
+          <div className="skill-description">
             <h2>UX // UI // TYPOGRAPHY // STRATEGY </h2>
             <p>blablablablablabla</p>
           </div>

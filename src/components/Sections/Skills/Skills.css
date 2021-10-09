@@ -17,6 +17,12 @@
   animation: pop-up 1s ease-in;
 }
 
+.skill-set {
+  width: 100%;
+  margin-top: 35px;
+  cursor: grab;
+}
+
 .skill-thinking {
   display: inherit;
   align-items: left;
@@ -31,12 +37,12 @@
   -webkit-text-fill-color: transparent;
 }
 
-.skill-descrption {
+.skill-description {
   flex-direction: column;
   flex-basis: 71%;
 }
 
-.skill-descrption h2 {
+.skill-description h2 {
   background-color: white;
   -webkit-text-stroke: 1px black;
   -webkit-background-clip: text;

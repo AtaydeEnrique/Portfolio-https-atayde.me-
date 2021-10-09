@@ -1,6 +1,9 @@
-import Carousel, { slidesToShowPlugin } from "@brainhubeu/react-carousel";
 import SkillCard from "./SkillCard";
-import "./Carousel/Carousel.css";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/swiper-bundle.min.css";
+import "swiper/swiper.min.css";
+
+import SwiperCore, { Pagination, Navigation } from "swiper";
 
 import jsFront from "../../../assets/langs/jsfront.svg";
 import jsBack from "../../../assets/langs/jsback.svg";
@@ -18,38 +21,52 @@ import bulmaFront from "../../../assets/langs/bulmafront.svg";
 import bulmaBack from "../../../assets/langs/bulmaback.svg";
 
 const SkillFE = () => {
+  SwiperCore.use([Pagination, Navigation]);
   return (
-    <Carousel
-      plugins={[
-        "infinite",
-        "arrows",
-        {
-          resolve: slidesToShowPlugin,
-          options: {
-            numberOfSlides: 4,
-          },
-        },
-      ]}
-    >
-      <SkillCard top={jsFront} bottom={jsBack} desc="JS" alt="js" />
-      <SkillCard top={cssFront} bottom={cssBack} desc="CSS" alt="CSS" />
-      <SkillCard top={htmlFront} bottom={htmlBack} desc="HTML5" alt="HTML5" />
-      <SkillCard
-        top={reactFront}
-        bottom={reactBack}
-        desc="React"
-        alt="React"
-        classN="spin"
-      />
-      <SkillCard top={reduxFront} bottom={reduxBack} desc="Redux" alt="Redux" />
-      <SkillCard
-        top={bootstrapFront}
-        bottom={bootstrapBack}
-        desc="Bootstrap 5"
-        alt="Bootstrap 5"
-      />
-      <SkillCard top={bulmaFront} bottom={bulmaBack} desc="Bulma" alt="Bulma" />
-    </Carousel>
+    <Swiper slidesPerView={4} freeMode={true} loop={true} navigation={true}>
+      <SwiperSlide>
+        <SkillCard top={jsFront} bottom={jsBack} desc="JS" alt="js" />
+      </SwiperSlide>
+      <SwiperSlide>
+        <SkillCard top={cssFront} bottom={cssBack} desc="CSS" alt="CSS" />
+      </SwiperSlide>
+      <SwiperSlide>
+        <SkillCard top={htmlFront} bottom={htmlBack} desc="HTML5" alt="HTML5" />
+      </SwiperSlide>
+      <SwiperSlide>
+        <SkillCard
+          top={reactFront}
+          bottom={reactBack}
+          desc="React"
+          alt="React"
+          classN="spin"
+        />
+      </SwiperSlide>
+      <SwiperSlide>
+        <SkillCard
+          top={reduxFront}
+          bottom={reduxBack}
+          desc="Redux"
+          alt="Redux"
+        />
+      </SwiperSlide>
+      <SwiperSlide>
+        <SkillCard
+          top={bootstrapFront}
+          bottom={bootstrapBack}
+          desc="Bootstrap 5"
+          alt="Bootstrap 5"
+        />
+      </SwiperSlide>
+      <SwiperSlide>
+        <SkillCard
+          top={bulmaFront}
+          bottom={bulmaBack}
+          desc="Bulma"
+          alt="Bulma"
+        />
+      </SwiperSlide>
+    </Swiper>
   );
 };
 
