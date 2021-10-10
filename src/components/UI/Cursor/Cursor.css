@@ -60,6 +60,15 @@
   height: 120px !important;
 }
 
+.cursor-anim {
+  background: var(--brand-color3);
+  mix-blend-mode: difference;
+  width: 220px !important;
+  height: 220px !important;
+  left: -110px !important;
+  top: -100px !important;
+}
+
 .cursor-canvas {
   touch-action: none;
   opacity: 0.05;

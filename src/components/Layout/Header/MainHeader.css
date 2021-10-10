@@ -5,11 +5,7 @@
   width: 100%;
   min-width: 85%;
   z-index: 10;
-}
-
-.sticky {
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
 }
 
 .navbar {
@@ -27,7 +23,7 @@
 }
 
 .brand-logo path:nth-child(4):hover {
-  fill: var(--brand-color1);
+  fill: #8b123d;
 }
 .brand-logo path:nth-child(3):hover {
   fill: var(--brand-color2);

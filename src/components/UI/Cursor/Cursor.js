@@ -23,12 +23,22 @@ const Cursor = () => {
           setOnlink("skills big");
         } else if (e.target.closest('li a[href="#contact"]') !== null) {
           setOnlink("contact big");
-        } else if (e.target.closest('div[class="trainer"]') !== null) {
-          setOnlink("text big");
-        } else if (e.target.closest('div[class="infinite"]') !== null) {
+        }
+        // else if (e.target.closest('div[class="trainer"]') !== null) {
+        //   setOnlink("text big");
+        // }
+        else if (e.target.closest('div[class="infinite"]') !== null) {
           setOnlink("inf big");
         } else if (e.target.closest('div[class="skill-card"]') !== null) {
           setOnlink("skill big");
+        } else if (e.target.closest('div[class="footer-info"]') !== null) {
+          setOnlink("small");
+        } else if (
+          e.target.closest(
+            'div[class="dot-divider"], div[class="waves-footer"]'
+          ) !== null
+        ) {
+          setOnlink("anim big");
         } else {
           setOnlink("small");
         }

@@ -8,8 +8,8 @@ const Skills = () => {
   return (
     <section id="skills">
       <div className="skill-container">
-        <h1 className="skill-title lax lax_preset_fadeInOut:309:0 ">.skills</h1>
-        <div className="skill-group lax lax_preset_fadeInOut:309:0">
+        <h1 className="skill-title lax lax_preset_fadeInOut:309">.skills</h1>
+        <div className="skill-group lax lax_preset_fadeInOut:309">
           <div className="skill-thinking">
             <h3>design.</h3>
           </div>
@@ -21,7 +21,7 @@ const Skills = () => {
         <div className="skill-set ">
           <SkillFE />
         </div>
-        <div className="skill-group lax lax_preset_fadeInOut:309:0">
+        <div className="skill-group lax lax_preset_fadeInOut:309">
           <div className="skill-thinking">
             <h3>develop.</h3>
           </div>
@@ -33,7 +33,7 @@ const Skills = () => {
         <div className="skill-set">
           <SkillBE />
         </div>
-        <div className="skill-group lax lax_preset_fadeInOut:309:0">
+        <div className="skill-group lax lax_preset_fadeInOut:309">
           <div className="skill-thinking">
             <h3>create.</h3>
           </div>
@@ -45,7 +45,7 @@ const Skills = () => {
         <div className="skill-set2">
           <SkillUX />
         </div>
-        <div className="skill-group lax lax_preset_fadeInOut:309:0">
+        <div className="skill-group lax lax_preset_fadeInOut:309">
           <div className="skill-thinking">
             <h3>connect.</h3>
           </div>

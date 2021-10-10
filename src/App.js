@@ -48,8 +48,7 @@ const App = () => {
 
   return (
     <div className={`app`}>
-      <div className="color-waves lax lax_preset_fadeOut:309:0 "></div>
-
+      <div className="color-waves"></div>
       {/* <Goo /> */}
       <Cursor />
       <MainHeader
@@ -63,6 +62,7 @@ const App = () => {
         }}
       />
       <ScrollingText text="RESEARCH. STUDY. PRACTICE. BUILD." />
+      <div className="dot-divider"></div>
       <Skills />
       <section className="last">
         <p>
@@ -151,13 +151,18 @@ const App = () => {
           reiciendis iste cupiditate ab adipisci, nihil atque voluptatem.
         </p>
       </section>
+      <Footer
+        onClose={() => {
+          setKraken((k) => !k);
+          console.log(kraken);
+        }}
+      />
       <ContactMenu
         kraken={kraken}
         onClose={() => {
           setKraken((k) => !k);
         }}
       />
-      <Footer />
     </div>
   );
 };

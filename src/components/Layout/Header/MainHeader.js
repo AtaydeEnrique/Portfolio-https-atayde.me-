@@ -28,7 +28,7 @@ const MainHeader = ({ overflowHandler, kraken, closeContactMenu }) => {
     offset === 0 || menu ? "brand-logo" : "brand-logo scrolled";
 
   return (
-    <header className={`header-wrap${offset === 0 ? "" : " sticky"}`}>
+    <header className={`header-wrap`}>
       <nav className={`navbar${offset === 0 ? "" : " scrolled"}`}>
         <ul className="navbar-nav">
           <li className="brand">
