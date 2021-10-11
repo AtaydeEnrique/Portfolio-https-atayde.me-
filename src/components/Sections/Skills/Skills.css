@@ -1,3 +1,6 @@
+#skills {
+  scroll-margin-top: 80px;
+}
 .skill-container {
   display: flex;
   align-items: center;
@@ -59,7 +62,24 @@
   font-weight: 100;
   font-size: 3vw;
 }
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  transform: scale(0.7);
+  color: var(--brand-color1) !important;
+  transition: 1s ease-out;
+}
 
+.swiper-button-next:hover:after,
+.swiper-button-prev:hover:after {
+  transform: scale(0.8);
+  color: var(--brand-color3) !important;
+  transition: 0.5 ease-in;
+}
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 @keyframes pop-up {
   from {
     opacity: 0;
