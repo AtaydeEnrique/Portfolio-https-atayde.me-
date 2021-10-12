@@ -6,6 +6,9 @@
   min-width: 85%;
   z-index: 10;
   position: fixed;
+  opacity: 1;
+  transition: transform 1s;
+  animation: menu-slide 1s ease-in;
 }
 
 .navbar {
@@ -126,4 +129,13 @@ li.nav-menu.collapsed:hover .line:last-child {
 .collapsed .line:nth-child(3) {
   transform: rotate(-45deg) translatey(-10px);
   transition: 100ms ease-in;
+}
+
+@keyframes menu-slide {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

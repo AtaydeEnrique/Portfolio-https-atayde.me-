@@ -8,7 +8,7 @@ import Spinner from "../../UI/Spinner/Spinner";
 import Form from "./Form/Form";
 import SuccessScreen from "./SuccessScreen/SuccessScreen";
 
-const ContactMenu = ({ onClose, kraken }) => {
+const ContactMenu = ({ onClose, kraken, hideMenuHandler }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [didLoad, setDidLoad] = useState(null);
 
@@ -17,7 +17,7 @@ const ContactMenu = ({ onClose, kraken }) => {
     if (validForm) {
       try {
         const promise = await fetch(
-          "https://send.pageclip.co/1KVcle4hvDDKpiHxudAkQ2r38p6ZvT5k",
+          `https://send.pageclip.co/${process.env.REACT_APP_VERCEL_KEY}`,
           {
             method: "POST",
             body: JSON.stringify(data),
@@ -29,12 +29,14 @@ const ContactMenu = ({ onClose, kraken }) => {
         );
         if (promise.ok) {
           setDidLoad(true);
+          hideMenuHandler();
           setTimeout(() => {
             onClose();
+            hideMenuHandler();
           }, 5000);
           setTimeout(() => {
             setDidLoad(null);
-          }, 10000);
+          }, 9000);
         }
       } catch {
         setDidLoad(false);

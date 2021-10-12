@@ -32,7 +32,7 @@ section {
   margin-bottom: 0;
 }
 .hidden {
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
 .fixed {

@@ -13,6 +13,8 @@ import Skills from "./components/Sections/Skills/Skills";
 // import Goo from "./components/UI/Goo/Goo";
 
 const App = () => {
+  const [kraken, setKraken] = useState(false);
+  const [messageSent, setMessageSent] = useState(false);
   useEffect(() => {
     window.onload = function () {
       lax.init();
@@ -21,7 +23,6 @@ const App = () => {
       });
     };
   }, []);
-  const [kraken, setKraken] = useState(false);
 
   window.onbeforeunload = () => {
     window.scrollTo(0, 0);
@@ -47,15 +48,17 @@ const App = () => {
   };
 
   return (
-    <div className={`app`}>
+    <div className={`app ${kraken ? " hidden" : ""}`}>
       <div className="color-waves"></div>
       {/* <Goo /> */}
       <Cursor />
-      <MainHeader
-        overflowHandler={overflowHandler}
-        closeContactMenu={closeKraken}
-        kraken={kraken}
-      />
+      {!messageSent && (
+        <MainHeader
+          overflowHandler={overflowHandler}
+          closeContactMenu={closeKraken}
+          kraken={kraken}
+        />
+      )}
       <Home
         onClick={() => {
           setKraken((k) => !k);
@@ -158,6 +161,9 @@ const App = () => {
         }}
       />
       <ContactMenu
+        hideMenuHandler={() => {
+          setMessageSent((k) => !k);
+        }}
         kraken={kraken}
         onClose={() => {
           setKraken((k) => !k);

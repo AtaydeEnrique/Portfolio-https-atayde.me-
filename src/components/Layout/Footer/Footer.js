@@ -6,7 +6,7 @@ import linkedInSVG from "../../../assets/contact/linkedin.svg";
 const Footer = ({ onClose }) => {
   return (
     <footer>
-      <div className="waves-footer">
+      <div id="contact" className="waves-footer">
         <div className="footer-info">
           <div className="contact-items lax lax_preset_fadeInOut:280">
             <div className="item-card">

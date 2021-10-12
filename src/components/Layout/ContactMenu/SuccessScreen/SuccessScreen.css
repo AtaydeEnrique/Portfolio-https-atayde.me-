@@ -16,14 +16,22 @@
   transform-origin: bottom left;
   bottom: 0;
 }
+.text-container.error0 {
+  background-color: var(--brand-color3);
+}
 
+.text-container.error2 {
+  background-color: var(--brand-color1);
+}
+
+.text-container.error4 {
+  background-color: var(--brand-color2);
+}
 .error1 .text,
-.error2 .text,
 .error3 .text {
   font-size: 164px;
 }
-.error1 {
-}
+
 .error1 .text {
   animation: movedown 30s linear infinite;
   animation-delay: -30s;
