@@ -10,6 +10,7 @@ import Footer from "./components/Layout/Footer/Footer";
 import "./App.css";
 import ScrollingText from "./components/UI/ScrollingText/ScrollingText";
 import Skills from "./components/Sections/Skills/Skills";
+import Description from "./components/Sections/Description/Description";
 // import Goo from "./components/UI/Goo/Goo";
 
 const App = () => {
@@ -49,9 +50,6 @@ const App = () => {
 
   return (
     <div className={`app ${kraken ? " hidden" : ""}`}>
-      <div className="color-waves"></div>
-      {/* <Goo /> */}
-      <Cursor />
       {!messageSent && (
         <MainHeader
           overflowHandler={overflowHandler}
@@ -59,11 +57,16 @@ const App = () => {
           kraken={kraken}
         />
       )}
+      <Cursor />
+      <div className="color-waves"></div>
+      {/* <Goo /> */}
+
       <Home
         onClick={() => {
           setKraken((k) => !k);
         }}
       />
+      <Description />
       <ScrollingText text="RESEARCH. STUDY. PRACTICE. BUILD." />
       <div className="dot-divider"></div>
       <Skills />

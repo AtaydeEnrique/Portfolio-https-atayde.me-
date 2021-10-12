@@ -7,6 +7,7 @@ import "./Home.css";
 
 const Home = ({ onClick }) => {
   const [colors, setColors] = useState(false);
+
   return (
     <section id="home-container">
       <div className="trainer">
@@ -25,8 +26,8 @@ const Home = ({ onClick }) => {
           <p>
             I'm a{" "}
             <TypeWriter
-              speed={100}
-              delay1={1000}
+              speed={80}
+              delay1={1500}
               delay2={300}
               text={["Mechatronics Engineer", "FullStack"]}
               emoji={["🤖", "🔧", "💻", "🦾"]}
