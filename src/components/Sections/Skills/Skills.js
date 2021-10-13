@@ -18,7 +18,7 @@ const Skills = () => {
             <p>blablablablablabla</p>
           </div>
         </div>
-        <div className="skill-set ">
+        <div className="skill-set lax lax_preset_fadeInOut:309 ">
           <SkillFE />
         </div>
         <div className="skill-group lax lax_preset_fadeInOut:309">
@@ -30,7 +30,7 @@ const Skills = () => {
             <p>blablablablablabla</p>
           </div>
         </div>
-        <div className="skill-set">
+        <div className="skill-set lax lax_preset_fadeInOut:309">
           <SkillBE />
         </div>
         <div className="skill-group lax lax_preset_fadeInOut:309">
@@ -42,7 +42,7 @@ const Skills = () => {
             <p>blablablablablabla</p>
           </div>
         </div>
-        <div className="skill-set2">
+        <div className="skill-set2 lax lax_preset_fadeInOut:309">
           <SkillUX />
         </div>
         <div className="skill-group lax lax_preset_fadeInOut:309">
@@ -54,7 +54,7 @@ const Skills = () => {
             <p>blablablablablabla</p>
           </div>
         </div>
-        <div className="skill-set2">
+        <div className="skill-set2 lax lax_preset_fadeInOut:309">
           <SkillTEC />
         </div>
       </div>

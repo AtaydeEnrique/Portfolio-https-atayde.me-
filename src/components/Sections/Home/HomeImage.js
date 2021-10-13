@@ -7,7 +7,7 @@ const HomeImage = () => {
   const [style, setStyle] = useState(false);
   const boxRef = useRef();
   const imgRef = useRef();
-
+  const windowWidth = window.innerWidth;
   const mouseMoveHandler = (e) => {
     setStyle(true);
     let rect = boxRef.current;
@@ -51,7 +51,7 @@ const HomeImage = () => {
     >
       <img
         style={
-          style
+          windowWidth > 850 && style
             ? {
                 transform: "perspective(800px)" + rotX + rotY,
               }

@@ -11,16 +11,19 @@ const Menu = ({ entered, hovered, close, setKraken }) => {
             <li>
               <a onClick={close} href="#about" alt="About">
                 About<i></i>
+                <span> 👋</span>
               </a>
             </li>
             <li>
               <a onClick={close} href="#skills" alt="Skills">
                 Skills<i></i>
+                <span> 📐</span>
               </a>
             </li>
             <li>
               <a onClick={close} href="#contact" alt="Contact">
                 Contact<i></i>
+                <span> 📫</span>
               </a>
             </li>
           </ul>

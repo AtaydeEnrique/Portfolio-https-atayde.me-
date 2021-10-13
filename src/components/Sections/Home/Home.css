@@ -5,6 +5,7 @@
   width: 100%;
   margin: 0;
   height: 100vh;
+  transition: 0.3s;
 }
 
 .trainer {
@@ -36,7 +37,7 @@
 
 .contact-btn {
   margin: 80px auto 0 auto;
-  width: 50%;
+  width: 20vw;
   background: white;
   padding: 18px 2vw 18px;
   border-radius: 50px;
@@ -69,6 +70,51 @@
 .menu-scrText {
   transform: rotate(30deg) translateY(-50vw);
   opacity: 0.1;
+}
+
+@media only screen and (max-width: 1250px) {
+}
+@media only screen and (max-width: 850px) {
+  .trainer {
+    flex-direction: column-reverse;
+  }
+  .trainer-headline {
+    flex-basis: 50%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 3.5vw;
+    height: 50%;
+  }
+  .trainer-img {
+    flex-basis: 50%;
+    height: 50%;
+  }
+  .trainer-img img {
+    width: 450px;
+    height: 450px;
+    transform: scale(0.6);
+    margin-top: 100px;
+  }
+  .contact-btn {
+    margin: 40px auto 80px auto;
+    width: 30vw;
+    font-size: 2.5vw;
+  }
+  .country {
+    margin-top: 40px;
+    font-size: 2.2vw;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .trainer-img img {
+    transform: scale(0.5);
+  }
+}
+@media only screen and (max-width: 330px) {
+  .trainer-img img {
+    transform: scale(0.4);
+  }
 }
 
 @keyframes fill-up {

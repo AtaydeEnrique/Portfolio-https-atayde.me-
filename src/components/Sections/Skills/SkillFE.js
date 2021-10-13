@@ -19,11 +19,38 @@ import bootstrapFront from "../../../assets/langs/bootstrapfront.svg";
 import bootstrapBack from "../../../assets/langs/bootstrapback.svg";
 import bulmaFront from "../../../assets/langs/bulmafront.svg";
 import bulmaBack from "../../../assets/langs/bulmaback.svg";
+const responsive = {
+  1: {
+    slidesPerView: 2,
+    spaceBetween: 20,
+  },
+  330: {
+    slidesPerView: 2,
+    spaceBetween: 20,
+  },
+  450: {
+    slidesPerView: 2,
+    spaceBetween: 30,
+  },
+  850: {
+    slidesPerView: 3,
+    spaceBetween: 0,
+  },
+  1250: {
+    slidesPerView: 4,
+    spaceBetween: 40,
+  },
+};
 
 const SkillFE = () => {
   SwiperCore.use([Pagination, Navigation]);
   return (
-    <Swiper slidesPerView={4} freeMode={true} loop={true} navigation={true}>
+    <Swiper
+      freeMode={true}
+      loop={true}
+      navigation={true}
+      breakpoints={responsive}
+    >
       <SwiperSlide>
         <SkillCard top={jsFront} bottom={jsBack} desc="JS" alt="js" />
       </SwiperSlide>
