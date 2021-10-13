@@ -1,5 +1,5 @@
 import { useState, useRef } from "react";
-import pokmnTrainer from "../../../assets/pokemon_trainer.png";
+import pokmnTrainer from "../../../assets/pokemon_trainer.jpg";
 import "./HomeImage.css";
 const HomeImage = () => {
   const [xy, setXY] = useState({ x: 0, y: 0 });

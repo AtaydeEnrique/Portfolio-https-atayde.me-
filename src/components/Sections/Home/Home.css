@@ -20,8 +20,12 @@
   flex-basis: 50%;
   font-weight: 900;
   font-size: 2.5vw;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
   /* font-family: Chihaya; */
 }
+
 .country {
   display: block;
   margin-top: 50px;
@@ -31,13 +35,13 @@
 }
 
 .contact-btn {
-  margin-top: 80px;
+  margin: 80px auto 0 auto;
+  width: 50%;
   background: white;
-  padding: 18px 55px 18px;
+  padding: 18px 2vw 18px;
   border-radius: 50px;
   color: black;
-  font-size: 22px;
-  margin-right: 2em;
+  font-size: 1.5vw;
   border: 1px solid #161616;
   box-shadow: 0 0 0 #161616;
   white-space: nowrap;

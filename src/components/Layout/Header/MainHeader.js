@@ -25,7 +25,7 @@ const MainHeader = ({ overflowHandler, kraken, closeContactMenu }) => {
   }, []);
 
   const brandClass =
-    offset === 0 || menu ? "brand-logo" : "brand-logo scrolled";
+    offset === 0 || kraken || menu ? "brand-logo" : "brand-logo scrolled";
 
   return (
     <header className={`header-wrap`}>
