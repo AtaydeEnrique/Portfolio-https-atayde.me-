@@ -147,7 +147,17 @@ li.nav-menu.collapsed:hover .line:last-child {
     width: 30px;
   }
 }
-@media only screen and (max-width: 450px) {
+
+@media only screen and (max-width: 650px) {
+  .navbar-nav {
+    width: 93%;
+  }
+  .brand {
+    width: 30px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
   .navbar-nav li {
     transform: scale(0.5);
   }
