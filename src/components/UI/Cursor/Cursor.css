@@ -9,13 +9,13 @@
 .cursor-small {
   display: block;
   transition: 250ms ease-out;
-  width: 20px;
-  height: 20px;
-  left: -9px;
-  top: -7px;
+  width: 30px;
+  height: 30px;
+  left: -13px;
+  top: -13px;
   border-radius: 50%;
   z-index: 11000;
-  background: rgb(136, 255, 0);
+  background: #88ff00;
   opacity: 0.8;
 }
 .cursor.big {
@@ -23,41 +23,77 @@
   transition: all 250ms ease-out;
   width: 80px;
   height: 80px;
-  left: -40px;
-  top: -40px;
+  left: -55px;
+  top: -55px;
   border-radius: 50%;
   z-index: 11000;
   opacity: 0.8;
 }
+.cursor2 {
+  transition: all 650ms ease-out;
+  width: 20px !important;
+  height: 20px !important;
+  left: -8px !important;
+  top: -8px !important;
+}
 
+.cursor2.big {
+  transition: all 750ms ease-out;
+  width: 60px !important;
+  height: 60px !important;
+  left: -25px !important;
+  top: -25px !important;
+}
+.cursor-hi {
+  background: var(--brand-color4);
+  mix-blend-mode: lighten;
+  left: -35px !important;
+  top: -35px !important;
+}
 .cursor-about {
   background: var(--brand-color1);
   mix-blend-mode: lighten;
+  left: -35px !important;
+  top: -35px !important;
 }
 .cursor-skills {
   background: var(--brand-color2);
   mix-blend-mode: lighten;
+  left: -35px !important;
+  top: -35px !important;
 }
 .cursor-contact {
   background: var(--brand-color3);
   mix-blend-mode: lighten;
+  left: -35px !important;
+  top: -35px !important;
 }
 
 .cursor-text {
-  background: var(--brand-color4);
-  mix-blend-mode: screen;
+  background: var(--brand-color2);
+  mix-blend-mode: difference;
+  width: 80px !important;
+  height: 80px !important;
+  top: -35px !important;
+  left: -35px !important;
 }
 
 .cursor-inf {
   background: var(--brand-color1);
   mix-blend-mode: exclusion;
+  width: 120px !important;
+  height: 120px !important;
+  top: -50px !important;
+  left: -50px !important;
 }
 
 .cursor-skill {
-  background: var(--brand-color2);
+  background: var(--brand-color1);
   mix-blend-mode: difference;
   width: 120px !important;
   height: 120px !important;
+  top: -50px !important;
+  left: -50px !important;
 }
 
 .cursor-anim {

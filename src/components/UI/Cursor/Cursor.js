@@ -8,7 +8,8 @@ const Cursor = () => {
   useEffect(() => {
     let clientX = -100;
     let clientY = -100;
-    const innerCursor = document.querySelector(".cursor-small");
+    const innerCursor = document.querySelector(".cursor");
+    const outerCursor = document.querySelector(".cursor2");
 
     const initCursor = () => {
       document.addEventListener("mousemove", (e) => {
@@ -19,17 +20,21 @@ const Cursor = () => {
       document.addEventListener("mouseover", (e) => {
         if (e.target.closest('li a[href="#about"]') !== null) {
           setOnlink("about big");
+        } else if (e.target.closest('li a[href="#home-container"]') !== null) {
+          setOnlink("hi big");
         } else if (e.target.closest('li a[href="#skills"]') !== null) {
           setOnlink("skills big");
         } else if (e.target.closest('li a[href="#contact"]') !== null) {
           setOnlink("contact big");
-        }
-        // else if (e.target.closest('div[class="trainer"]') !== null) {
-        //   setOnlink("text big");
-        // }
-        else if (e.target.closest('div[class="infinite"]') !== null) {
+        } else if (e.target.closest('div[class="parallax-effect"]') !== null) {
+          setOnlink("text big");
+        } else if (e.target.closest('div[class="infinite"]') !== null) {
           setOnlink("inf big");
-        } else if (e.target.closest('div[class="skill-card"]') !== null) {
+        } else if (
+          e.target.closest(
+            'div[class="skill-card"], div[class="work-box_content"]'
+          ) !== null
+        ) {
           setOnlink("skill big");
         } else if (e.target.closest('div[class="footer-info"]') !== null) {
           setOnlink("small");
@@ -46,6 +51,7 @@ const Cursor = () => {
 
       const render = () => {
         innerCursor.style.transform = `translate(${clientX}px, ${clientY}px)`;
+        outerCursor.style.transform = `translate(${clientX}px, ${clientY}px)`;
         requestAnimationFrame(render);
       };
       requestAnimationFrame(render);
@@ -57,6 +63,7 @@ const Cursor = () => {
   return (
     <Fragment>
       <div className={`cursor cursor-${onLink}`}></div>
+      <div className={`cursor cursor-${onLink} cursor2`}></div>
       {/* <canvas className="cursor cursor-canvas" resize="true"></canvas> */}
     </Fragment>
   );

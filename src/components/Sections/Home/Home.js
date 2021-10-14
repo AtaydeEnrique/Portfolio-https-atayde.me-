@@ -3,7 +3,6 @@ import { useState } from "react";
 import TypeWriter from "../../UI/TypeWriter/TypeWriter";
 import HomeImage from "./HomeImage";
 import "./Home.css";
-// import ScrollingText from "../../UI/ScrollingText/ScrollingText";
 
 const Home = ({ onClick }) => {
   const [colors, setColors] = useState(false);
@@ -51,12 +50,6 @@ const Home = ({ onClick }) => {
         </div>
         <HomeImage />
       </div>
-      {/* <ScrollingText
-        direction="right"
-        abs={true}
-        customClass="menu-scrText"
-        text="WORK. WORK. WORK. WORK."
-      /> */}
     </section>
   );
 };

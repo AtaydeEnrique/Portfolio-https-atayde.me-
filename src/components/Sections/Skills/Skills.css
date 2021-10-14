@@ -1,5 +1,6 @@
 #skills {
   scroll-margin-top: 80px;
+  margin-bottom: 100px;
 }
 .skill-container {
   display: flex;
@@ -121,7 +122,7 @@
     height: 115px !important;
   }
   .skill-card {
-    transform: scale(0.6);
+    transform: scale(0.57);
   }
   .swiper-button-next:after,
   .swiper-button-prev:after {

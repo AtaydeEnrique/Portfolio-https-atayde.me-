@@ -1,7 +1,7 @@
 import { Fragment, useState } from "react";
 import ReactDOM from "react-dom";
 
-import Menu from "../../Layout/Menu/Menu";
+import Menu from "../../Layout/Menus/Menu";
 import "./MenuModal.css";
 
 const portalElement = document.querySelector("#overlays");

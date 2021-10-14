@@ -1,0 +1,98 @@
+.backdrop-works,
+.backdrop-works-closing {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 99;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.backfrop-works {
+  animation: works 1.5s;
+}
+
+.backdrop-left,
+.backdrop-left-closing {
+  opacity: 1;
+  left: 0;
+  width: 100%;
+  max-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--brand-color1);
+}
+.backdrop-left {
+  animation: works-slide 1.5s, 20s works2 infinite;
+}
+
+.backdrop-works-closing {
+  animation: works-exit 1.5s;
+}
+
+.backdrop-left-closing {
+  animation: works-slide-out 1.5s, 20s works2 infinite;
+}
+
+@keyframes works {
+  from {
+    background-color: transparent;
+  }
+  to {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+}
+
+@keyframes works2 {
+  0% {
+    background-color: var(--brand-color1);
+  }
+  25% {
+    background-color: var(--brand-color3);
+  }
+  50% {
+    background-color: var(--brand-color1);
+  }
+  75% {
+    background-color: var(--brand-color3);
+  }
+  100% {
+    background-color: var(--brand-color1);
+  }
+}
+
+@keyframes works-slide {
+  from {
+    opacity: 0;
+    left: 100%;
+  }
+  to {
+    opacity: 1;
+    left: 0;
+  }
+}
+
+@keyframes works-exit {
+  from {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  to {
+    background-color: transparent;
+  }
+}
+
+@keyframes works-slide-out {
+  from {
+    opacity: 1;
+    left: 0;
+  }
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}

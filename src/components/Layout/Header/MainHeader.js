@@ -5,11 +5,15 @@ import MenuModal from "../../UI/Modals/MenuModal";
 import { Transition } from "react-transition-group";
 import "./MainHeader.css";
 
-const MainHeader = ({ overflowHandler, kraken, closeContactMenu }) => {
+const MainHeader = ({ overflowHandler, kraken, closeContactMenu, offset }) => {
   const [menu, setMenu] = useState(false);
-  const [offset, setOffset] = useState(0);
 
   const menuButtonHandler = () => {
+    setMenu((m) => !m);
+    overflowHandler(menu);
+  };
+
+  const liMenuButtonHandler = () => {
     setMenu((m) => !m);
     overflowHandler(menu);
   };
@@ -17,12 +21,6 @@ const MainHeader = ({ overflowHandler, kraken, closeContactMenu }) => {
   const closeContactMenuHandler = () => {
     closeContactMenu();
   };
-
-  useEffect(() => {
-    window.onscroll = () => {
-      setOffset(window.pageYOffset);
-    };
-  }, []);
 
   const brandClass =
     offset === 0 || kraken || menu ? "brand-logo" : "brand-logo scrolled";
@@ -54,7 +52,7 @@ const MainHeader = ({ overflowHandler, kraken, closeContactMenu }) => {
             </li>
           )}
           <Transition in={menu} timeout={1000} mountOnEnter unmountOnExit>
-            {(state) => <MenuModal close={menuButtonHandler} show={state} />}
+            {(state) => <MenuModal close={liMenuButtonHandler} show={state} />}
           </Transition>
         </ul>
       </nav>

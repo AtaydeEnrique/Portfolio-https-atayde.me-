@@ -15,7 +15,7 @@
 .modal-menu li {
   display: inline-block;
   list-style: none;
-  font-size: 6vw;
+  font-size: 5vw;
   text-decoration: none;
   padding: 20px;
   width: 100%;
@@ -28,7 +28,7 @@
   background: #000;
   width: 25px;
   margin: inherit;
-  top: -1.5vw;
+  top: -1.2vw;
   left: 15px;
   position: relative;
   transition: 3s cubic-bezier(0.77, 0, 0.175, 1) all;
@@ -40,7 +40,6 @@
 }
 
 .modal-menu ul li a {
-  opacity: 0.5;
   text-decoration: none;
   color: black;
   transition: opacity 1s;
@@ -52,16 +51,20 @@
 }
 
 .menu-focus li:nth-child(1) > a {
-  color: var(--brand-color1) !important;
+  color: var(--brand-color4) !important;
   transition: color 100ms ease-out;
 }
 .menu-focus li:nth-child(2) > a {
-  color: var(--brand-color2) !important;
-  transition: color 500ms ease-out;
+  color: var(--brand-color1) !important;
+  transition: color 200ms ease-out;
 }
 .menu-focus li:nth-child(3) > a {
+  color: var(--brand-color2) !important;
+  transition: color 300ms ease-out;
+}
+.menu-focus li:nth-child(4) > a {
   color: var(--brand-color3) !important;
-  transition: color 1000ms ease-out;
+  transition: color 400ms ease-out;
 }
 
 .modal-menu ul li > a:hover {
@@ -76,12 +79,31 @@
   transform: translateX(20px);
   transition: opacity 2s ease-out;
 }
+.modal-menu ul {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+}
 
-.modal-menu li:hover span {
+.modal-menu a:hover span {
   opacity: 1;
   transition: 2s ease-out;
 }
+.modal-menu li {
+  opacity: 1;
+  transition: 0.5s;
+}
+.li-opacity {
+  opacity: 0.5 !important;
+  transition: 0.5s;
+}
 
+.li-opacity-true {
+  opacity: 1;
+  transition: 0.5s;
+}
 @media only screen and (max-width: 850px) {
   .modal-menu ul {
     text-align: center;

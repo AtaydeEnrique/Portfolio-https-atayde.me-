@@ -106,14 +106,14 @@ li:hover .line:last-child {
   transform: translateY(-5px) scale(0.8);
 }
 
-li.nav-menu.collapsed:hover .line:first-child {
+.nav-menu.collapsed:hover .line:first-child {
   display: flex;
   transform: rotate(45deg) translatey(10px);
   background: #c70000;
   width: 100%;
 }
 
-li.nav-menu.collapsed:hover .line:last-child {
+.nav-menu.collapsed:hover .line:last-child {
   transform: rotate(-45deg) translatey(-10px);
   background: #c70000;
   width: 100%;

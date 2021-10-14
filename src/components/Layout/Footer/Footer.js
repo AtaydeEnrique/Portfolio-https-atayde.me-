@@ -40,7 +40,7 @@ const Footer = ({ onClose }) => {
             </div>
             <button
               onClick={onClose}
-              className="footer-btn lax lax_preset_fadeInOut:280"
+              className="btn lax lax_preset_fadeInOut:280"
             >
               Leave a message
             </button>
