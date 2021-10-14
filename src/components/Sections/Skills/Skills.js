@@ -15,7 +15,7 @@ const Skills = () => {
           </div>
           <div className="skill-description">
             <h2>FRONT-END // </h2>
-            <p>blablablablablabla</p>
+            <p>because you want to make a compelling design real, don't you?</p>
           </div>
         </div>
         <div className="skill-set lax lax_preset_fadeInOut:309 ">
@@ -27,7 +27,10 @@ const Skills = () => {
           </div>
           <div className="skill-description">
             <h2>BACK-END // </h2>
-            <p>blablablablablabla</p>
+            <p>
+              because making your projects fully functional is the most
+              important thing.
+            </p>
           </div>
         </div>
         <div className="skill-set lax lax_preset_fadeInOut:309">
@@ -39,7 +42,10 @@ const Skills = () => {
           </div>
           <div className="skill-description">
             <h2>UX // UI // TYPOGRAPHY // </h2>
-            <p>blablablablablabla</p>
+            <p>
+              because understanding your audience's concerns and priorities is
+              fundamental.
+            </p>
           </div>
         </div>
         <div className="skill-set2 lax lax_preset_fadeInOut:309">
@@ -51,7 +57,10 @@ const Skills = () => {
           </div>
           <div className="skill-description">
             <h2>TECHNOLOGIES // </h2>
-            <p>blablablablablabla</p>
+            <p>
+              because keeping communication and an understandable workflow is
+              primordial.
+            </p>
           </div>
         </div>
         <div className="skill-set2 lax lax_preset_fadeInOut:309">

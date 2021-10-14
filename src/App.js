@@ -98,7 +98,7 @@ const App = () => {
           setKraken((k) => !k);
         }}
       />
-      <ScrollIcon />
+      <ScrollIcon offset={offset} />
     </div>
   );
 };

@@ -5,6 +5,15 @@
   bottom: 100px;
   left: 50%;
 }
+.scroll-visible {
+  opacity: 1 !important;
+  transition: opacity 1s;
+}
+
+.scroll-hidden {
+  opacity: 0 !important;
+  transition: opacity 1s;
+}
 
 .scroll-icon {
   position: absolute;
@@ -78,5 +87,13 @@
 @keyframes pulse-scroll {
   to {
     opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .scroll-container {
+    transform: scale(0.7);
+    bottom: 70px;
+    left: 47%;
   }
 }

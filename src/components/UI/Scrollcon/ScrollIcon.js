@@ -1,8 +1,9 @@
 import "./ScrollIcon.css";
 
-const ScrollIcon = () => {
+const ScrollIcon = ({ offset }) => {
+  const offsetClass = offset === 0 ? "scroll-visible" : "scroll-hidden";
   return (
-    <div class="scroll-container">
+    <div class={`scroll-container ${offsetClass}`}>
       <div class="scroll-icon"></div>
       <div class="scroll-icon"></div>
       <div class="scroll-icon"></div>

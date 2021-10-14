@@ -29,7 +29,7 @@ const About = () => {
             <p className="about-description">
               My journey as a programmer started with BASIC when I was 15, then,
               when I started my Bachelor's Degree I rediscovered my passion for
-              programmnig and moved to C++, MATLAB, Python and Java, developing
+              programming and moved to C++, MATLAB, Python and Java, developing
               and publishing some apps and papers for scientific journals.
               <button onClick={menuButtonHandler} className="btn btn-about">
                 See papers
@@ -48,9 +48,9 @@ const About = () => {
               using technology for real-world challenges.
               <br />
               <br />
-              You can expect from me to always be learning everyday and
-              improving everything I do as well as developing myself as an
-              Engineer, but most importantly, as a human being.
+              You can expect from me to always be learning and improving
+              everything I do, as well as developing myself as an Engineer, but
+              most importantly, as a human being.
             </p>
           </div>
           <div className="about-img">

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 import Brand from "../../UI/Brand/Brand";
 import MenuModal from "../../UI/Modals/MenuModal";

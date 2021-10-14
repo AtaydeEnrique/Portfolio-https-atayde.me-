@@ -25,8 +25,8 @@ const WorkMenu = () => {
             In this App, the Scherrer equation is used for calculating the size
             of nanocrystals using the X-ray diffraction (XRD) technique. This
             application becomes a very powerful tool to use in teaching
-            methodologies of engineering students of materials science and
-            nanotechnology engineering.
+            methodologies of engineering to materials science and nanotechnology
+            engineering students.
           </h4>
           <br />
           <h5>JAVA &nbsp;Android Studio</h5>
@@ -48,10 +48,10 @@ const WorkMenu = () => {
           <br />
           <h4>
             A didactic program was developed to perform the analysis of the
-            position of a generic mechanism of four bars. The program was
-            carried out through the mathematical analysis of the closed loop
-            equation of the mechanism and was implemented in the GUIDE platform
-            of MATLAB through functions programmed in the MATLAB environment.
+            position of a generic four bar mechanism. The program was carried
+            out through the mathematical analysis of the closed loop equation of
+            the mechanism and was implemented in the GUIDE platform of MATLAB
+            through functions programmed in the MATLAB environment.
           </h4>
           <br />
           <h5>MATLAB</h5>
