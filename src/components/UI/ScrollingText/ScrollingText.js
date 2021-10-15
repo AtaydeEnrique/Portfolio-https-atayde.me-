@@ -1,14 +1,9 @@
 import "./ScrollingText.css";
 
-const ScrollingText = ({
-  direction = "left",
-  abs = false,
-  customClass = null,
-  text,
-}) => {
+const ScrollingText = ({ direction = "left", customClass = null, text }) => {
   return (
     <div
-      className={`infinite${abs ? " infinite-absolute" : ""}${
+      className={`infinite lax lax_preset_fadeInOut:309${
         customClass ? " " + customClass : ""
       }`}
     >

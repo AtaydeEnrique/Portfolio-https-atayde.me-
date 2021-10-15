@@ -111,6 +111,7 @@
   display: flex;
   align-content: flex-end;
   justify-content: right;
+  animation: handy-up 1000ms forwards;
 }
 .menu-handy-links h5 {
   padding: 10px 40px;
@@ -166,5 +167,14 @@
   }
   to {
     transform: translateX(0px);
+  }
+}
+
+@keyframes handy-up {
+  from {
+    transform: translateY(200px);
+  }
+  to {
+    transform: translateY(0px);
   }
 }
