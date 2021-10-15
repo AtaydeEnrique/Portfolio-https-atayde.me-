@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 import Tilt from "react-parallax-tilt";
+import TypeWriter from "../../UI/TypeWriter/TypeWriter";
 import WorksModal from "../../UI/Modals/WorksModal";
 import { Transition } from "react-transition-group";
 import pokmnTrainer from "../../../assets/pokemon_trainer2.jpg";
@@ -22,7 +23,16 @@ const About = () => {
         tiltMaxAngleY={2}
       >
         <h2 className="about-title">
-          Hi! I'm Ricardo, I craft apps that lead to enjoyable user experiences
+          hi, my name is Ricardo{" "}
+          <TypeWriter
+            speed={100}
+            delay1={6000}
+            delay2={300}
+            text={["Atayde", "アタイで"]}
+            emoji={["✌"]}
+            classes="typewriter"
+          />
+          . I craft apps that lead to enjoyable user experiences
         </h2>
         <div className="about-wrapper inner-element">
           <div className="about-headline">

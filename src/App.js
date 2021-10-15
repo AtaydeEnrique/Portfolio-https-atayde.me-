@@ -38,11 +38,13 @@ const App = () => {
     window.onscroll = () => {
       setOffset(window.pageYOffset);
     };
+    window.onblur = () => {
+      document.title = "Come back! 🙃";
+    };
+    window.onfocus = () => {
+      document.title = "Atayde ――――";
+    };
   }, []);
-
-  window.onbeforeunload = () => {
-    window.scrollTo(0, 0);
-  };
 
   if (kraken) {
     document.body.classList.add("hidden");
@@ -61,6 +63,10 @@ const App = () => {
 
   const closeKraken = () => {
     setKraken((k) => !k);
+  };
+
+  window.onbeforeunload = () => {
+    window.scrollTo(0, 0);
   };
 
   return (

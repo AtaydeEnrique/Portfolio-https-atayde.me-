@@ -93,7 +93,7 @@
 @media only screen and (max-width: 850px) {
   .scroll-container {
     transform: scale(0.7);
-    bottom: 70px;
+    bottom: 50px;
     left: 47%;
   }
 }

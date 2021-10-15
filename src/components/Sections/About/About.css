@@ -7,7 +7,7 @@
 .about-title {
   margin-top: 150px;
   font-size: 3.5vw;
-  margin-bottom: 30px;
+  margin-bottom: 80px;
   width: 75%;
 }
 .parallax-effect {
@@ -33,7 +33,7 @@
 
 .about-img img {
   width: 75%;
-  border-radius: 5%;
+  border-radius: 50%;
   box-shadow: 10px 15px 1px black;
   animation: box-shadow 8s infinite;
 }

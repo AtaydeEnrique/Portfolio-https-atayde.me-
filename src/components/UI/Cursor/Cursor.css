@@ -83,8 +83,8 @@
   mix-blend-mode: exclusion;
   width: 120px !important;
   height: 120px !important;
-  top: -50px !important;
-  left: -50px !important;
+  top: -55px !important;
+  left: -55px !important;
 }
 
 .cursor-skill {
@@ -92,8 +92,8 @@
   mix-blend-mode: difference;
   width: 120px !important;
   height: 120px !important;
-  top: -50px !important;
-  left: -50px !important;
+  top: -55px !important;
+  left: -55px !important;
 }
 
 .cursor-anim {

@@ -29,7 +29,7 @@ const Home = ({ onClick }) => {
               delay1={1500}
               delay2={300}
               text={["Mechatronics Engineer", "FullStack"]}
-              emoji={["🤖", "🔧", "💻", "🦾"]}
+              emoji={["🤖", "🔧", "💻", "📱"]}
               classes="typewriter"
             />
             , focused on creating... asdasdd

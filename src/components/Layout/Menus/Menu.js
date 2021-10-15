@@ -119,6 +119,29 @@ const Menu = ({ entered, hovered, close }) => {
               </a>
             </li>
           </ul>
+          <div className="menu-handy-links">
+            <a
+              href="https://github.com/AtaydeEnrique"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <h5>Resume</h5>
+            </a>
+            <a
+              href="https://github.com/AtaydeEnrique"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <h5>GitHub</h5>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/ataydericardo/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <h5>LinkedIn</h5>
+            </a>
+          </div>
         </div>
       )}
     </Transition>
