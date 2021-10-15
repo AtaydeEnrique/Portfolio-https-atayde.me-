@@ -1,66 +1,27 @@
-import { useState, useRef } from "react";
+import { useState } from "react";
 import pokmnTrainer from "../../../assets/pokemon_trainer.jpg";
+import Tilt from "react-parallax-tilt";
+
 import "./HomeImage.css";
 const HomeImage = () => {
-  const [xy, setXY] = useState({ x: 0, y: 0 });
-  const [rectImg, setRectImg] = useState({ rX: 0, rY: 0 });
-  const [style, setStyle] = useState(false);
-  const boxRef = useRef();
-  const imgRef = useRef();
-  const windowWidth = window.innerWidth;
-  const mouseMoveHandler = (e) => {
-    setStyle(true);
-    let rect = boxRef.current;
-    let inner = imgRef.current;
-    let _x = rect.offsetLeft + Math.floor(rect.offsetWidth / 2);
-    let _y = rect.offsetTop + Math.floor(rect.offsetHeight / 2);
-    setXY({
-      x: e.clientX - _x,
-      y: (e.clientY - _y) * -1,
-    });
-    setRectImg({ rX: inner.offsetWidth, rY: inner.offsetHeight });
-  };
-
-  let rotX = 0;
-  let rotY = 0;
-  if (xy.y > 0 && xy.x > 0) {
-    rotX = "rotateX(" + (xy.x / rectImg.rX / 2).toFixed(2) * 30 + "deg)";
-    rotY = "rotateY(" + (xy.y / rectImg.rY / 2).toFixed(2) * 30 + "deg)";
-  }
-  if (xy.y > 0 && xy.x < 0) {
-    rotX = "rotateX(" + (xy.x / rectImg.rX / 2).toFixed(2) * -30 + "deg)";
-    rotY = "rotateY(" + (xy.y / rectImg.rY / 2).toFixed(2) * -30 + "deg)";
-  }
-  if (xy.y < 0 && xy.x < 0) {
-    rotX = "rotateX(" + (xy.x / rectImg.rX / 2).toFixed(2) * 30 + "deg)";
-    rotY = "rotateY(" + (xy.y / rectImg.rY / 2).toFixed(2) * 30 + "deg)";
-  }
-  if (xy.y < 0 && xy.x > 0) {
-    rotX = "rotateX(" + (xy.x / rectImg.rX / 2).toFixed(2) * -30 + "deg)";
-    rotY = "rotateY(" + (xy.y / rectImg.rY / 2).toFixed(2) * -30 + "deg)";
-  }
-
+  const [hachi, setHachi] = useState(false);
   return (
-    <div
-      className="trainer-img"
-      onMouseMove={mouseMoveHandler}
-      onMouseLeave={() => {
-        setStyle(false);
-      }}
-      ref={boxRef}
-    >
-      <img
-        style={
-          windowWidth > 850 && style
-            ? {
-                transform: "perspective(800px)" + rotX + rotY,
-              }
-            : {}
-        }
-        ref={imgRef}
-        src={pokmnTrainer}
-        alt="Me"
-      />
+    <div className="trainer-img">
+      <Tilt className="parallax-effect" perspective={500} scale={1.02}>
+        <img
+          src={pokmnTrainer}
+          alt="Me"
+          onMouseEnter={() => {
+            setHachi(true);
+          }}
+          onMouseLeave={() => {
+            setHachi(false);
+          }}
+        />
+        <div className={`trainer-img-footer${hachi ? " hachi-visible" : ""}`}>
+          Hachikō!
+        </div>
+      </Tilt>
     </div>
   );
 };

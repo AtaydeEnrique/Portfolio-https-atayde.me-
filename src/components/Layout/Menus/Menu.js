@@ -16,6 +16,7 @@ const Menu = ({ entered, hovered, close }) => {
   const state4 = { 1: false, 2: false, 3: false, 4: true };
 
   const hoverClass = hovered ? "menu-focus" : "menu-unfocused";
+
   return (
     <Transition in={entered} timeout={500} mountOnEnter unmountOnExit>
       {(state) => (
@@ -42,7 +43,7 @@ const Menu = ({ entered, hovered, close }) => {
                 }}
               >
                 hi<i></i>
-                <span> 📐</span>
+                <span> 👋</span>
               </a>
             </li>
             <li
@@ -90,7 +91,7 @@ const Menu = ({ entered, hovered, close }) => {
                 }}
               >
                 about<i></i>
-                <span> 👋</span>
+                <span> 💬</span>
               </a>
             </li>
             <li

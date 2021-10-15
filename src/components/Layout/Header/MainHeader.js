@@ -4,6 +4,7 @@ import Brand from "../../UI/Brand/Brand";
 import MenuModal from "../../UI/Modals/MenuModal";
 import { Transition } from "react-transition-group";
 import "./MainHeader.css";
+const windowWidth = window.innerWidth <= 850;
 
 const MainHeader = ({ overflowHandler, kraken, closeContactMenu, offset }) => {
   const [menu, setMenu] = useState(false);
@@ -13,10 +14,20 @@ const MainHeader = ({ overflowHandler, kraken, closeContactMenu, offset }) => {
     overflowHandler(menu);
   };
 
-  const liMenuButtonHandler = () => {
-    setMenu((m) => !m);
-    overflowHandler(menu);
-  };
+  let liMenuButtonHandler;
+  if (windowWidth) {
+    liMenuButtonHandler = () => {
+      setTimeout(() => {
+        setMenu((m) => !m);
+        overflowHandler(menu);
+      }, 3000);
+    };
+  } else {
+    liMenuButtonHandler = () => {
+      setMenu((m) => !m);
+      overflowHandler(menu);
+    };
+  }
 
   const closeContactMenuHandler = () => {
     closeContactMenu();

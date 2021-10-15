@@ -1,0 +1,181 @@
+.backdrop-loading,
+.backdrop-loading-exit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 99;
+  background-color: var(--brand-color1);
+  transition: opacity 1s;
+}
+
+.backdrop-loading-exit {
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.backdrop-loading svg,
+.backdrop-loading-exit svg {
+  width: 50%;
+}
+
+#DE2 {
+  animation: DE2__opacity__1 2250ms 0ms linear forwards,
+    DE2__opacity__2 750ms 2250ms linear forwards,
+    DE2__opacity__3 500ms 3000ms linear forwards;
+}
+
+@keyframes DE2__opacity__1 {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+@keyframes DE2__opacity__2 {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+@keyframes DE2__opacity__3 {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+#Y2 {
+  animation: Y2__opacity__1 1500ms 0ms linear forwards,
+    Y2__opacity__2 750ms 1500ms linear forwards,
+    Y2__opacity__3 750ms 2250ms linear forwards,
+    Y2__opacity__4 500ms 3000ms linear forwards;
+}
+
+@keyframes Y2__opacity__1 {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+@keyframes Y2__opacity__2 {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+@keyframes Y2__opacity__3 {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+@keyframes Y2__opacity__4 {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+#TA2 {
+  animation: TA2__opacity__1 750ms 0ms linear forwards,
+    TA2__opacity__2 750ms 750ms linear forwards,
+    TA2__opacity__3 1500ms 1500ms linear forwards,
+    TA2__opacity__4 500ms 3000ms linear forwards;
+}
+
+@keyframes TA2__opacity__1 {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+@keyframes TA2__opacity__2 {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+@keyframes TA2__opacity__3 {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+@keyframes TA2__opacity__4 {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+#A1 {
+  animation: A1__opacity__1 750ms 0ms linear forwards,
+    A1__opacity__2 2250ms 750ms linear forwards,
+    A1__opacity__3 500ms 3000ms linear forwards;
+}
+
+@keyframes A1__opacity__1 {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+@keyframes A1__opacity__2 {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+@keyframes A1__opacity__3 {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}

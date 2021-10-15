@@ -1,5 +1,5 @@
 import "./WorkMenu.css";
-import Link from "../../../assets/linkIcon.svg";
+import Link from "../../../assets/misc/linkIcon.svg";
 
 const WorkMenu = () => {
   return (

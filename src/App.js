@@ -13,15 +13,20 @@ import ScrollingText from "./components/UI/ScrollingText/ScrollingText";
 import Skills from "./components/Sections/Skills/Skills";
 import Description from "./components/Sections/Description/Description";
 import ScrollIcon from "./components/UI/Scrollcon/ScrollIcon";
+import LoadModal from "./components/UI/Modals/LoadModal";
 // import Goo from "./components/UI/Goo/Goo";
 
 const App = () => {
+  const [loadingModal, setLoadingModal] = useState(true);
   const [kraken, setKraken] = useState(false);
   const [messageSent, setMessageSent] = useState(false);
   const [offset, setOffset] = useState(0);
 
   useEffect(() => {
     window.onload = function () {
+      setTimeout(() => {
+        setLoadingModal(false);
+      }, 4500);
       lax.init();
       lax.addDriver("scrollY", function () {
         return window.scrollY;
@@ -60,6 +65,7 @@ const App = () => {
 
   return (
     <div className={`app ${kraken ? " hidden" : ""}`}>
+      {loadingModal && <LoadModal loading={loadingModal} />}
       {!messageSent && (
         <MainHeader
           overflowHandler={overflowHandler}
