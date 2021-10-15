@@ -141,6 +141,7 @@ const Menu = ({ entered, hovered, close }) => {
             >
               <h5>LinkedIn</h5>
             </a>
+            <i></i>
           </div>
         </div>
       )}

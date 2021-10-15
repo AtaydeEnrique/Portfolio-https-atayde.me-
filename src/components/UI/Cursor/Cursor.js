@@ -28,7 +28,9 @@ const Cursor = () => {
           setOnlink("contact big");
         } else if (e.target.closest('div[class="parallax-effect"]') !== null) {
           setOnlink("text big");
-        } else if (e.target.closest('div[class="infinite"]') !== null) {
+        } else if (
+          e.target.closest('div[class="infinite-container"]') !== null
+        ) {
           setOnlink("inf big");
         } else if (
           e.target.closest(

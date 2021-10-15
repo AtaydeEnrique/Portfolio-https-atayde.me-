@@ -32,7 +32,7 @@ const About = () => {
             emoji={["✌"]}
             classes="typewriter"
           />
-          . I craft apps that lead to enjoyable user experiences
+          .<br />I craft apps that lead to enjoyable user experiences
         </h2>
         <div className="about-wrapper inner-element">
           <div className="about-headline">

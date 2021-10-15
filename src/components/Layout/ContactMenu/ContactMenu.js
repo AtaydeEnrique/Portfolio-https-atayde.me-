@@ -7,6 +7,7 @@ import "./ContactMenu.css";
 import Spinner from "../../UI/Spinner/Spinner";
 import Form from "./Form/Form";
 import SuccessScreen from "./SuccessScreen/SuccessScreen";
+const windowWidth = window.innerWidth <= 850;
 
 const ContactMenu = ({ onClose, kraken, hideMenuHandler }) => {
   const [isLoading, setIsLoading] = useState(false);
@@ -75,7 +76,7 @@ const ContactMenu = ({ onClose, kraken, hideMenuHandler }) => {
                   </div>
                 </div>
               </div>
-              {didLoad === null && <Kraken show={state} />}
+              {didLoad === null && !windowWidth && <Kraken show={state} />}
             </Fragment>
           )}
         </ContactModal>

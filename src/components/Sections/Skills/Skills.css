@@ -15,6 +15,7 @@
 
 .skill-group {
   display: flex;
+  align-content: center;
   justify-content: space-between;
   width: 100%;
   margin-top: 50px;
@@ -43,8 +44,8 @@
   justify-content: center;
   flex-direction: column;
   flex-basis: 20%;
-  font-size: 3.2vw;
-  background: url("https://i.imgur.com/aU0lEX3.gif");
+  font-size: 3.5vw;
+  background: url("../../../assets/misc/skillshead.webp");
   background-size: 7%;
   background-attachment: fixed;
   -webkit-background-clip: text;
@@ -64,6 +65,10 @@
   white-space: nowrap;
   font-weight: 100;
   font-size: 3vw;
+}
+
+.skill-description p {
+  font-size: 1.3vw;
 }
 .swiper-button-next:after,
 .swiper-button-prev:after {
@@ -98,8 +103,6 @@
   .swiper-button-prev:after {
     transform: scale(0.6) !important;
   }
-  .swiper-slide {
-  }
 }
 
 @media only screen and (max-width: 850px) {
@@ -113,6 +116,23 @@
   .swiper-button-next:after,
   .swiper-button-prev:after {
     transform: scale(0.55) !important;
+  }
+  .skill-group {
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .skill-thinking {
+    font-size: 5vw;
+  }
+
+  .skill-description h2 {
+    font-size: 4vw;
+  }
+
+  .skill-description p {
+    font-size: 1.8vw;
   }
 }
 

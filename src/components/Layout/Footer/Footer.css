@@ -48,6 +48,7 @@ footer {
 }
 .contact-items img {
   width: 60px;
+  height: 80px;
   padding: 10px 0;
   transition: transform 1s ease-out;
 }

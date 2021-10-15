@@ -23,10 +23,15 @@ const App = () => {
   const [offset, setOffset] = useState(0);
 
   useEffect(() => {
-    window.onload = function () {
+    window.addEventListener("load", () => {
       setTimeout(() => {
         setLoadingModal(false);
-      }, 4500);
+      }, 4000);
+    });
+  }, []);
+
+  useEffect(() => {
+    window.onload = function () {
       lax.init();
       lax.addDriver("scrollY", function () {
         return window.scrollY;

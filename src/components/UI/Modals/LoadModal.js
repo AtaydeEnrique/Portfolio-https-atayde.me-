@@ -1,4 +1,4 @@
-import { Fragment, useState } from "react";
+import { Fragment, useState, useEffect } from "react";
 import ReactDOM from "react-dom";
 import { Transition } from "react-transition-group";
 
@@ -7,9 +7,15 @@ import "./LoadModal.css";
 const portalElement = document.querySelector("#overlays");
 const LoadModal = () => {
   const [loading, setLoading] = useState(true);
-  setTimeout(() => {
-    setLoading(false);
-  }, 4000);
+
+  useEffect(() => {
+    window.addEventListener("load", () => {
+      setTimeout(() => {
+        setLoading(false);
+      }, 3000);
+    });
+  }, []);
+
   return (
     <Fragment>
       {ReactDOM.createPortal(
