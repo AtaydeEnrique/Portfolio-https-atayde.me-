@@ -23,7 +23,6 @@ const Home = ({ onClick }) => {
             />
           </p>
           <p>
-            I'm a{" "}
             <TypeWriter
               speed={80}
               delay1={1500}
@@ -32,7 +31,6 @@ const Home = ({ onClick }) => {
               emoji={["🤖", "🔧", "💻", "📱"]}
               classes="typewriter"
             />
-            , focused on creating... asdasdd
           </p>
           <span className="country">
             <p>based in México</p>

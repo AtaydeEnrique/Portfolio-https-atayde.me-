@@ -4,14 +4,70 @@
   align-content: center;
   flex-direction: column;
   height: 100vh;
+  margin-bottom: 20vh;
 }
 .btn.btn-desc {
-  margin: 0 auto;
-  width: 20%;
-  padding: 20px 10px;
+  display: flex;
+  padding: 15px 4vw;
+  margin: 15px auto 30px auto;
   font-size: 1.4vw;
 }
 
 .text-wrap {
   font-size: 2vw;
+  text-align: justify;
+}
+
+.highlight1 {
+  color: var(--brand-color1);
+}
+.highlight2 {
+  color: #b1b40c;
+}
+.highlight3 {
+  color: var(--brand-color3);
+}
+.highlight4 {
+  color: #5dbea3;
+}
+.highlight5 {
+  color: rgb(172, 147, 125);
+}
+
+@media only screen and (max-width: 1250px) {
+  .text-wrap {
+    font-size: 2.5vw;
+  }
+  .btn.btn-desc {
+    font-size: 1.7vw !important;
+  }
+}
+@media only screen and (max-width: 850px) {
+  .text-wrap {
+    font-size: 3vw;
+  }
+  .btn.btn-desc {
+    font-size: 2vw !important;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .text-wrap {
+    font-size: 3.8vw;
+  }
+  .btn.btn-desc {
+    font-size: 2.5vw !important;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .text-wrap {
+    font-size: 4.3vw;
+  }
+  .btn.btn-desc {
+    font-size: 3vw !important;
+  }
+}
+@media only screen and (max-width: 330px) {
+  .text-wrap {
+    font-size: 4.7vw;
+  }
 }

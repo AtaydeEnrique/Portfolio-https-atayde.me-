@@ -14,6 +14,8 @@ import Skills from "./components/Sections/Skills/Skills";
 import Description from "./components/Sections/Description/Description";
 import ScrollIcon from "./components/UI/Scrollcon/ScrollIcon";
 import LoadModal from "./components/UI/Modals/LoadModal";
+// import Resume from "./assets/misc/Resume.pdf";
+
 const windowWidth = window.innerWidth <= 850;
 
 const App = () => {

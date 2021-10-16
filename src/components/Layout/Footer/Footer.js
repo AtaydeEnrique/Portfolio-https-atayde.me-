@@ -32,7 +32,7 @@ const Footer = ({ onClose }) => {
             </div>
             <div className="item-card">
               <a
-                href="mailto:riorat97@gmail.com"
+                href="mailto:atayde.ricardoe@gmail.com"
                 target="_blank"
                 rel="noreferrer"
               >
