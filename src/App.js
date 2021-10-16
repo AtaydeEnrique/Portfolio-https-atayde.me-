@@ -14,7 +14,7 @@ import Skills from "./components/Sections/Skills/Skills";
 import Description from "./components/Sections/Description/Description";
 import ScrollIcon from "./components/UI/Scrollcon/ScrollIcon";
 import LoadModal from "./components/UI/Modals/LoadModal";
-// import Goo from "./components/UI/Goo/Goo";
+const windowWidth = window.innerWidth <= 850;
 
 const App = () => {
   const [loadingModal, setLoadingModal] = useState(true);
@@ -75,7 +75,9 @@ const App = () => {
   };
 
   return (
-    <div className={`app ${kraken ? " hidden" : ""}`}>
+    <div
+      className={`app${kraken ? " hidden" : ""}${windowWidth ? " mobile" : ""}`}
+    >
       {loadingModal && <LoadModal loading={loadingModal} />}
       {!messageSent && (
         <MainHeader
@@ -87,8 +89,6 @@ const App = () => {
       )}
       <Cursor />
       <div className="color-waves"></div>
-      {/* <Goo /> */}
-
       <Home
         onClick={() => {
           setKraken((k) => !k);

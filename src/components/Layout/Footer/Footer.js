@@ -2,11 +2,12 @@
 import "./Footer.css";
 import gitSVG from "../../../assets/contact/github.svg";
 import linkedInSVG from "../../../assets/contact/linkedin.svg";
+import mailSVG from "../../../assets/contact/mail.svg";
 
 const Footer = ({ onClose }) => {
   return (
     <footer>
-      <div id="contact" className="waves-footer">
+      <section id="contact" className="waves-footer">
         <div className="footer-info">
           <div className="contact-items lax lax_preset_fadeInOut:280">
             <div className="item-card">
@@ -29,6 +30,16 @@ const Footer = ({ onClose }) => {
               </a>
               <h5>LinkedIn</h5>
             </div>
+            <div className="item-card">
+              <a
+                href="mailto:riorat97@gmail.com"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img className="mail-icon" src={mailSVG} alt="Mail" />
+              </a>
+              <h5>Mail</h5>
+            </div>
           </div>
           <div className="footer-wrap">
             <div className="footer-title lax lax_preset_fadeInOut:280">
@@ -44,9 +55,10 @@ const Footer = ({ onClose }) => {
             >
               Leave a message
             </button>
+            <p>or...</p>
           </div>
         </div>
-      </div>
+      </section>
     </footer>
   );
 };

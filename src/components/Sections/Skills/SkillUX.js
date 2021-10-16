@@ -18,7 +18,12 @@ const SkillUX = () => {
         desc="Photoshop"
         alt="Photoshop"
       />
-      <SkillCard top={svgFront} bottom={svgBack} desc="Svg" alt="Svg" />
+      <SkillCard
+        top={svgFront}
+        bottom={svgBack}
+        desc="Svg/Animations"
+        alt="Svg"
+      />
     </Fragment>
   );
 };

@@ -1,3 +1,17 @@
-.description {
-  display: block;
+#description {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  flex-direction: column;
+  height: 100vh;
+}
+.btn.btn-desc {
+  margin: 0 auto;
+  width: 20%;
+  padding: 20px 10px;
+  font-size: 1.4vw;
+}
+
+.text-wrap {
+  font-size: 2vw;
 }

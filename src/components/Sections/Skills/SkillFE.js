@@ -52,7 +52,12 @@ const SkillFE = () => {
       breakpoints={responsive}
     >
       <SwiperSlide>
-        <SkillCard top={jsFront} bottom={jsBack} desc="JS" alt="js" />
+        <SkillCard
+          top={jsFront}
+          bottom={jsBack}
+          desc="JavaScript"
+          alt="JavaScript"
+        />
       </SwiperSlide>
       <SwiperSlide>
         <SkillCard top={cssFront} bottom={cssBack} desc="CSS" alt="CSS" />

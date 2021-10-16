@@ -1,15 +1,16 @@
 @font-face {
   font-family: Honoka;
+  font-display: swap;
   src: url("./assets/Honoka.woff2");
 }
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth !important;
 }
 html * {
   font-family: "Honoka";
-  font-display: auto;
 }
 
 html,

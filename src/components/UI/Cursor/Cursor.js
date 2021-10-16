@@ -39,10 +39,10 @@ const Cursor = () => {
         ) {
           setOnlink("skill big");
         } else if (e.target.closest('div[class="footer-info"]') !== null) {
-          setOnlink("small");
+          setOnlink("footer-inf big");
         } else if (
           e.target.closest(
-            'div[class="dot-divider"], div[class="waves-footer"]'
+            'div[class="dot-divider"], section[class="waves-footer"]'
           ) !== null
         ) {
           setOnlink("anim big");

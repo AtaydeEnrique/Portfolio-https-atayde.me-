@@ -1,13 +1,10 @@
 footer {
   width: 100%;
   z-index: 1;
-  height: 540px;
+  height: 740px;
 }
 
 .footer-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   height: 100%;
   width: 85%;
   margin: auto;
@@ -17,13 +14,15 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column-reverse;
   width: 100%;
-  height: 540px;
+  height: 740px;
   background: url("../../../assets/misc/footer.svg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   z-index: -30;
+
   transform: rotate(180deg);
 }
 
@@ -31,6 +30,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-direction: column-reverse;
   transform: rotate(180deg);
   width: 50%;
   backdrop-filter: blur(20px);
@@ -42,8 +42,10 @@ footer {
   display: flex;
   height: 100%;
   align-items: center;
-  justify-content: space-around;
-  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 50px;
+  width: 60%;
+  flex-direction: row;
   transition: 0.5s;
 }
 .contact-items img {
@@ -73,6 +75,9 @@ footer {
   justify-content: center;
   flex-direction: column;
 }
+.footer-wrap p {
+  margin-top: 10px;
+}
 
 .footer-title {
   font-size: var(--title-font);
@@ -80,7 +85,7 @@ footer {
 .footer-message {
   width: 70%;
   margin: 20px 0;
-  font-size: 1.4vw;
+  font-size: 1.5vw;
 }
 .btn {
   background-color: black;
@@ -90,6 +95,7 @@ footer {
   padding: 10px 10px;
   transition: 0.5s ease-in;
   font-size: 1vw;
+  margin-top: 10px;
 }
 
 .btn:hover {
@@ -109,8 +115,19 @@ footer {
   transition: 0.1s ease-in;
   cursor: pointer;
 }
+.footer-copyright {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  color: #ccc;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  transform: rotate(180deg);
+  animation: blink-foo 10s infinite;
+}
 
-.github-icon {
+.footer-copyright h5 {
+  padding: 10px;
 }
 
 @media only screen and (max-width: 850px) {
@@ -126,7 +143,8 @@ footer {
     width: 50%;
   }
   .contact-items img {
-    width: 40px;
+    width: 50px;
+    height: 70px;
   }
   .footer-wrap .footer-title {
     font-size: 5vw !important;
@@ -141,10 +159,11 @@ footer {
 @media only screen and (max-width: 650px) {
   .contact-items {
     margin-top: 20px;
-    width: 40%;
+    width: 60%;
   }
   .contact-items img {
-    width: 30px;
+    width: 40px;
+    height: 60px;
   }
   .item-card h5 {
     font-size: 2vw;
@@ -153,12 +172,13 @@ footer {
 @media only screen and (max-width: 450px) {
   .contact-items {
     margin-top: 10px;
-    width: 35%;
+    width: 60%;
   }
   .contact-items img {
-    width: 20px;
+    width: 30px;
+    height: 50px;
     padding: 0px 0;
-    margin-top: 20px;
+    margin-top: 10px;
   }
   .footer-wrap .footer-title {
     font-size: 6vw !important;
@@ -172,6 +192,36 @@ footer {
 }
 @media only screen and (max-width: 330px) {
   .contact-items {
-    margin-top: 0px;
+    width: 70%;
+  }
+  .contact-items img {
+    width: 25px;
+    height: 45px;
+    padding: 0px 0;
+    margin-top: 10px;
+  }
+}
+
+@keyframes blink-foo {
+  0% {
+    color: #ccc;
+  }
+  79% {
+    color: #ccc;
+  }
+  80% {
+    color: var(--brand-color1);
+  }
+  85% {
+    color: var(--brand-color2);
+  }
+  90% {
+    color: var(--brand-color3);
+  }
+  95% {
+    color: var(--brand-color4);
+  }
+  100% {
+    color: #ccc;
   }
 }

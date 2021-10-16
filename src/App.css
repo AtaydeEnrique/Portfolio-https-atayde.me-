@@ -26,6 +26,7 @@ section {
   background: url("./assets/misc/divider.svg");
   background-repeat: no-repeat;
   background-size: cover;
+  margin: 100px 0;
 }
 
 .last {
@@ -37,4 +38,9 @@ section {
 
 .fixed {
   overflow-y: hidden;
+}
+
+.mobile {
+  user-select: none;
+  -webkit-touch-callout: none;
 }

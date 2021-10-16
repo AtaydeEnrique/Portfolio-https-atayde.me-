@@ -79,7 +79,7 @@
 }
 
 .cursor-inf {
-  background: var(--brand-color1);
+  background: rgb(0, 255, 115);
   mix-blend-mode: exclusion;
   width: 120px !important;
   height: 120px !important;
@@ -97,12 +97,21 @@
 }
 
 .cursor-anim {
-  background: var(--brand-color3);
+  background: var(--body-color);
   mix-blend-mode: difference;
   width: 220px !important;
   height: 220px !important;
   left: -110px !important;
   top: -100px !important;
+}
+
+.cursor-footer-inf {
+  background: red;
+  mix-blend-mode: difference;
+  width: 150px !important;
+  height: 150px !important;
+  left: -70px !important;
+  top: -70px !important;
 }
 
 .cursor-canvas {
