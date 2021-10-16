@@ -42,16 +42,16 @@ const Footer = ({ onClose }) => {
             </div>
           </div>
           <div className="footer-wrap">
-            <div className="footer-title lax lax_preset_fadeInOut:280">
+            <div className="footer-title lax lax_preset_fadeInOut:309">
               contact.
             </div>
-            <div className="footer-message lax lax_preset_fadeInOut:280">
+            <div className="footer-message lax lax_preset_fadeInOut:309">
               Ready for working together, sending feedback or simply to say
               hello 👋 ? Great! Let's get in touch !
             </div>
             <button
               onClick={onClose}
-              className="btn lax lax_preset_fadeInOut:280"
+              className="btn lax lax_preset_fadeInOut:309"
             >
               Leave a message
             </button>

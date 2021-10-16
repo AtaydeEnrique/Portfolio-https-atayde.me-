@@ -121,7 +121,7 @@ const Menu = ({ entered, hovered, close }) => {
           </ul>
           <div className="menu-handy-links">
             <a
-              href="https://github.com/AtaydeEnrique"
+              href="https://atayde.me/static/media/Resume.00d78f57.pdf"
               target="_blank"
               rel="noreferrer"
             >

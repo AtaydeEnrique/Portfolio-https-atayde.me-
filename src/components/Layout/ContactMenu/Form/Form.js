@@ -25,7 +25,7 @@ const Form = ({ sendData, isLoading }) => {
   const emailValidation = (e) => {
     const email = e.target.value.trim();
     setVisitorEmail(email);
-    if (email && email.includes("@" && ".") && emailFocus) {
+    if (email && email.includes("@") && email.includes(".") && emailFocus) {
       setEmailIsValid(true);
     } else {
       setEmailIsValid(false);
