@@ -25,26 +25,35 @@
 
 .infinite-text:hover {
   animation: rainbow-text-animation 0.5s ease forwards;
+  -webkit-animation: rainbow-text-animation 0.5s ease forwards;
 }
 
 .infinite-text.right {
   animation: moves 30s linear infinite;
   animation-delay: -30s;
+  -webkit-animation: moves 30s linear infinite;
+  -webkit-animation-delay: -30s;
 }
 
 .infinite-text.left {
   animation: moves3 30s linear infinite;
   animation-delay: -30s;
+  -webkit-animation: moves3 30s linear infinite;
+  -webkit-animation-delay: -30s;
 }
 
 .infinite-text.right:nth-child(2) {
   animation: moves2 30s linear infinite;
   animation-delay: -15s;
+  -webkit-animation: moves2 30s linear infinite;
+  -webkit-animation-delay: -15s;
 }
 
 .infinite-text.left:nth-child(2) {
   animation: moves4 30s linear infinite;
   animation-delay: -15s;
+  -webkit-animation: moves4 30s linear infinite;
+  -webkit-animation-delay: -15s;
 }
 
 @media only screen and (max-width: 650px) {

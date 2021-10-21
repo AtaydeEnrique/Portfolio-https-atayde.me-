@@ -10,6 +10,7 @@
   overflow: hidden;
   position: relative;
   animation: thankyou 1s ease-in;
+  -webkit-animation: thankyou 1s ease-in;
 }
 
 .text-container {
@@ -58,28 +59,40 @@
 
 .error1 .text {
   animation: movedown 30s linear infinite;
+  -webkit-animation: movedown 30s linear infinite;
   animation-delay: -30s;
+  -webkit-animation-delay: -30s;
 }
 .error1 .text:nth-child(2) {
   animation: movedown2 30s linear infinite;
   animation-delay: -15s;
+  -webkit-animation: movedown2 30s linear infinite;
+  -webkit-animation-delay: -15s;
 }
 
 .error2 .text {
   animation: move 50s linear infinite;
   animation-delay: -50s;
+  -webkit-animation: move 50s linear infinite;
+  -webkit-animation-delay: -50s;
 }
 .error2 .text:nth-child(2) {
   animation: move2 50s linear infinite;
   animation-delay: -25s;
+  -webkit-animation: move2 50s linear infinite;
+  -webkit-animation-delay: -25s;
 }
 .error3 .text {
   animation: movedown 30s linear infinite;
   animation-delay: -30s;
+  -webkit-animation: movedown 30s linear infinite;
+  -webkit-animation-delay: -30s;
 }
 .error3 .text:nth-child(2) {
   animation: movedown2 30s linear infinite;
   animation-delay: -15s;
+  -webkit-animation: movedown2 30s linear infinite;
+  -webkit-animation-delay: -15s;
 }
 .text {
   margin: auto 0;
@@ -89,11 +102,15 @@
   white-space: nowrap;
   animation: move 30s linear infinite;
   animation-delay: -30s;
+  -webkit-animation: move 30s linear infinite;
+  -webkit-animation-delay: -30s;
   padding: 0 40px;
 }
 .text:nth-child(2) {
   animation: move2 30s linear infinite;
   animation-delay: -15s;
+  -webkit-animation: move2 30s linear infinite;
+  -webkit-animation-delay: -15s;
 }
 
 @keyframes move {

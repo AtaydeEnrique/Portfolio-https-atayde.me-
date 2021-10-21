@@ -91,6 +91,7 @@
   cursor: pointer;
   transition: 1s;
   animation: submit-up 3s infinite;
+  -webkit-animation: submit-up 3s infinite;
 }
 
 .contact-submit-enabled:active {
@@ -135,6 +136,7 @@
 
 .form-group > .form-label-wrap span {
   animation: slide-error 1s ease-out;
+  -webkit-animation: slide-error 1s ease-out;
 }
 
 @keyframes slide-error {

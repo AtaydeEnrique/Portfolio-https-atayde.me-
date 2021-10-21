@@ -11,45 +11,59 @@
 .pink-open {
   background-color: var(--brand-color1);
   animation: slide-up 200ms ease-out forwards;
+  -webkit-animation: slide-up 200ms ease-out forwards;
 }
 .lime-open {
   background-color: var(--brand-color2);
   animation: slide-up 200ms ease-out forwards;
   animation-delay: 200ms;
+  -webkit-animation: slide-up 200ms ease-out forwards;
+  -webkit-animation-delay: 200ms;
 }
 .purple-open {
   background-color: var(--brand-color3);
   animation: slide-up 200ms ease-out forwards;
   animation-delay: 400ms;
+  -webkit-animation: slide-up 200ms ease-out forwards;
+  -webkit-animation-delay: 400ms;
 }
 .white-open {
   background-color: var(--body-color);
   animation: slide-up 200ms ease-out forwards;
   animation-delay: 600ms;
+  -webkit-animation: slide-up 200ms ease-out forwards;
+  -webkit-animation-delay: 600ms;
 }
 
 .white-closing {
   opacity: 1;
   background-color: var(--body-color);
   animation: slide-down 200ms ease-in forwards;
+  -webkit-animation: slide-down 200ms ease-in forwards;
 }
 .purple-closing {
   opacity: 1;
   background-color: var(--brand-color3);
   animation: slide-down 200ms ease-in forwards;
   animation-delay: 200ms;
+  -webkit-animation: slide-down 200ms ease-in forwards;
+  -webkit-animation-delay: 200ms;
 }
 .lime-closing {
   opacity: 1;
   background-color: var(--brand-color2);
   animation: slide-down 200ms ease-in forwards;
   animation-delay: 400ms;
+  -webkit-animation: slide-down 200ms ease-in forwards;
+  -webkit-animation-delay: 400ms;
 }
 .pink-closing {
   opacity: 1;
   background-color: var(--brand-color1);
   animation: slide-down 200ms ease-in forwards;
   animation-delay: 600ms;
+  -webkit-animation: slide-down 200ms ease-in forwards;
+  -webkit-animation-delay: 600ms;
 }
 
 @media (min-width: 768px) {

@@ -12,10 +12,12 @@
 
 .wave-up {
   animation: slide-wave-up 2s ease-in forwards;
+  -webkit-animation: slide-wave-up 2s ease-in forwards;
 }
 
 .wave-down {
   animation: slide-wave-down 2s ease-in forwards;
+  -webkit-animation: slide-wave-down 2s ease-in forwards;
 }
 
 @keyframes slide-wave-up {

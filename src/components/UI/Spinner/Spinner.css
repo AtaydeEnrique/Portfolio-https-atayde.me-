@@ -12,6 +12,7 @@
   align-items: center;
   background: var(--brand-color1);
   animation: clockwise 3s ease-in-out 0s infinite alternate;
+  -webkit-animation: clockwise 3s ease-in-out 0s infinite alternate;
   z-index: 9999;
 }
 
@@ -26,6 +27,7 @@
   background: var(--brand-color4);
   transform: rotate(45deg);
   animation: xclockwise 3s ease-in-out 0s infinite alternate;
+  -webkit-animation: xclockwise 3s ease-in-out 0s infinite alternate;
 }
 
 .core {

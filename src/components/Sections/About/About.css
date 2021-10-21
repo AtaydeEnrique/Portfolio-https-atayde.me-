@@ -3,7 +3,7 @@
   z-index: 99;
   width: 100%;
   display: flex;
-  scroll-margin-top: -60px;
+  scroll-margin-top: -5vw;
 }
 .about-title {
   margin-top: 150px;
@@ -37,6 +37,7 @@
   border-radius: 50%;
   box-shadow: 10px 15px 1px black;
   animation: box-shadow 8s infinite;
+  -webkit-animation: box-shadow 8s infinite;
 }
 .about-description {
   font-size: 1.2vw;

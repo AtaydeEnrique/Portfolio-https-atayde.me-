@@ -9,6 +9,7 @@
   opacity: 1;
   transition: transform 1s;
   animation: menu-slide 1s ease-in;
+  -webkit-animation: menu-slide 1s ease-in;
 }
 
 .navbar {

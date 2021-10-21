@@ -50,6 +50,7 @@
   box-shadow: -3px 3px 0 #161616;
   transition: 0.2s ease;
   animation: fill-up 1s ease-in;
+  -webkit-animation: fill-up 1s ease-in;
 }
 
 .contact-btn:hover {
@@ -66,6 +67,7 @@
 
 .contact-btn.fillup {
   animation: fill-down 1s ease-in;
+  -webkit-animation: fill-down 1s ease-in;
 }
 
 .menu-scrText {

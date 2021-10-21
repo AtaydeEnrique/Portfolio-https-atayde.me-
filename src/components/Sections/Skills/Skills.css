@@ -20,6 +20,7 @@
   width: 100%;
   margin-top: 50px;
   animation: pop-up 1s ease-in;
+  -webkit-animation: pop-up 1s ease-in;
 }
 
 .skill-set {

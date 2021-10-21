@@ -14,6 +14,7 @@
 }
 .backfrop-works {
   animation: works 1.5s;
+  -webkit-animation: works 1.5s;
 }
 
 .backdrop-left,
@@ -29,14 +30,17 @@
 }
 .backdrop-left {
   animation: works-slide 1.5s, 20s works2 infinite;
+  -webkit-animation: works-slide 1.5s, 20s works2 infinite;
 }
 
 .backdrop-works-closing {
   animation: works-exit 1.5s;
+  -webkit-animation: works-exit 1.5s;
 }
 
 .backdrop-left-closing {
   animation: works-slide-out 1.5s, 20s works2 infinite;
+  -webkit-animation: works-slide-out 1.5s, 20s works2 infinite;
 }
 
 @keyframes works {
