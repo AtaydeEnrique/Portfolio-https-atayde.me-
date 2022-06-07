@@ -1,5 +1,5 @@
 import SkillCard from "./SkillCard";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react/swiper-react";
 import "swiper/swiper-bundle.min.css";
 import "swiper/swiper.min.css";
 
