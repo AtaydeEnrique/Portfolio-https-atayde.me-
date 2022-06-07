@@ -74,22 +74,22 @@
 }
 
 @keyframes slide-up {
-  from {
+  0% {
     opacity: 0;
     top: 100%;
   }
-  to {
+  100% {
     opacity: 1;
     top: 0;
   }
 }
 
 @keyframes slide-down {
-  from {
+  0% {
     opacity: 1;
     top: 0;
   }
-  to {
+  100% {
     opacity: 0;
     top: 100%;
   }

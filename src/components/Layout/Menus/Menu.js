@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Transition } from "react-transition-group";
 import "./Menu.css";
+import Resume from "../../../assets/misc/Resume.pdf";
 
 const Menu = ({ entered, hovered, close }) => {
   const [opacty, setOpacity] = useState({
@@ -121,7 +122,10 @@ const Menu = ({ entered, hovered, close }) => {
           </ul>
           <div className="menu-handy-links">
             <a
-              href="https://atayde.me/static/media/Resume.00d78f57.pdf"
+              onClick={() => {
+                window.open(Resume);
+              }}
+              href="Resume"
               target="_blank"
               rel="noreferrer"
             >

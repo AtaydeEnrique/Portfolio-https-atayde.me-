@@ -1,10 +1,10 @@
 import { Fragment, useState } from "react";
 import { Transition } from "react-transition-group";
 
-import ContactModal from "../../UI/Modals/ContactModal";
-import Kraken from "../../UI/Kraken/Kraken";
+import ContactModal from "../../../UI/Modals/ContactModal";
+import Kraken from "../../../UI/Kraken/Kraken";
 import "./ContactMenu.css";
-import Spinner from "../../UI/Spinner/Spinner";
+import Spinner from "../../../UI/Spinner/Spinner";
 import Form from "./Form/Form";
 import SuccessScreen from "./SuccessScreen/SuccessScreen";
 const windowWidth = window.innerWidth <= 850;

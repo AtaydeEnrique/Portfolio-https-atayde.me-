@@ -4,17 +4,15 @@ import lax from "lax.js";
 import MainHeader from "./components/Layout/Header/MainHeader";
 import Home from "./components/Sections/Home/Home";
 import Cursor from "./components/UI/Cursor/Cursor";
-import ContactMenu from "./components/Layout/ContactMenu/ContactMenu";
+import ContactMenu from "./components/Layout/Menus/ContactMenu/ContactMenu";
 import About from "./components/Sections/About/About";
 import Footer from "./components/Layout/Footer/Footer";
-
-import "./App.css";
 import ScrollingText from "./components/UI/ScrollingText/ScrollingText";
 import Skills from "./components/Sections/Skills/Skills";
 import Description from "./components/Sections/Description/Description";
 import ScrollIcon from "./components/UI/Scrollcon/ScrollIcon";
 import LoadModal from "./components/UI/Modals/LoadModal";
-// import Resume from "./assets/misc/Resume.pdf";
+import "./App.css";
 
 const windowWidth = window.innerWidth <= 850;
 
@@ -33,6 +31,9 @@ const App = () => {
   }, []);
 
   useEffect(() => {
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 1000);
     window.onload = function () {
       lax.init();
       lax.addDriver("scrollY", function () {
@@ -71,11 +72,6 @@ const App = () => {
   const closeKraken = () => {
     setKraken((k) => !k);
   };
-
-  window.onbeforeunload = () => {
-    window.scrollTo(0, 0);
-  };
-
   return (
     <div
       className={`app${kraken ? " hidden" : ""}${windowWidth ? " mobile" : ""}`}
@@ -105,7 +101,6 @@ const App = () => {
       <Footer
         onClose={() => {
           setKraken((k) => !k);
-          console.log(kraken);
         }}
       />
       <ContactMenu

@@ -113,8 +113,8 @@
   align-content: flex-start;
   justify-content: left;
   margin-left: 8vw;
-  animation: handy-up 1000ms forwards;
-  -webkit-animation: handy-up 1000ms forwards;
+  animation: handy-up 1300ms forwards;
+  -webkit-animation: handy-up 1300ms forwards;
 }
 .menu-handy-links h5 {
   padding: 10px 40px;
@@ -201,19 +201,19 @@
 }
 
 @keyframes in {
-  from {
+  0% {
     transform: translateX(-200px);
   }
-  to {
+  100% {
     transform: translateX(0px);
   }
 }
 
 @keyframes handy-up {
-  from {
+  0% {
     transform: translateY(200px);
   }
-  to {
+  100% {
     transform: translateY(0px);
   }
 }

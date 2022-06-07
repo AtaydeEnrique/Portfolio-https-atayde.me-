@@ -43,7 +43,7 @@ const Home = ({ onClick }) => {
             }}
             className={`contact-btn${colors ? " fillup" : ""}`}
           >
-            Contact me ;)
+            Contact me
           </button>
         </div>
         <HomeImage />

@@ -46,7 +46,8 @@
   flex-direction: column;
   flex-basis: 20%;
   font-size: 3.5vw;
-  background: url("../../../assets/misc/skillshead.webp");
+  background: url("../../../assets/misc/skillshead.avifs"),
+    url("../../../assets/misc/skillshead.webp");
   background-size: 7%;
   background-attachment: fixed;
   -webkit-background-clip: text;
