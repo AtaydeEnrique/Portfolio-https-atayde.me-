@@ -1,12 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { Routes, Route } from 'react-router-dom'
+import { BrowserRouter } from "react-router-dom";
 
 import "./index.css";
-import App from "./App";
+import App1 from "./app1/App";
+import App2 from "./app2/App";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <React.StrictMode>  
-        <App/>
+    <React.StrictMode>
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<App1/>} />
+                <Route path="cryptoapp/*" element={<App2/>} />
+            </Routes>
+        </BrowserRouter>
     </React.StrictMode>
   );
