@@ -83,6 +83,11 @@
   text-align: justify;
 }
 
+.work-box_content a{
+  color: var(--brand-color1);
+}
+
+
 @media only screen and (max-width: 1250px) {
 }
 @media only screen and (max-width: 850px) {

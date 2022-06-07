@@ -47,6 +47,10 @@
   flex-basis: 50%;
 }
 
+.about-button-container{
+  display: flex;
+}
+
 .btn-about {
   display: flex;
   margin: 15px auto 30px auto;

@@ -1,12 +1,13 @@
 import { Fragment } from "react";
 import ReactDOM from "react-dom";
 import WorkMenu from "../../Layout/Menus/WorkMenu";
+import ProjectMenu from "../../Layout/Menus/ProjectMenu";
 
 import "./WorksModal.css";
 
 const portalElement = document.querySelector("#overlays");
 
-const WorksModal = ({ close, show }) => {
+const WorksModal = ({ close, show, works }) => {
   const exiting = show === "exiting" ? "-closing" : "";
 
   return (
@@ -19,7 +20,8 @@ const WorksModal = ({ close, show }) => {
               <div className="line"></div>
               <div className="line"></div>
             </div>
-            <WorkMenu />
+            {works === 1 && <WorkMenu />}
+            {works === 2 && <ProjectMenu />}
           </div>
         </div>,
         portalElement
