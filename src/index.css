@@ -1,12 +1,12 @@
 @font-face {
   font-family: Honoka1;
   font-display: swap;
-  src: url("./assets/Honoka.woff2");
+  src: url("./app1/assets/Honoka.woff2");
 }
 @font-face {
   font-family: Honoka2;
   font-display: swap;
-  src: url("./assets/Honoka.woff");
+  src: url("./app1/assets/Honoka.woff");
 }
 * {
   box-sizing: border-box;

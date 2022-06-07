@@ -1,0 +1,112 @@
+#about {
+  height: fit-content;
+  z-index: 99;
+  width: 100%;
+  display: flex;
+  scroll-margin-top: -5vw;
+}
+.about-title {
+  margin-top: 150px;
+  font-size: 3.5vw;
+  font-weight: 600;
+  margin-bottom: 80px;
+  width: 75%;
+}
+.parallax-effect {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.about-wrapper {
+  display: flex;
+  align-items: center;
+  width: 75%;
+  height: 50vh;
+  margin-bottom: 200px;
+}
+
+.about-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: perspective(200px);
+}
+
+.about-img img {
+  width: 75%;
+  border-radius: 50%;
+  box-shadow: 10px 15px 1px black;
+  animation: box-shadow 8s infinite;
+  -webkit-animation: box-shadow 8s infinite;
+}
+.about-description {
+  font-size: 1.2vw;
+  padding: 1rem 2rem 1rem 0;
+  text-align: justify;
+  flex-basis: 50%;
+}
+
+.about-button-container{
+  display: flex;
+  margin-top: 10px;
+}
+
+.btn-about {
+  display: flex;
+  margin: 15px auto 30px auto;
+}
+
+@media only screen and (max-width: 850px) {
+  .about-wrapper {
+    height: fit-content !important;
+    flex-direction: column-reverse;
+    justify-content: center;
+    margin-bottom: 0;
+  }
+  .about-img img {
+    width: 50%;
+    height: 100%;
+    border-radius: 450px;
+    margin-bottom: 20px;
+    height: fit-content;
+  }
+  .about-description {
+    padding: 1rem 0;
+    text-align: justify;
+    flex-basis: 50%;
+    font-size: 2.6vw;
+  }
+  .about-title {
+    font-size: 4.8vw;
+    margin-top: 50px;
+  }
+  .btn-about {
+    font-size: 2vw !important;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .btn-about {
+    font-size: 3vw !important;
+  }
+}
+@media only screen and (max-width: 330px) {
+}
+
+@keyframes box-shadow {
+  0% {
+    box-shadow: -20px 15px 1px black;
+  }
+  25% {
+    box-shadow: -20px -15px 1px black;
+  }
+  50% {
+    box-shadow: 20px -15px 1px black;
+  }
+  75% {
+    box-shadow: 20px 15px 1px black;
+  }
+  100% {
+    box-shadow: -20px 15px 1px black;
+  }
+}

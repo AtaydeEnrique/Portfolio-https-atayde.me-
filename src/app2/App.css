@@ -1,0 +1,71 @@
+.app-full{
+    display: flex;
+}
+
+.app-collapsed{
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+.main-full{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20%;
+    width: 80%;
+    height: fit-content;
+}
+
+.main-collapsed{
+  width: 100%;
+}
+
+
+.noise {
+    background-image: url("./assets/grain.png");
+    height: 500%;
+    left: -50%;
+    position: fixed;
+    top: -100%;
+    width: 500%;
+    z-index: -2;
+    opacity: 0.1;
+    animation: noises 8s steps(10) infinite;
+  }
+  
+  @keyframes noises {
+    0% {
+      transform: translate(0);
+    }
+    10% {
+      transform: translate(-5%, -10%);
+    }
+    20% {
+      transform: translate(0);
+    }
+    30% {
+      transform: translate(-5%, -10%);
+    }
+    40% {
+      transform: translate(0);
+    }
+    50% {
+      transform: translate(-5%, -10%);
+    }
+    60% {
+      transform: translate(0);
+    }
+    70% {
+      transform: translate(-5%, -10%);
+    }
+    80% {
+      transform: translate(0);
+    }
+    90% {
+      transform: translate(-5%, -10%);
+    }
+    100% {
+      transform: translate(0);
+    }
+  }
+  
