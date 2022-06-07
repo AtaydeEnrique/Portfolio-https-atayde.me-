@@ -4,7 +4,7 @@ const baseUrl = 'https://coinranking1.p.rapidapi.com'
 
 const cryptoApiHeaders = {
     'X-RapidAPI-Host': 'coinranking1.p.rapidapi.com',
-    'X-RapidAPI-Key': process.env.REACT_APP_CRYPTO_KEY
+    'X-RapidAPI-Key': process.env.REACT_APP_VERCEL_RAPIDAPI
 }
 
 const createRequest = (url) => ({url, headers: cryptoApiHeaders})
