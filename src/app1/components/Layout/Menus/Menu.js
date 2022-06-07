@@ -91,7 +91,7 @@ const Menu = ({ entered, hovered, close }) => {
                   setOpacity(state0);
                 }}
               >
-                about<i></i>
+                about/works<i></i>
                 <span> 💬</span>
               </a>
             </li>

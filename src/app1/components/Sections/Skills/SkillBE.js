@@ -53,26 +53,18 @@ const SkillBE = () => {
     >
       <SwiperSlide>
         <SkillCard
+          top={pythonFront}
+          bottom={pythonBack}
+          desc="Python"
+          alt="Python"
+        />
+      </SwiperSlide>
+      <SwiperSlide>
+        <SkillCard
           top={mongodbFront}
           bottom={mongodbBack}
           desc="MongoDB"
           alt="MongoDB"
-        />
-      </SwiperSlide>
-      <SwiperSlide>
-        <SkillCard
-          top={postgresqlFront}
-          bottom={postgresqlBack}
-          desc="PostgreSQL"
-          alt="PostgreSQL"
-        />
-      </SwiperSlide>
-      <SwiperSlide>
-        <SkillCard
-          top={mysqlFront}
-          bottom={mysqlBack}
-          desc="MySQL"
-          alt="MySQL"
         />
       </SwiperSlide>
       <SwiperSlide>
@@ -84,16 +76,30 @@ const SkillBE = () => {
         />
       </SwiperSlide>
       <SwiperSlide>
-        <SkillCard top={phpFront} bottom={phpBack} desc="PHP" alt="PHP" />
+        <SkillCard 
+          top={phpFront} 
+          bottom={phpBack} 
+          desc="PHP" 
+          alt="PHP" />
       </SwiperSlide>
       <SwiperSlide>
         <SkillCard
-          top={pythonFront}
-          bottom={pythonBack}
-          desc="Python"
-          alt="Python"
+          top={postgresqlFront}
+          bottom={postgresqlBack}
+          desc="PostgreSQL"
+          alt="PostgreSQL"
         />
       </SwiperSlide>
+      {/* <SwiperSlide>
+        <SkillCard
+          top={mysqlFront}
+          bottom={mysqlBack}
+          desc="MySQL"
+          alt="MySQL"
+        />
+      </SwiperSlide> */}
+
+
     </Swiper>
   );
 };

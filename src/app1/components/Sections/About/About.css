@@ -49,6 +49,7 @@
 
 .about-button-container{
   display: flex;
+  margin-top: 10px;
 }
 
 .btn-about {
