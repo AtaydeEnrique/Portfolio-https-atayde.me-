@@ -46,6 +46,7 @@ const About = () => {
               when I started my Bachelor's Degree I rediscovered my passion for
               programming and moved to C++, MATLAB, Python and Java, developing
               and publishing some apps and papers for scientific journals.
+            </p>
               <div className="about-button-container">
               <button onClick={worksMenuButtonHandler} className="btn btn-about">
                 Published Papers
@@ -72,6 +73,8 @@ const About = () => {
                 )}
               </Transition>
               </div>
+              
+              <p className="about-description">
               Now I am trying to leverage my analytical and problem-solving
               skills in the process of designing digital and tangible solutions
               using technology for real-world challenges.

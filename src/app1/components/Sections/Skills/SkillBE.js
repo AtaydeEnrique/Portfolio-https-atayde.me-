@@ -13,8 +13,8 @@ import mongodbFront from "../../../assets/langs/mongodbfront.svg";
 import mongodbBack from "../../../assets/langs/mongodbback.svg";
 import postgresqlFront from "../../../assets/langs/postgresqlfront.svg";
 import postgresqlBack from "../../../assets/langs/postgresqlback.svg";
-import mysqlFront from "../../../assets/langs/mysqlfront.svg";
-import mysqlBack from "../../../assets/langs/mysqlback.svg";
+// import mysqlFront from "../../../assets/langs/mysqlfront.svg";
+// import mysqlBack from "../../../assets/langs/mysqlback.svg";
 import nodejsFront from "../../../assets/langs/nodejsfront.svg";
 import nodejsBack from "../../../assets/langs/nodejsback.svg";
 

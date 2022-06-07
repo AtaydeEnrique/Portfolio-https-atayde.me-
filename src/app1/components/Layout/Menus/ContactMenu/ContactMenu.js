@@ -12,13 +12,13 @@ const windowWidth = window.innerWidth <= 850;
 const ContactMenu = ({ onClose, kraken, hideMenuHandler }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [didLoad, setDidLoad] = useState(null);
-
+  
   const sendData = async (data, validForm) => {
     setIsLoading(true);
     if (validForm) {
       try {
         const promise = await fetch(
-          `https://send.pageclip.co/${process.env.REACT_APP_VERCEL_KEY}`,
+          `https://send.pageclip.co/${process.env.REACT_APP_PAGECLIP_KEY}`,
           {
             method: "POST",
             body: JSON.stringify(data),

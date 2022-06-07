@@ -3,7 +3,7 @@ const SuccessScreen = () => {
   return (
     <div className="main">
       <div className="text-container error0">
-        <div className="text">MESSAGE SENT MESSAGE SENT</div>
+        <div className="text"></div>
         <div className="text">MESSAGE SENT MESSAGE SENT</div>
       </div>
       <div className="text-container error1">
@@ -11,7 +11,7 @@ const SuccessScreen = () => {
         <div className="text">Thank you ~ Thank you</div>
       </div>
       <div className="text-container error2">
-        <div className="text">アタイで Atayde アタイで</div>
+        <div className="text"></div>
         <div className="text">アタイで Atayde アタイで</div>
       </div>
       <div className="text-container error3">
@@ -23,7 +23,7 @@ const SuccessScreen = () => {
         </div>
       </div>
       <div className="text-container error4">
-        <div className="text">MESSAGE SENT MESSAGE SENT</div>
+        <div className="text"></div>
         <div className="text">MESSAGE SENT MESSAGE SENT</div>
       </div>
     </div>
