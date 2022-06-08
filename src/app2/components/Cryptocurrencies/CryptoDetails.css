@@ -129,7 +129,7 @@
 
 .coin-stat img{
     padding-right: 20px;
-    width: 8%;
+    width: 12% !important;
     height: 6%;
 }
 

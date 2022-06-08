@@ -21,9 +21,9 @@ const WorkMenu = () => {
           <h6>React App</h6>
           <br />
           <h4>
-            In this App, we make use of one the top criptocurrencies API within RapidAPI <b>
+            In this App, we make use of one the top cryptocurrencies API within RapidAPI <b>
             "<a href="https://rapidapi.com/Coinranking/api/coinranking1/" rel="noreferrer" target='_blank'>CoinRanking</a></b>",
-            showcasing top cryptocurrencies in the world, details and news for each of them.<br/>
+            showcasing the top cryptocurrencies in the world, details and news for each of them.<br/>
             In addition, an Express server handles all the request through my own API
             
           </h4>

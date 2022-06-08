@@ -25,7 +25,9 @@ const CryptoDetails = () => {
     if (isFetching) return <Loading/>
     const coin = data?.data?.coin
     const changeType = coin?.change === '-' ? 'negative' : 'positive'
-
+    if (coin.supply?.total > 1000000000000000){
+      return 'This coin may be a scam, needs revision'
+    }
     const time = ['3h', '24h', '7d', '30d', '1y', '3m', '3y', '5y'];
 
   return (
@@ -92,7 +94,7 @@ const CryptoDetails = () => {
                   <img src={TrophyIcon} alt='Highest'></img>
                   <h3 className='stat-name'>All-time-high(daily avg.)</h3>
                 </div>
-                <p>{millify(coin?.allTimeHigh?.price)}</p>
+                <p>{millify(coin?.allTimeHigh?.price ? coin?.allTimeHigh?.price : 0)}</p>
               </div>
             </div>
           </div>
@@ -130,7 +132,8 @@ const CryptoDetails = () => {
                   <img src={ExclamationIcon} alt='Exclamation'></img>
                   <h3 className='stat-name'>Total Supply</h3>
                 </div>
-                <p>{millify(coin?.supply?.total ? coin?.supply?.total : 0 )}</p>
+                {console.log(coin?.supply?.total)}
+                <p>{coin?.supply?.total ? millify(coin?.supply?.total) : 0}</p>
               </div>
               <div className='coin-stat'>
                 <div className='coin-stat-desc'>
