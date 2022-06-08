@@ -68,15 +68,15 @@ const Navbar = () => {
           </nav>
           {!navActive && (
               <ul className='burger-menu'>
-                <Link to='/' className='burger-link' onClick={activateNavHandler}>
+                <Link to='/cryptoapp' className='burger-link' onClick={activateNavHandler}>
                   <img className='link-icon'src={HomeIcon} alt='Home'></img>
                   <li>Homepage</li>
                 </Link>
-                <Link to='/cryptocurrencies' className='burger-link' onClick={activateNavHandler}>
+                <Link to='/cryptoapp/cryptocurrencies' className='burger-link' onClick={activateNavHandler}>
                   <img className='link-icon' src={CryptoIcon} alt='Cryptocurrencies'></img>
                   <li>Cryptocurrencies</li>
                 </Link>
-                <Link to='/news' className='burger-link' onClick={activateNavHandler}>
+                <Link to='/cryptoapp/news' className='burger-link' onClick={activateNavHandler}>
                   <img className='link-icon' src={NewsIcon} alt='News'></img>
                   <li>News</li>
                 </Link>
