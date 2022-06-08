@@ -12,7 +12,6 @@ export default function App() {
   const [loading, setLoading] = useState(false)
   const apiKey = process.env.REACT_APP_VERCEL_SCRAPER
   const url = `http://api.scraperapi.com?api_key=${apiKey}&autoparse=true`;
-  localStorage.setItem("expirationTime", 10);
   
   const copyDataHandler = () =>{
     navigator.clipboard.writeText(data)
