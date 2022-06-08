@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef, Fragment }  from 'react'
+import React, { useState, useRef, Fragment }  from 'react'
 import request from 'request-promise'
 import JSONPretty from 'react-json-pretty';
 import Spinner from '../app1/components/UI/Spinner/Spinner';
@@ -80,13 +80,6 @@ export default function App() {
       setLoading(false)
       setData('Enter a valid ID!')
   }
-  }
-
-  console.log(data)
-  const jsonStyle = {
-    propertyStyle: { color: 'red' },
-    stringStyle: { color: 'green' },
-    numberStyle: { color: 'darkorange' }
   }
 
   return (
