@@ -18,7 +18,7 @@ const ContactMenu = ({ onClose, kraken, hideMenuHandler }) => {
     if (validForm) {
       try {
         const promise = await fetch(
-          `https://send.pageclip.co/${process.env.REACT_APP_VERCEL_PAPRECLIP}`,
+          `https://send.pageclip.co/${process.env.REACT_APP_VERCEL_PAPERCLIP}`,
           {
             method: "POST",
             body: JSON.stringify(data),

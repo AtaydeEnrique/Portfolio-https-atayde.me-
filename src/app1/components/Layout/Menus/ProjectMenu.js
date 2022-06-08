@@ -23,11 +23,12 @@ const WorkMenu = () => {
           <h4>
             In this App, we make use of one the top criptocurrencies API within RapidAPI <b>
             "<a href="https://rapidapi.com/Coinranking/api/coinranking1/" rel="noreferrer" target='_blank'>CoinRanking</a></b>",
-            showcasing top cryptocurrencies in the world, details and news for each of them.
+            showcasing top cryptocurrencies in the world, details and news for each of them.<br/>
+            In addition, an Express server handles all the request through my own API
             
           </h4>
           <br />
-          <h5>React.js &nbsp;Redux &nbsp;Redux Toolkit &nbsp;API usage</h5>
+          <h5>React.js &nbsp;Redux &nbsp;Redux Toolkit &nbsp;API usage &nbsp;Heroku &nbsp;Express</h5>
         </div>
       </div>
       <div className="work-box">
@@ -42,18 +43,19 @@ const WorkMenu = () => {
         </div>
         <div className="work-box_content">
           <h3>
-            Amazon Scraper App API (My own API)
+            Amazon Scraper App API
           </h3>
           <h6>React App</h6>
           <br />
           <h4>
             In this App, an Amazon Scraper API is implemented, the input will be the amazon product ID
             which will return a JSON object containing the product detail, reviews and offers depending on what we previously selected.
-            This JSON object can be used in any other app.
+            This JSON object can be used in any other app.<br/>
+            In addition, an Express server handles all the request through my own API
             
           </h4>
           <br />
-          <h5>React.js &nbsp;API usage</h5>
+          <h5>React.js &nbsp;API usage &nbsp;Heroku &nbsp;Express</h5>
         </div>
       </div>
     </div>
