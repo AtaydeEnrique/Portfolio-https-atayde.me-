@@ -1,29 +1,22 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
-const baseUrl = 'https://coinranking1.p.rapidapi.com'
-
-const cryptoApiHeaders = {
-    'X-RapidAPI-Host': 'coinranking1.p.rapidapi.com',
-    'X-RapidAPI-Key': process.env.REACT_APP_VERCEL_RAPIDAPI
-}
-
-const createRequest = (url) => ({url, headers: cryptoApiHeaders})
+const baseUrl = 'https://atayde.herokuapp.com'
 
 export const cryptoApi = createApi({
   reducerPath: 'cryptoApi',
   baseQuery: fetchBaseQuery({ baseUrl }),
   endpoints: (builder) => ({
     getCryptos: builder.query({
-      query: (count) => createRequest(`/coins?limit=${count}`),
+      query: (count) => `${baseUrl}/cryptos/${count}`,
     }),
     getCryptoStats: builder.query({
-      query: () => createRequest(`/stats`),
+      query: () => `${baseUrl}/cryptoStats`,
     }),
     getOneCrypto: builder.query({
-      query: (id) => createRequest(`/coin/${id}`),
+      query: (id) => `${baseUrl}/crypto/${id}`,
     }),
     getCryptoHistory: builder.query({
-      query: ({coinId,timePeriod}) => createRequest(`/coin/${coinId}/history?timePeriod=${timePeriod}`)
+      query: ({coinId,timePeriod}) => `${baseUrl}/crypto/${coinId}/${timePeriod}`
   }),
   }),
 })
