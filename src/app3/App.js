@@ -10,8 +10,6 @@ export default function App() {
   const [data, setData] = useState('')
   const [clip, setClip] = useState('Copy to Clipboard!')
   const [loading, setLoading] = useState(false)
-  const apiKey = process.env.REACT_APP_VERCEL_SCRAPER
-  const url = `http://api.scraperapi.com?api_key=${apiKey}&autoparse=true`;
   
   const copyDataHandler = () =>{
     navigator.clipboard.writeText(data)
@@ -42,7 +40,7 @@ export default function App() {
   const getDetailsHandler = async (productId) =>{
     try {
       setLoading(true)
-      const response = await request(`${url}&url=https://www.amazon.com/dp/${productId}`);
+      const response = await request(`http://localhost:5000/product/${productId}`);
       const res = response
       setData(res)
       setLoading(false)
@@ -56,7 +54,7 @@ export default function App() {
   const getReviewsHandler = async (productId) =>{
     try {
       setLoading(true)
-      const response = await request(`${url}&url=https://www.amazon.com/product-reviews/${productId}`);
+      const response = await request(`http://localhost:5000/product/${productId}/reviews`);
       const res = JSON.parse(response)
       setData(res)
       setLoading(false)
@@ -70,7 +68,7 @@ export default function App() {
   const getOffersHandler = async (productId) =>{
     try {
       setLoading(true)
-      const response = await request(`${url}&url=https://www.amazon.com/gp/offer-listing/${productId}`);
+      const response = await request(`http://localhost:5000/product/${productId}/offers`);
       const res = JSON.parse(response)
       setData(res)
       setLoading(false)
