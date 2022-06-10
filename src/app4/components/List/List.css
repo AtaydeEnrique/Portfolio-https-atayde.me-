@@ -1,0 +1,108 @@
+.place-card-container{
+    width: 80%;
+    margin-top: 20px;
+    height: fit-content;
+    
+}
+.places-container{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    margin: auto;
+}
+.places-container h1{
+    /* text-align: center; */
+    width: 80%;
+    margin: auto;
+}
+.places-forms{
+    width: 80%;
+    margin: auto;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.place-ranking{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.place-type{
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
+.place-type label, .place-ranking label{
+    margin-bottom: 5px;
+}
+
+.place-type select, .place-ranking select{
+    padding: 3px;
+    border: solid thin transparent;
+    border-radius: 7px;
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.25);
+}
+
+.places-grid{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 5px;
+    width: 100%;
+    overflow-y: visible;
+    overflow-x: hidden;
+    direction: ltr;
+    scrollbar-width: thin;
+    scrollbar-color: #f3f0dd black;
+    height: 70vh ;
+    max-height: 70vh;
+    padding-top: 10px;
+    margin-top: 20px;
+}
+
+.places-grid::-webkit-scrollbar {
+    width: 8px;
+    display: block !important;
+}
+
+.places-grid::-webkit-scrollbar-track {
+    background-color: antiquewhite;
+}
+
+.places-grid::-webkit-scrollbar-thumb {
+    background-color: black;
+    border-radius: 6px;
+}
+
+
+
+@media (max-width:850px){
+    .places-container h1{
+        font-size: 5vw;
+    }
+    .places-forms{
+        font-size: 2vw;
+    }
+    .places-container{
+        margin: auto;
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+    }
+    .places-grid{
+        margin: auto;
+        height: 70vh ;
+        max-height: 70vh;
+        padding-top: 10px;
+        margin-top: 20px;
+        width: 90%;
+    }
+    .place-card-container{
+        /* transform: scale(0.7); */
+    }
+}

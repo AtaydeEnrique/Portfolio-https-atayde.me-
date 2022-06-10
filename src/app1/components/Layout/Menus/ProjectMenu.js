@@ -58,6 +58,32 @@ const WorkMenu = () => {
           <h5>React.js &nbsp;API usage &nbsp;Heroku &nbsp;Express</h5>
         </div>
       </div>
+      <div className="work-box">
+        <div className="work-box_link">
+          <a
+            href="http://atayde.me/placeadvisor"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img src={Link} alt="link icon" />
+          </a>
+        </div>
+        <div className="work-box_content">
+          <h3>
+            Travel Advisor App
+          </h3>
+          <h6>React App</h6>
+          <br />
+          <h4>
+            In this App, we make use of RapidAPI's&nbsp;
+             <b>"<a href="https://rapidapi.com/apidojo/api/travel-advisor/" rel="noreferrer" target='_blank'>Travel Advisor</a></b>"
+            API, which let us search nearby restaurants, hotels and places. <br/>
+            The Google Maps API is also used to display the location of each place we search.
+          </h4>
+          <br />
+          <h5>React.js &nbsp;API usage &nbsp;Heroku &nbsp;Google Maps </h5>
+        </div>
+      </div>
     </div>
   );
 };

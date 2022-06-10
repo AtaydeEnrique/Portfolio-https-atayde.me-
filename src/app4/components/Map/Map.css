@@ -1,0 +1,52 @@
+.map-container{
+    height: calc(100vh - 55px);
+    width: 100%;
+}
+
+.map-paper{
+    padding: 3px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    width: 80px;
+    height: 100px;
+    background-color: white;
+}
+.map-paper h5{
+    font-size: 0.5rem;
+}
+
+.map-paper h5:hover{
+    cursor: pointer;
+}
+
+.map-location-icon{
+    width: 30px;
+}
+
+.map-paper-stars{
+    display: flex;
+    margin-top: 2px;
+    flex-direction: row;
+}
+.map-paper-star{
+    width: 12px;
+
+}
+
+.map-paper-img{
+    height: 50px;
+    width: 80%;
+}
+
+@media (max-width:850px){
+    .map-container{
+        margin-top: 50px !important;
+        height: calc(100vh);
+        width: 100%;
+        margin: auto;
+    }
+}
