@@ -21,7 +21,7 @@ const CryptoDetails = () => {
     const [timePeriod, setTimeperiod] = useState('7d');
     const {data,  isFetching} = useGetOneCryptoQuery(id)
     const { data: coinHistory } = useGetCryptoHistoryQuery({ coinId:id, timePeriod });
-
+    window.scrollTo(0, 0)
     if (isFetching) return <Loading/>
     const coin = data?.data?.coin
     const changeType = coin?.change === '-' ? 'negative' : 'positive'

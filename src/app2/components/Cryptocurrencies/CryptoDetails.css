@@ -215,7 +215,11 @@
     border-top: solid thin rgb(207, 207, 207);
 }
 
-
+@media (max-width:500px){
+    .coin-header-name img{
+        width: 12vw;
+    }
+}
 
 
 @media (max-width:768px){
@@ -236,7 +240,7 @@
         font-size: 6vw;
     }
     .coin-header-name img{
-        width: 6vw;
+        width: 8vw;
     }
     .coin-header p{
         font-size: 2vw
