@@ -1,0 +1,44 @@
+.googl-search-links{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+.googl-search-links a{
+    color: #333333;
+    text-decoration: none;
+    margin: 0 10px;
+    padding-bottom: 5px;
+}
+
+.googl-search-links a:hover{
+    color: #655bff;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: all 0.4s;
+}
+
+.googl-search-links a.active{
+    color: #655bff;
+    border-bottom: solid;
+}
+
+
+.googl-link-active{
+
+}
+
+@media (max-width:768px){
+    .googl-search-links{
+        font-size: 0.85rem;
+    }
+  }
+
+  @media (min-width: 769px) and (max-width:1024px){
+
+  }
+
+  @media (min-width: 1025px) and (max-width:1200px){
+
+  }

@@ -1,0 +1,24 @@
+.googl-loader {
+    margin: auto;
+    margin-top: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(to left, #f3f3f3 30%, #7070ff);
+    border: 6px solid #7070ff;
+    animation: goggl-rotate 1s linear infinite;
+}
+  
+.googl-loader::before {
+    content: " ";
+    position: absolute;
+    background: #f3f3f3 ;
+    inset: 5px;
+    border-radius: 100%;
+  }
+  
+ @keyframes goggl-rotate {
+    to {
+      transform: rotate(360deg);
+    }
+  }

@@ -1,0 +1,13 @@
+.googl-footer{
+    margin: auto;
+    border-top: solid thin #ccc;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    width: fit-content;
+}
+
+.googl-footer p{
+    font-size: 0.8rem;
+    color: rgb(151, 151, 151);
+}
+

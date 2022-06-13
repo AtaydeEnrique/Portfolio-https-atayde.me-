@@ -3,7 +3,7 @@
   z-index: 99;
   width: 100%;
   display: flex;
-  scroll-margin-top: -15vh;
+  scroll-margin-top: -5vh;
 }
 .about-title {
   margin-top: 150px;

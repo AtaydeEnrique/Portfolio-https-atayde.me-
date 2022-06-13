@@ -1,0 +1,38 @@
+.googl-navbar{
+    margin-top: 20px;
+    display: flex;
+    width: 100%;
+    border-bottom: solid thin #ccc;
+}
+.googl-logo{
+    margin-right: 50px;
+    margin-left: 20px;
+}
+
+.googl-logo a{
+    color: black;
+    text-decoration: none;
+}
+
+.googl-logo p{
+    font-size: 20px;
+}
+
+@media (max-width:768px){
+    .googl-navbar{
+        flex-direction: column;
+    }
+    .googl-logo{
+        margin: auto;
+        margin-bottom: 15px;
+        
+    }
+  }
+
+  @media (min-width: 769px) and (max-width:1024px){
+
+  }
+
+  @media (min-width: 1025px) and (max-width:1200px){
+
+  }
