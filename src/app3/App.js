@@ -40,7 +40,7 @@ export default function App() {
   const getDetailsHandler = async (productId) =>{
     try {
       setLoading(true)
-      const response = await request(`http://localhost:5000/product/${productId}`);
+      const response = await request(`https://atayde.herokuapp.com/product/${productId}`);
       const res = response
       setData(res)
       setLoading(false)
@@ -54,7 +54,7 @@ export default function App() {
   const getReviewsHandler = async (productId) =>{
     try {
       setLoading(true)
-      const response = await request(`http://localhost:5000/product/${productId}/reviews`);
+      const response = await request(`https://atayde.herokuapp.com/product/${productId}/reviews`);
       const res = JSON.parse(response)
       setData(res)
       setLoading(false)
@@ -68,7 +68,7 @@ export default function App() {
   const getOffersHandler = async (productId) =>{
     try {
       setLoading(true)
-      const response = await request(`http://localhost:5000/product/${productId}/offers`);
+      const response = await request(`https://atayde.herokuapp.com/product/${productId}/offers`);
       const res = JSON.parse(response)
       setData(res)
       setLoading(false)
