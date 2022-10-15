@@ -17,7 +17,7 @@ function Navbar({ background }) {
         {(state) => (
           <div className={triggerMenu ? "blog-nav" : "blog-nav exit"}>
             <div className={triggerMenu ? "blog-menu" : "blog-menu exit"}>
-              <Link to="home">
+              <Link to="">
                 <div className="blog-option" onClick={menuHandler}>
                   Home
                 </div>
@@ -37,7 +37,7 @@ function Navbar({ background }) {
                   Week 3
                 </div>
               </Link>
-              <Link to="Week-faq">
+              <Link to="FAQ">
                 <div className="blog-option" onClick={menuHandler}>
                   How this blog works
                 </div>
