@@ -24,11 +24,11 @@ const WorkMenu = () => {
             In this App, we make use of one the top cryptocurrencies API within RapidAPI <b>
             "<a href="https://rapidapi.com/Coinranking/api/coinranking1/" rel="noreferrer" target='_blank'>CoinRanking</a></b>",
             showcasing the top cryptocurrencies in the world, details and news for each of them.<br/>
-            In addition, an Express server handles all the request through an own backend for API Keys protection, hosted in Heroku. 
+            In addition, an Express backend hosted in Heroku handles all the request for API Keys protection. 
             
           </h4>
           <br />
-          <h5>React.js &nbsp;Redux &nbsp;Redux Toolkit &nbsp;API usage &nbsp;Heroku &nbsp;Express</h5>
+          <h5>React.js &nbsp;Redux &nbsp;Redux Toolkit &nbsp;API usage Heroku &nbsp;Express</h5>
         </div>
       </div>
       <div className="work-box">
@@ -101,8 +101,7 @@ const WorkMenu = () => {
           <br />
           <h4>
             In this App, a Google mock up was created, allowing us to search sites, news, images and videos <br/>
-            In addition, an Express server handles all the request through an own backend for API Keys protection, hosted in Heroku. 
-            
+            In addition, an Express backend hosted in Heroku handles all the request for API Keys protection.  
           </h4>
           <br />
           <h5>React.js &nbsp;API usage &nbsp;Heroku &nbsp;Express &nbsp;React Context</h5>

@@ -69,6 +69,7 @@
 
 .work-box:first-child:hover,
 .work-box:nth-child(2):hover,
+.work-box:nth-child(3):hover,
 .work-box:last-child:hover {
   background: black;
   border: white solid medium;
