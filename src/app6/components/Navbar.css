@@ -1,0 +1,116 @@
+.blog-nav {
+  background-color: var(--brand-color1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  width: 40%;
+  min-height: 100vh;
+  animation: blog-nav-in 1s;
+  -webkit-animation: blog-nav-in 1s;
+}
+
+.blog-nav.exit {
+  transform: translate(-1000px, 0);
+  transition: all 3s;
+}
+
+.blog-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: white;
+  padding: 40%;
+  width: 100%;
+  min-height: 100vh;
+  padding-left: 20%;
+  animation: blog-menu-in 1.5s cubic-bezier(0.77, 0, 0.4, 1);
+  -webkit-animation: blog-menu-in 1.5s cubic-bezier(0.77, 0, 0.4, 1);
+  transition: all 3s;
+}
+
+.blog-menu.exit {
+  transform: translate(-1000px, 0);
+  transition: all 3s;
+}
+
+.blog-menu a {
+  text-decoration: none;
+  color: black;
+}
+
+.blog-option {
+  width: 100%;
+  animation: blog-menu-in 2s cubic-bezier(0.77, 0, 0.4, 1);
+  -webkit-animation: blog-menu-in 2s cubic-bezier(0.77, 0, 0.4, 1);
+}
+
+.blog-menu-btn {
+  position: absolute;
+  min-height: 100vh;
+  writing-mode: vertical-lr;
+  text-align: center;
+  cursor: pointer;
+  z-index: 99;
+  font-size: large;
+  font-weight: 900;
+  transition: 1s;
+}
+.blog-menu-btn.actv:hover {
+  background-color: black;
+  color: white;
+}
+
+.blog-menu-btn.actv {
+  margin-left: 40%;
+  padding-right: 2%;
+  background-color: white;
+  border-right: black solid;
+}
+
+.blog-menu-btn.closed {
+  padding-left: 2%;
+  border-right: transparent solid;
+  transition: 1.5s;
+}
+
+.blog-menu-btn.closed:hover {
+  background-color: black;
+  color: white;
+  transition: 1s;
+}
+
+@keyframes blog-nav-in {
+  0% {
+    transform: translateX(-700px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+@keyframes blog-menu-in {
+  0% {
+    transform: translateX(-700px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes blog-btn-in {
+  0% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: white;
+  }
+}
+
+@keyframes blog-btn-out {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-100px);
+  }
+}
