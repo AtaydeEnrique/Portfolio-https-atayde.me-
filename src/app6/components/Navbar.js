@@ -4,13 +4,12 @@ import { Transition } from "react-transition-group";
 
 import "./Navbar.css";
 
-function Navbar({ background }) {
+function Navbar({ background, entries }) {
   const [triggerMenu, setTriggerMenu] = useState(false);
   const menuHandler = () => {
     background();
     setTriggerMenu((m) => !m);
   };
-
   return (
     <>
       <Transition in={triggerMenu} timeout={1500} mountOnEnter unmountOnExit>
@@ -22,21 +21,14 @@ function Navbar({ background }) {
                   Home
                 </div>
               </Link>
-              <Link to="Week-1">
-                <div className="blog-option" onClick={menuHandler}>
-                  Week 1
-                </div>
-              </Link>
-              <Link to="Week-2">
-                <div className="blog-option" onClick={menuHandler}>
-                  Week 2
-                </div>
-              </Link>
-              <Link to="Week-3">
-                <div className="blog-option" onClick={menuHandler}>
-                  Week 3
-                </div>
-              </Link>
+              {entries?.map((entry, i) => (
+                <Link to={entry.link.substring(1)} key={i}>
+                  <div className="blog-option" onClick={menuHandler}>
+                    {entry.title}
+                  </div>
+                </Link>
+              ))}
+
               <Link to="FAQ">
                 <div className="blog-option" onClick={menuHandler}>
                   How this blog works

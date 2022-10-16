@@ -1,16 +1,18 @@
 #blog {
   min-height: 100vh;
   z-index: 99;
+  margin-top: 0 !important;
 }
 .blog-background {
   background-color: rgb(230, 230, 230);
   width: 100%;
+  margin-top: 0 !important;
   min-height: 100vh;
   z-index: -99;
-  position: absolute;
+  position: fixed;
 }
 .blog-content {
-  background-color: rgb(240, 240, 240);
+  background-color: rgb(245, 245, 245);
   width: 95%;
   min-height: 100vh;
   margin-left: auto;

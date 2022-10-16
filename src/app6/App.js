@@ -1,14 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Cursor from "../app1/components/UI/Cursor/Cursor";
 import Entry from "./components/Entry";
-
-import "./App.css";
 import Home from "./components/Home";
+import FAQ from "./components/FAQ";
+
+import { entries } from "./assets/entries/entries";
+import "./App.css";
 
 function App() {
   const [background, setBackground] = useState(false);
+
   const backgroundHandler = () => {
     setBackground((b) => !b);
   };
@@ -17,14 +20,17 @@ function App() {
       <div className="blog-background"></div>
       <div id="blog" className={background ? "blurred" : ""}>
         <Cursor></Cursor>
-        <Navbar background={backgroundHandler} />
+        <Navbar background={backgroundHandler} entries={entries} />
         <div className={background ? "blog-content blurred" : "blog-content"}>
           <Routes>
             <Route path="/" element={<Home />} />
-            {["/Week-1", "/Week-2", "/Week-3"].map((path, i) => (
-              <Route path={path} element={<Entry entry={path} key={i} />} />
+            {entries?.map((entry, i) => (
+              <Route
+                path={entry.link}
+                element={<Entry entry={entry} key={i} />}
+              />
             ))}
-            <Route path="/FAQ" element={<div>FAQ</div>} />
+            <Route path="/FAQ" element={<FAQ></FAQ>} />
           </Routes>
         </div>
       </div>

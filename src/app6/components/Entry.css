@@ -1,0 +1,29 @@
+.blog-entry {
+  display: flex;
+  flex-direction: column;
+  /* width: auto;
+  height: 100vh; */
+}
+.entry-body {
+  display: flex;
+  flex-direction: column;
+  margin: 2% 10%;
+  max-width: 90%;
+}
+
+.entry-body h1 {
+  text-align: center;
+}
+
+.entry-text p {
+  margin: 30px 0;
+  text-align: justify;
+}
+
+.entry-text p:first-child {
+  margin-top: 60px;
+}
+
+.entry-text ul {
+  margin-left: 10%;
+}
