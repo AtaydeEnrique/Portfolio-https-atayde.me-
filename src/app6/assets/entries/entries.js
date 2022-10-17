@@ -305,24 +305,50 @@ export const entries = [
         </div>
         <p className="entry-figure">Fig. 2 Crazy 8 design.</p>
         <p>
+          This week I learned a lot about UI design patterns and the most
+          typical software to use when we need to work as a team, basically, the
+          most important parts or “stages” of a design sprint are the following:
+        </p>
+        <ol>
+          <li>
+            The team will brainstorm ideas and propose all kind of questions
+            which would help to solve the problem we are facing; these will be
+            answered by the client.
+          </li>
+          <li>
+            Each member of the team will select and sketch some of the winning
+            ideas after the interview with the client, this will let us have
+            potential solutions and perspectives on how to start working.
+          </li>
+          <li>
+            A single winning sketch will be selected after a voting session.
+            This selected idea needs to be critiqued one more time to polish it
+            as close to perfection.
+          </li>
+          <li>
+            Prototyping starts in this stage; the selected idea is transformed
+            into a realistic prototype.
+          </li>
+          <li>
+            End part of the sprint, here the prototype is reviewed and redone if
+            needed.
+          </li>
+        </ol>
+        <p>
           Aside from the design sprint, this week we got different coding
           challenges from Google Jam. Five of them were team challenges and we
-          had to decide a single problem to solve on our own. Through the week
-          we, the Interns, made two calls to divide the challenges depending on
-          everyone’s capabilities and everyone's programming languages. All
-          these coding challenges will be further discussed in next week's
-          entry.
-        </p>
-        <p>
-          This week I learned a lot about UI design patterns and the most
-          typical software to use when we need to work as a team, and also had a
-          chance to practice data structures and algorithms while trying to
-          solve all of the coding challenges on my own.
+          got to decide a single problem to solve it by our own. Through the
+          week us, the Interns, made two calls to divide the challenges
+          depending on everyone’s capabilities and everyone's programming
+          languages. All these coding challenges will be further discussed in
+          the next week entry, although this week I had a chance to practice
+          data structures and algorithms while trying to solve all coding
+          challenges on my own.
         </p>
         <p>
           Lastly, we were asked to start our own blog. We could use any webpage
           or tool we wanted, so I decided to build my own, which is the one
-          where you are in right now. 😁
+          where you are reading right now. 😁
         </p>
       </>
     ),

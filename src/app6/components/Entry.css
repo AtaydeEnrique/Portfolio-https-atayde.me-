@@ -24,7 +24,8 @@
   margin-top: 60px;
 }
 
-.entry-text ul {
+.entry-text ul,
+.entry-text ol {
   margin-left: 10%;
 }
 .blog-img {
@@ -34,6 +35,8 @@
 .entry-body img {
   width: 40vw;
   margin: auto;
+  box-shadow: 0 0 15px grey;
+  border-radius: 5px;
 }
 
 .entry-figure {
