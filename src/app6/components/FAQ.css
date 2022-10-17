@@ -1,0 +1,40 @@
+.blog-faq {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.blog-faq p {
+  margin-top: 30px;
+}
+
+.blog-faq a {
+  text-decoration: none;
+}
+
+.FAQ-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  border: solid thin transparent;
+  padding: 10px;
+  box-shadow: 0px 0px 15px grey;
+  border-radius: 10px;
+}
+.FAQ-wrapper p {
+  margin-top: 5px;
+  color: black;
+}
+
+.FAQ-wrapper img {
+  width: 50%;
+  transition: all 1s;
+}
+
+.FAQ-wrapper:hover > img {
+  width: 60%;
+}
