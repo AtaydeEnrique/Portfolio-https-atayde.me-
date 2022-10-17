@@ -8,7 +8,7 @@ function FAQ() {
       <img className="spin" src={reactLogo} alt="react logo" />
       <p>Made with React</p>
       <a
-        href="https://github.com/AtaydeEnrique/Portfolio-https-atayde.me-"
+        href="https://github.com/AtaydeEnrique/Portfolio-https-atayde.me-/tree/main/src/app6"
         target="_blank"
         rel="noreferrer"
       >
