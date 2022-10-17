@@ -29,8 +29,8 @@ function Home() {
         <div className="about-wrapper inner-element">
           <div className="about-headline">
             <p className="about-description">
-              I'm a Mechatronics Engineer, part of the Encora Encora Apprentice
-              - Software Engineer Internship.
+              I'm a Mechatronics Engineer, part of the Encora Apprentice -
+              Software Engineer Internship.
             </p>
             <p className="about-description">
               My journey as a programmer started with BASIC when I was 15, then,
