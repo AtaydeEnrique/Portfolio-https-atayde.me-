@@ -18,6 +18,10 @@ function Navbar({ background, entries }) {
     }
   };
 
+  const toTopHandler = () => {
+    window.scrollTo(0, 0);
+  };
+
   return (
     <>
       <Transition in={triggerMenu} timeout={1500} mountOnEnter unmountOnExit>
@@ -31,7 +35,13 @@ function Navbar({ background, entries }) {
               </Link>
               {entries?.map((entry, i) => (
                 <Link to={entry.link.substring(1)} key={i}>
-                  <div className="blog-option" onClick={menuHandler}>
+                  <div
+                    className="blog-option"
+                    onClick={() => {
+                      menuHandler();
+                      toTopHandler();
+                    }}
+                  >
                     {entry.title}
                   </div>
                 </Link>

@@ -14,7 +14,7 @@ function DataCard({ date, title }) {
         text={title.toUpperCase() + "// ENCORA APPRENTICE++"}
         customClass={"blog-scrolling"}
       />
-      <img src={pkmnTrainer} />
+      <img src={pkmnTrainer} alt="Ricardo Atayde" />
       <div className="data-wrapper">
         <h3>Ricardo Enrique Ortega Atayde</h3>
         <p>{date}</p>
@@ -25,21 +25,21 @@ function DataCard({ date, title }) {
           target="_blank"
           rel="noreferrer"
         >
-          <img src={linkedIn} />
+          <img src={linkedIn} alt="linkedin logo" />
         </a>
         <a
           href="https://github.com/AtaydeEnrique"
           target="_blank"
           rel="noreferrer"
         >
-          <img src={github} />
+          <img src={github} alt="github logo" />
         </a>
         <a
           href="mailto:atayde.ricardoe@gmail.com"
           target="_blank"
           rel="noreferrer"
         >
-          <img src={email} />
+          <img src={email} alt="email logo" />
         </a>
       </div>
     </div>
