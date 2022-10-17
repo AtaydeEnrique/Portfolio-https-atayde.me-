@@ -17,8 +17,10 @@ function App() {
   };
   return (
     <>
-      <div className="blog-background"></div>
-      <div id="blog" className={background ? "blurred" : ""}>
+      <div
+        className={background ? "blog-background blurred" : "blog-background"}
+      ></div>
+      <div id="blog">
         <Cursor></Cursor>
         <Navbar background={backgroundHandler} entries={entries} />
         <div className={background ? "blog-content blurred" : "blog-content"}>

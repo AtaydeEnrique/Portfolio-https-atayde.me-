@@ -15,7 +15,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
     {window.location.host.split(".")[0] === "blog" ? (
-      <App1 />
+      <App6 />
     ) : (
       <Routes>
         <Route path="/" element={<App1 />} />

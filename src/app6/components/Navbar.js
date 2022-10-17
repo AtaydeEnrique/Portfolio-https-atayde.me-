@@ -6,10 +6,18 @@ import "./Navbar.css";
 
 function Navbar({ background, entries }) {
   const [triggerMenu, setTriggerMenu] = useState(false);
+  const [menuText, setMenuText] = useState("Menu");
+
   const menuHandler = () => {
     background();
     setTriggerMenu((m) => !m);
+    if (!triggerMenu) {
+      setMenuText("Close Menu");
+    } else {
+      setMenuText("Menu");
+    }
   };
+
   return (
     <>
       <Transition in={triggerMenu} timeout={1500} mountOnEnter unmountOnExit>
@@ -43,7 +51,7 @@ function Navbar({ background, entries }) {
         className={triggerMenu ? "blog-menu-btn actv" : "blog-menu-btn closed"}
         onClick={menuHandler}
       >
-        Menu
+        {menuText}
       </div>
     </>
   );

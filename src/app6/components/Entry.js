@@ -7,7 +7,7 @@ import "./Entry.css";
 function Entry({ entry }) {
   return (
     <div className="blog-entry">
-      <DataCard date={entry.date} />
+      <DataCard date={entry.date} title={entry.title} />
       <div className="entry-body">
         <h1>
           <TypeWriter

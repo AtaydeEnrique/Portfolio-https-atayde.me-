@@ -37,3 +37,19 @@
 .media-wrapper img:hover {
   width: 40px;
 }
+.blog-scrolling {
+  background: rgba(205, 255, 209, 0.5);
+  mix-blend-mode: multiply;
+  color: white;
+  position: fixed;
+  transform: rotate(90deg) translateY(-30vw) translateX(40vw);
+}
+
+.blog-scrolling > .infinite-container > .infinite-text {
+  -webkit-text-stroke: 0px !important;
+  font-size: 3vw !important;
+}
+
+.blog-scrolling > .infinite-container {
+  min-width: 100vw;
+}

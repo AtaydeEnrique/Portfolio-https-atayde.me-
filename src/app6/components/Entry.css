@@ -27,3 +27,15 @@
 .entry-text ul {
   margin-left: 10%;
 }
+.blog-img {
+  display: flex;
+}
+
+.entry-body img {
+  width: 40vw;
+  margin: auto;
+}
+
+.entry-figure {
+  text-align: center !important;
+}

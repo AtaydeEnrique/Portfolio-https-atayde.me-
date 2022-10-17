@@ -253,4 +253,78 @@ export const entries = [
       </>
     ),
   },
+  {
+    link: "/Week-3",
+    title: "Week 3",
+    date: "Oct 17, 2022",
+    content: (
+      <>
+        <p>
+          This week I had the opportunity to participate in a UI Design workshop
+          called “Design Sprint”, although a sprint is most of the time 5 days
+          of work, we rushed on learning just the most important ideas of a UI
+          design sprint in 2 hours.
+        </p>
+        <p>
+          In the meeting, we formed groups of 7+ people which would be our
+          design team. The idea was to emulate a real team with a real client
+          that was in need for a communication app for their company. We used an
+          online workspace tool to make notes and develop the prototype. The
+          first step was to brainstorm about what we thought we needed to ask
+          the client to gather all the information before we could start
+          developing ideas and prototypes. The questions we would ask to the
+          client were written by all the team in notes as found in Fig. 1. There
+          wasn’t a limit on how many questions we could make, the more, the
+          better.
+        </p>
+        <div className="blog-img">
+          <img src="https://i.imgur.com/fZ6wPJA.png" alt="Brainstorm"></img>
+        </div>
+        <p className="entry-figure">Fig. 1 Brainstorm notes.</p>
+        <p>
+          After the brainstorm we would emulate a call with a client which was a
+          member of another team. We asked him all the questions, and all the
+          answers provided would serve us to develop ideas and more questions
+          about the product our client would like to get. These new questions
+          were called “How Might We”. They were crucial to pinpoint the most
+          important features that were needed in our app, here we polished the
+          details on how we were going to develop the prototype and let us know
+          how to start sketching out ideas.
+        </p>
+        <p>
+          Once we had all our information selected, it was time to start the
+          prototype development. The online workspace let us select cards that
+          were similar to a phone screen. (Fig. 2). Here we made 8 different
+          screens for each part of our app, this part of the sprint was called
+          Crazy 8. Although it was rough to do it in so little time at the end,
+          we could make different designs that were further discussed with the
+          client, and all the expectations were met.
+        </p>
+        <div className="blog-img">
+          <img src="https://i.imgur.com/eH1qzm4.png" alt="Crazy 8"></img>
+        </div>
+        <p className="entry-figure">Fig. 2 Crazy 8 design.</p>
+        <p>
+          Aside from the design sprint, this week we got different coding
+          challenges from Google Jam. Five of them were team challenges and we
+          had to decide a single problem to solve on our own. Through the week
+          we, the Interns, made two calls to divide the challenges depending on
+          everyone’s capabilities and everyone's programming languages. All
+          these coding challenges will be further discussed in next week's
+          entry.
+        </p>
+        <p>
+          This week I learned a lot about UI design patterns and the most
+          typical software to use when we need to work as a team, and also had a
+          chance to practice data structures and algorithms while trying to
+          solve all of the coding challenges on my own.
+        </p>
+        <p>
+          Lastly, we were asked to start our own blog. We could use any webpage
+          or tool we wanted, so I decided to build my own, which is the one
+          where you are in right now. 😁
+        </p>
+      </>
+    ),
+  },
 ];
