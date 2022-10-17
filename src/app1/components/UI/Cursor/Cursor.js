@@ -22,7 +22,7 @@ const Cursor = () => {
           setOnlink("about big");
         } else if (e.target.closest('li a[href="#home-container"]') !== null) {
           setOnlink("hi big");
-        } else if (e.target.closest('li a[href="#skills"]') !== null) {
+        } else if (e.target.closest('li a[href="#skills"] ') !== null) {
           setOnlink("skills big");
         } else if (e.target.closest('li a[href="#contact"]') !== null) {
           setOnlink("contact big");
@@ -34,7 +34,7 @@ const Cursor = () => {
           setOnlink("inf big");
         } else if (
           e.target.closest(
-            'div[class="skill-card"], div[class="work-box_content"]'
+            'div[class="skill-card"], div[class="work-box_content"], div[class="blog-contact-data"]'
           ) !== null
         ) {
           setOnlink("skill big");
@@ -42,7 +42,7 @@ const Cursor = () => {
           setOnlink("footer-inf big");
         } else if (
           e.target.closest(
-            'div[class="dot-divider"], section[class="waves-footer"]'
+            'div[class="dot-divider"], section[class="waves-footer"], div[class="blog-menu-btn closed"], div[class="blog-menu-btn actv"]'
           ) !== null
         ) {
           setOnlink("anim big");

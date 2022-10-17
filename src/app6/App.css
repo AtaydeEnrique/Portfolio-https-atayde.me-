@@ -1,0 +1,32 @@
+#blog {
+  min-height: 100vh;
+  z-index: 99;
+  margin-top: 0 !important;
+}
+.blog-background {
+  background-color: rgb(230, 230, 230);
+  width: 100%;
+  margin-top: 0 !important;
+  min-height: 100vh;
+  z-index: -99;
+  position: fixed;
+}
+.blog-content {
+  background-color: rgb(245, 245, 245);
+  width: 95%;
+  min-height: 100vh;
+  margin-left: auto;
+  border-left: thin black;
+  border-right: thin black;
+  box-shadow: 0px 10px 10px grey;
+}
+
+#blog.blurred,
+.blog-content.blurred {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.blog-background.blurred {
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.5);
+}
