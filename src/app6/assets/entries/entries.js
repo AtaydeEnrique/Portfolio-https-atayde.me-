@@ -353,4 +353,181 @@ export const entries = [
       </>
     ),
   },
+  {
+    link: "/Week-4",
+    title: "Week 4",
+    date: "Oct 24, 2022",
+    content: (
+      <>
+        <p>
+          This week was a really busy and tiring but satisfying experience in my
+          opinion. Through the week, as I mentioned in my last entry, I worked
+          on Google Jam challenges as a team.
+        </p>
+        <p>The challenges we had were:</p>
+        <ul>
+          <li>
+            <a
+              href="https://codingcompetitions.withgoogle.com/codejam/round/0000000000876ff1/0000000000a4621b"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Punched Cards
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://codingcompetitions.withgoogle.com/codejam/round/0000000000876ff1/0000000000a4672b"
+              target="_blank"
+              rel="noreferrer"
+            >
+              3D Printing
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://codingcompetitions.withgoogle.com/codejam/round/0000000000876ff1/0000000000a46471"
+              target="_blank"
+              rel="noreferrer"
+            >
+              d1000000
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://codingcompetitions.withgoogle.com/codejam/round/0000000000876ff1/0000000000a45ef7"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Chain Reactions
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://codingcompetitions.withgoogle.com/codejam/round/0000000000876ff1/0000000000a45fc0"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Twisty Little Passages
+            </a>
+          </li>
+        </ul>
+        <p>
+          All of them needed to be made on 4 different programming languages
+          which were TypeScript, Kotlin, Dart and Python. To be honest I was
+          kind of scared at first, since it would be my first time working with
+          Kotlin and Dart. I didn’t have any experience on those two, but at
+          least I knew they were similar to Java and I already had been
+          practicing that language with the Hyperskill courses.
+        </p>
+        <p>
+          As a team, we decided to pick any problems we wanted voluntarily in
+          any programming language we felt confident in. As I have worked with
+          Python the most, I started with the first three problems, which I
+          could solve within 1 day. The three of them didn’t require any data
+          structure but arrays and just for loops which didn’t involve any
+          algorithm in particular, they were really straightforward, so after
+          solving them we discussed them in another team call and we decided to
+          translate the code to the other 3 programming languages.{" "}
+        </p>
+        <p>
+          The problem came with the last 2 problems, Chain Reactions and Twisty
+          Little Passages. They seemed really intimidating and it was hard to
+          visualize what path to take at first, so we agreed on discussing in
+          detail what we could do to solve it. After the meeting, I tried
+          solving the fourth one with dynamic programming since it was the most
+          discussed topic in the meeting, with no luck at all. I was really
+          frustrated as there was no luck on passing all the tests provided on
+          Google Jam, there were just a few of them correct. At last, we
+          discussed these last 2 problems once again and two of my teammates
+          were able to successfully explain how to solve them. I was really
+          happy to work with them, since there was no judgement, no laughs and
+          there were never “dumb” questions, everyone were supportive and we
+          learned from each other a lot.
+        </p>
+        <p>
+          Afterwards, with all the explanation and feedback we had, I
+          volunteered to solve both problems on Dart, since I wanted to test my
+          learning capabilities with a whole new syntax. Dart was really similar
+          to C# and Java and the thing I struggled the most was type
+          declarations, as you need to be specific and watch the types of all
+          variables you declare.{" "}
+        </p>
+        <p>
+          After one whole day of Dart syntax 101 I was able to solve both
+          problems, the last one, was trickier since it was more like a
+          statistics and probability problem rather than a programming one.{" "}
+        </p>
+        <p>
+          As a team, we managed to solve all of these problems relatively not
+          that slow, but later in the week we got 3 more coding challenges,
+          which were:{" "}
+        </p>
+        <ul>
+          <li>
+            <a
+              href="https://codingcompetitions.withgoogle.com/codejam/round/0000000000876ff1/0000000000a4621b"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Double or One Thing
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://codingcompetitions.withgoogle.com/codejam/round/0000000000877ba5/0000000000aa8e9c"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Equal Sum
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://codingcompetitions.withgoogle.com/codejam/round/0000000000877ba5/0000000000aa9280"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Weightlifting
+            </a>
+          </li>
+        </ul>
+        <p>
+          As we already had experience with the last ones, we did basically the
+          same steps to solve them, everyone volunteered to solve each of them.
+          I worked on the first and last problem. The first one didn’t require a
+          specific algorithm to solve, it was straightforward like the ones I
+          solved earlier in the week. I worked with Dart to solve it. But again,
+          the problem started with the third one as no one could solve it on
+          their own. A meeting was held and we discussed possible solutions, and
+          after hours of discussion everyone agreed to start researching and
+          seek a solution we could study and then implement it with our own
+          code. All the solutions and explanations can be further explored here:
+        </p>
+        <a>Individual Technical Log</a>
+        <br />
+        <a>Group Technical Log</a>
+        <p>
+          Through the week I also spent an hour a day refreshing my knowledge on
+          data structures and algorithms, which was really helpful to not get
+          that stressed solving the real Google Jam problems. I re-visited the
+          courses available on LeetCode.
+        </p>
+        <p>
+          This week was really fulfilling for me, I got to know my teammates
+          more and I appreciate so much that everyone is available to teach as
+          well as they are not shy to ask if they don’t know something. I got
+          the opportunity to learn a lot through teaching Python syntax, data
+          structures and algorithms to some of my teammates who reached me after
+          getting lost on some coding challenges. This is the first time I tried
+          to teach someone else coding and I now I know why people say that the
+          best way to fully understand something is to teach people about that
+          topic. But I did not only teach people, I had the opportunity to learn
+          from my teammates, and again, I was really happy to know everyone was
+          open and understanding when everyone did questions. I really felt in a
+          safe and confident place.
+        </p>
+      </>
+    ),
+  },
 ];

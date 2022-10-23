@@ -57,6 +57,9 @@
 .blog-menu a:hover:nth-child(4) {
   background-color: #c2ffee;
 }
+.blog-menu a:hover:nth-child(5) {
+  background-color: #c2ffc2;
+}
 .blog-menu a:hover:last-child {
   background-color: #ffd8b4;
 }
