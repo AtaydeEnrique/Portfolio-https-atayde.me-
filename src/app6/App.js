@@ -3,10 +3,12 @@ import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Cursor from "../app1/components/UI/Cursor/Cursor";
 import Entry from "./components/Entry";
+import Techlog from "./components/Techlog";
 import Home from "./components/Home";
 import FAQ from "./components/FAQ";
 
 import { entries } from "./assets/entries/entries";
+import { teclogs } from "./assets/teclogs/teclogs";
 import "./App.css";
 
 function App() {
@@ -30,6 +32,12 @@ function App() {
               <Route
                 path={entry.link}
                 element={<Entry entry={entry} key={i} />}
+              />
+            ))}
+            {teclogs?.map((teclog, i) => (
+              <Route
+                path={teclog.link}
+                element={<Techlog teclog={teclog} key={i} />}
               />
             ))}
             <Route path="/FAQ" element={<FAQ></FAQ>} />

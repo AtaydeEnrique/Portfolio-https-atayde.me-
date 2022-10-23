@@ -1,8 +1,6 @@
 .blog-entry {
   display: flex;
   flex-direction: column;
-  /* width: auto;
-  height: 100vh; */
 }
 .entry-body {
   display: flex;
@@ -11,7 +9,8 @@
   max-width: 90%;
 }
 
-.entry-body h1 {
+.entry-body h1,
+.entry-body h2 {
   text-align: center;
 }
 
