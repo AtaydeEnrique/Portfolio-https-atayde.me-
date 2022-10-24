@@ -197,9 +197,39 @@ if __name__ == '__main__':
     date: "Oct 24, 2022",
     content: (
       <>
-        <h2>PUNCHED CARDS</h2>
+        <div className="teclog2-menu">
+          <ul>
+            <li>
+              <a href="#teclog2-1">1</a>
+            </li>
+            <li>
+              <a href="#teclog2-2">2</a>
+            </li>
+            <li>
+              <a href="#teclog2-3">3</a>
+            </li>
+            <li>
+              <a href="#teclog2-4">4</a>
+            </li>
+            <li>
+              <a href="#teclog2-5">5</a>
+            </li>
+            <li>
+              <a href="#teclog2-6">6</a>
+            </li>
+            <li>
+              <a href="#teclog2-7">7</a>
+            </li>
+            <li>
+              <a href="#teclog2-8">8</a>
+            </li>
+          </ul>
+        </div>
+        <div className="teclog2-menu">
+          <p>Challenges</p>
+        </div>
+        <h2 id="teclog2-1">PUNCHED CARDS</h2>
         <p>Oct 24, 2022</p>
-
         <h3>Problem</h3>
         <p>
           {" "}
@@ -332,7 +362,6 @@ if __name__ == '__main__':
           Once we have constructed these 2 strings, we only need print each line
           R times interleaving one and another to build our full pattern.{" "}
         </p>
-
         <h3>Conclusion</h3>
         <p>
           The code can be considered a brute force solution since we only focus
@@ -340,7 +369,7 @@ if __name__ == '__main__':
           the most naïve solution could be the one that can get us to our goal
           more easily.
         </p>
-        <h2>3D PRINTING</h2>
+        <h2 id="teclog2-2">3D PRINTING</h2>
         <h3>Problem</h3>
         <p>
           You are part of the executive committee of the Database Design Day
@@ -480,7 +509,6 @@ if __name__ == '__main__':
           simply use a for loop to sum 1 million units and reduce the rest of
           the values within that minimum values array.
         </p>
-
         <h3>Conclusion</h3>
         <p>
           This problem can be considered as a naïve solution. The requirements
@@ -489,7 +517,7 @@ if __name__ == '__main__':
           million units. The only thing we have to check is that we actually can
           sum 1 million units on each printer.
         </p>
-        <h2>d1000000</h2>
+        <h2 id="teclog2-3">d1000000</h2>
         <h3>Problem</h3>
         <p>
           While the most typical type of dice has 6 sides, each of which shows a
@@ -589,7 +617,6 @@ if __name__ == '__main__':
           mentioned above are met, we can keep adding a unit to our maximum
           straight.{" "}
         </p>
-
         <h3>Conclusion</h3>
         <p>
           This challenge was really straightforward, more than a programming
@@ -598,8 +625,211 @@ if __name__ == '__main__':
           description, so if you really understand the keywords within the text,
           it becomes easier to solve.
         </p>
-        <h2>CHAIN REACTIONS</h2>
-        <h2>TWISTY LITTLE PASSAGES</h2>
+        <h2 id="teclog2-4">CHAIN REACTIONS</h2>
+        <h3>Problem</h3>
+        <p>
+          Chain Reactions is a maximization challenge in which we are asked to
+          "activate" N modules in a given order. Each module has a fun factor F
+          that lies between 1 and 10**9 and each module may point at one other
+          module with a lower index. If not, it points at the abyss "0". The fun
+          obtained from a chain reaction is the largest fun factor of all
+          modules that triggered in that chain reaction. We are going to trigger
+          each initiator module once, in some order. The overall fun from the
+          session is the sum of the fun we get from each chain reaction. Given
+          the fun factors and the setup of the modules, compute the maximum fun
+          we can get if we trigger the initiators in the best possible order.{" "}
+        </p>
+        <p>
+          All modules have to be activated, once a module is activated, it
+          cannot be triggered again, module cannot point to another with a
+          bigger index.
+        </p>
+        <div class="teclog-img">
+          <img
+            src="https://codejam.googleapis.com/dashboard/get_file/AQj_6U082gwrOWxTIk0xb0txUp0BUKaS_Eq-ajDPKkxFmikoP0Mj0FSs7KrB_0xXsCCs5A/example_1.gif"
+            alt="chain reactions 1"
+          />
+        </div>
+        <br />
+        <br />
+        <div class="teclog-img">
+          <img
+            src="https://codejam.googleapis.com/dashboard/get_file/AQj_6U1l2CkoolsqG_Rbe9sg49oRAp4iWH_XpyxM8UUBooUbKHsKPfsxbZ869C9oBMO4Aw/example_2.gif"
+            alt="chain reactions 2"
+          />
+        </div>
+        <br />
+        <br />
+        <a
+          className="teclog-group-link"
+          href="https://codingcompetitions.withgoogle.com/codejam/round/0000000000876ff1/0000000000a45ef7"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Google Jam Full Explanation
+        </a>
+        <br />
+        <br />
+        <h3>Approach</h3>
+        <p>
+          This problem was the most difficult one among the Qualification Round
+          2022 - Code Jam 2022. Just by inspection this problem can be solved in
+          at least three different ways, although the difficulty of solution
+          will increase depending on which path, we take.{" "}
+        </p>
+        <h4>Depth First Search – Binary Tree/Graph</h4>
+        <p>
+          Depth-first search (DFS) is a method for exploring a tree or graph. In
+          a DFS, you go as deep as possible down one path before backing up and
+          trying a different one.{" "}
+        </p>
+        <p>
+          Depth-first search is like walking through a corn maze. You explore
+          one path, hit a dead end, and go back and try a different one.{" "}
+        </p>
+        <p>
+          {" "}
+          Here's a how a DFS would traverse this tree, starting with the root:{" "}
+        </p>
+        <div class="teclog-img">
+          <img src="https://www.interviewcake.com/images/svgs/depth_first_search_root.svg?bust=210" />
+        </div>
+        <p>We'd go down the first path we find until we hit a dead end:</p>
+        <div class="teclog-img">
+          <img src="https://www.interviewcake.com/images/svgs/depth_first_search_dead_end_one.svg?bust=210" />
+        </div>
+        <p> And so on. </p>
+        <p>
+          {" "}
+          Source -{" "}
+          <a
+            href="https://www.interviewcake.com/concept/java/dfs"
+            target="_blank"
+            rel="noreferrer"
+          >
+            {" "}
+            Depth First Search
+          </a>{" "}
+        </p>
+        <h4>Divide and conquer. </h4>
+        <p>
+          Divide and conquer is a programming technique that involves dividing a
+          complex task into smaller, more manageable tasks. The goal is to break
+          complex tasks into smaller, more manageable tasks that can be
+          completed in parallel.{" "}
+        </p>
+        <div class="teclog-img">
+          <img
+            src="https://www.interviewbit.com/blog/wp-content/uploads/2022/06/What-is-Divide-and-Conquer-1536x1198.png"
+            alt="divide and conquer"
+          />
+        </div>
+        <p>
+          {" "}
+          Source -{" "}
+          <a
+            href="https://www.interviewbit.com/blog/difference-between-divide-and-conquer-and-dynamic-programming/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Divide and Conquer
+          </a>{" "}
+        </p>
+        <h4>Dynamic programming</h4>
+        <p>
+          {" "}
+          Dynamic programming is a programming paradigm that aims to optimize a
+          problem by considering the trade-offs between different approaches.
+          The idea is to take a problem and break it down into smaller,
+          easier-to-manage subproblems. Then, you can optimize each subproblem
+          by considering the best possible solution for each subproblem.{" "}
+        </p>
+        <p>
+          {" "}
+          Dynamic programming is a powerful tool for optimization because it
+          allows you to consider all possible solutions to a problem, which can
+          lead to more efficient solutions.
+        </p>
+        <div class="teclog-img">
+          <img src="https://www.interviewbit.com/blog/wp-content/uploads/2022/06/What-is-Dynamic-Programming-1536x810.png" />
+        </div>
+        <p>
+          {" "}
+          Source -{" "}
+          <a
+            href="https://www.interviewbit.com/blog/difference-between-divide-and-conquer-and-dynamic-programming/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Dynamic Programming
+          </a>{" "}
+        </p>
+        <h3> Solution (Dart) </h3>
+        <CopyBlock
+          text={`import 'dart:io'; //For user input
+          import 'dart:math'; // For reducer method
+          
+          void main () {
+            // Read number of cases from user input
+            int cases = int.parse(stdin.readLineSync());
+            
+            for (int i = 0; i < cases; i++) {
+                  print("Case #$\{i + 1}: " + chain().toString());
+              }
+          
+          }
+          
+          chain () {
+            int n = int.parse(stdin.readLineSync()); // Number of nodes
+            List<int> funN = [0];
+            funN.addAll(stdin.readLineSync().split(" ").map(int.parse).toList());  // Fun numbers mapped to Arr offset 1 so that pointers are correct
+            List<int> ptrN = [0];
+            ptrN.addAll(stdin.readLineSync().split(" ").map(int.parse).toList()); // Pointer numbers mapped to Arr offset 1 so that pointers are correct
+            
+            const int inf = 9007199254740991; // Infinity variable
+            List<int> temp = List.filled(n + 1, inf); // Temporal array used to modify data
+            
+            int total = funN.fold(0, (previous, current) => previous + current); // Total sum of Array
+          
+            for (int i = n; i > 0; i--){
+              if (temp[i] == inf) { 
+                temp[i] = 0; // We convert the unknown number to 0 for us to work with it
+              }
+              
+              total -= min(funN[i], temp[i]); // on our first run we are not going to subtract anything since temp[i] = 0
+              int funM = max(funN[i], temp[i]); // then we change our temp value
+              
+              temp[ptrN[i]] = min(temp[ptrN[i]], funM);
+              
+            }
+            return total;
+          }
+    `}
+          language={"python"}
+          showLineNumbers={true}
+          startingLineNumber={0}
+          theme={dracula}
+          wrapLines
+        />
+        <h3>Contribution</h3>
+        <p>
+          For this challenge, I was in charge of translating the solution to
+          Dart programming language. There were two solutions for this problem,
+          one on dynamic programming (Kotlin) and one with trees (Python). I
+          decided to translate the problem from Kotlin, as it was cleaner to
+          understand. In line commentary is provided for better understanding.
+        </p>
+        <h3>Conclusion</h3>
+        <p>
+          This problem was discussed in group several times, and it needed to be
+          reviewed by everyone before actually fully understand it. The two
+          solutions that were achieved were both complicated, but not impossible
+          to understand, although the python solution that was achieved, was
+          harder to translate since it used built in functions proper to the
+          language that didn’t exist in Dart, and would result in an
+          un-optimized solution.{" "}
+        </p>
+        <h2 id="teclog2-5">TWISTY LITTLE PASSAGES</h2>
         <h3>Problem</h3>
         <p>
           {" "}
@@ -770,7 +1000,6 @@ if __name__ == '__main__':
           a set would not store already visited rooms and this would save us a
           little extra memory.{" "}
         </p>
-
         <h3>Conclusion</h3>
         <p>
           These kinds of problems are more focused on statistics and probability
@@ -784,7 +1013,7 @@ if __name__ == '__main__':
           Further study on this topics is required to fully understand this
           challenge
         </p>
-        <h2>DOUBLE OR ONE THING (GOOGLE JAM)</h2>
+        <h2 id="teclog2-6">DOUBLE OR ONE THING</h2>
         <h3>Problem</h3>
         <p>
           You are given a string of uppercase English letters. You can highlight
@@ -904,9 +1133,7 @@ if __name__ == '__main__':
           one that will pop up first will be the one that has the lower
           lexicographical order:{" "}
         </p>
-
         <p>aaaaaaaaaaa &lt; aaaaaaaaaab </p>
-
         <p>
           {" "}
           In our program, we apply this same logic. We start with an empty
@@ -915,7 +1142,6 @@ if __name__ == '__main__':
           or only one will have a lesser alphabetical order with the built-in
           comparator operator “ &gt;” higher than.
         </p>
-
         <h3>Conclusion</h3>
         <p>
           {" "}
@@ -925,6 +1151,341 @@ if __name__ == '__main__':
           doing analogies. Understanding how the problem would work in real life
           always gives me a broader view, although I must add, it doesn’t work
           in every situation.{" "}
+        </p>
+        <h2 id="teclog2-7">EQUAL SUM</h2>
+        <h3>Problem</h3>
+        <p>
+          {" "}
+          You are given a set of distinct integers. You need to separate them
+          into two non-empty subsets such that each element belongs to exactly
+          one of them and the sum of all elements of each subset is the same.{" "}
+        </p>
+        <p>
+          {" "}
+          An anonymous tip told us that the problem above was unlikely to be
+          solved in polynomial time (or something like that), so we decided to
+          change it. Now you get to decide what half of the integers are!{" "}
+        </p>
+        <p>
+          {" "}
+          This is an interactive problem with three phases. In phase 1, you
+          choose NN distinct integers. In phase 2, you are given another NN
+          integers that are distinct from each other and from the ones you chose
+          in phase 1. In phase 3, you have to partition those 2N2N integers into
+          two subsets, both of which sum to the same amount. All 2N2N integers
+          are to be between 11 and 109109, inclusive, and it is guaranteed that
+          they sum up to an even number.{" "}
+        </p>
+        <a
+          href="https://codingcompetitions.withgoogle.com/codejam/round/0000000000877ba5/0000000000aa8fc1"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Google Jam
+        </a>
+        <br />
+        <br />
+        <h3>Approach</h3>
+        <p>
+          In this challenge we are required to divide a set of 2N different
+          numbers into 2 subsets, no matter its size, in which the sums of their
+          elements have the same value, in other words, the difference of their
+          sums needs to be equal to zero. This problem has 3 stages:
+        </p>
+        <ul>
+          <li>Stage 1, the user inputs the first N different numbers. </li>
+          <li>
+            Stage 2, the machine provides the remaining N numbers in such a way
+            that the sum of all 2N integers is even{" "}
+          </li>
+          <li>
+            Stage 3, the user prints one of the two possible sets with equal sum
+            for the given 2N numbers.{" "}
+          </li>
+        </ul>
+        <p>
+          All the numbers provided have values between 1 and 10**9 and N is
+          always equal to 100 for the test cases.{" "}
+        </p>
+        <p>
+          In order to solve this problem, the user needs to generate the first N
+          numbers in such a way that these numbers can fulfill any possible
+          difference. It can be said that after minimizing the difference of the
+          sum of the two subsets, this difference could be, at most, of 10**9.
+          Therefore, we need to provide a set of numbers that combined would
+          take any value between 1 and 10**9 to satisfy this difference. Given
+          that N will be bigger than 100 if we use the decimal system to
+          represent every possible difference, a binary representation of
+          numbers from 1 to 10**9 needs to be implemented. Indeed, this
+          representation can be reached with the 30 first powers of 2, and thus
+          the remaining N-30 numbers we need to provide can be whatever other
+          numbers inside 1 and 10**9.{" "}
+        </p>
+        <h3> Solution (Dart) </h3>
+        <CopyBlock
+          text={`import 'dart:io';
+          import 'dart:math';
+          
+          List<num> powersOftwo(N) {
+            List<num> A = [];
+          
+            for (int i = 0; i < 30; i++) {
+              A.add(pow(2, i));
+            }
+          
+            if (N <= 30) {
+              return A;
+            } else {
+              for (int i = 0; i < N - 30; i++) {
+                A.add(pow(10, 9) - i);
+              }
+              return A;
+            }
+          }
+          
+          solveSum(A, B, N) {
+            List<int> equalSum = [];
+            for (int i = 0; i < B.length; i++) {
+              A.add(B[i]);
+            }
+            A.sort();
+            num aSum = 0;
+            num bSum = 0;
+          
+            for (int i = A.length - 1; i >= 0; i--) {
+              if (aSum > bSum) {
+                equalSum.add(A[i]);
+                bSum += A[i];
+              } else {
+                aSum += A[i];
+              }
+            }
+            return equalSum;
+          }
+          
+          void main() {
+            int T = int.parse(stdin.readLineSync());
+          
+            for (int i = 0; i < T; i++) {
+              int N = int.parse(stdin.readLineSync());
+          
+              List<num> A = powersOftwo(N);
+          
+              List<String> temporal = A.map((e) => e.toString()).toList();
+              print(temporal.join(" "));
+          
+              List<String> bString = stdin.readLineSync()!.split(" ");
+          
+              List<int> B = bString.map(int.parse).toList();
+          
+              List<num> C = solveSum(A, B, N);
+          
+              List<String> listC = C.map((e) => e.toString()).toList();
+              print(listC.join(" "));
+            }
+          }
+    `}
+          language={"dart"}
+          showLineNumbers={true}
+          startingLineNumber={0}
+          theme={dracula}
+          wrapLines
+        />
+        <h3>Contribution </h3>
+        <p>
+          {" "}
+          I made the translation to Dart in conjunction with a teammate. Dart is
+          one of the slowest programming languages in comparison to Python,
+          TypeScript and Kotlin so deep optimization was needed in order for the
+          program to pass speed tests.{" "}
+        </p>
+        <h2 id="teclog2-8">WEIGHTLIFTING</h2>
+        <h3>Problem</h3>
+        <p>
+          You are following a prescribed training for weightlifting. The
+          training consists of a series of exercises that you must do in order.
+          Each exercise requires a specific set of weights to be placed on a
+          machine. There are W types of different weights. For example, an
+          exercise may require 3 weights of type A and 1 weight of type B, while
+          the next requires 2 weights each of types A, C, and D.
+        </p>
+        <div class="teclog-img">
+          <img src="https://codejam.googleapis.com/dashboard/get_file/AQj_6U1OV3xmMuPrgn4r0DOCfPDUdJxR_YYgkRQeKr9PzVLxuaeAK7zrYDZI6f3Iqu4iiQsr1zo/weightlifting.png" />
+        </div>
+        <p>
+          The weights are placed on the machine as a stack. Formally, with a
+          single operation, you can either add a new weight of any type to the
+          top of the stack, or remove the weight that is currently at the top of
+          the stack.
+        </p>
+        <p>
+          You can load the weights for each exercise onto the machine's stack in
+          any order. So, if you place the weight of type B at the bottom in the
+          first exercise of the example above, you will have to take all the
+          weights off before putting on the weights for the second exercise. On
+          the other hand, if you place the weight of type B third from the
+          bottom, you can leave two of the weights of type A on the bottom of
+          the stack to be part of the next exercise's set, saving you some time.
+        </p>
+        <p>
+          Given the amount of weights of each type needed for each exercise,
+          find the minimum number of operations needed to do them all. You must
+          complete the exercises in the order given. The machine stack starts
+          out empty, and you must leave it empty after you finish with all your
+          exercises.
+        </p>
+        <a
+          href="https://codingcompetitions.withgoogle.com/codejam/round/0000000000877ba5/0000000000aa9280"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Google Jam
+        </a>
+        <br />
+        <br />
+        <h3>Approach</h3>
+        <p>
+          On this problem you must count as an operation each time you wither
+          put on or off weight to complete each exercise. As inputs you are
+          given T number of cases on the first line, on the next line will be 2
+          integers with E number of exercises and W types of weights. Then, will
+          follow E numbers of lines, with each one containing the weights
+          required for each exercise. At the end of each line E of exercises you
+          must empty the stack of weights.{" "}
+        </p>
+        <p>
+          For example, if you have 3 exercises (e) with 1 weight type (w), and
+          each of the exercises needs 1, 2 and 1 as weights, the result will be
+          4 operations.{" "}
+        </p>
+        <ul>
+          <li> One operation to put on a 1w</li>
+          <li>
+            {" "}
+            One operation to put another 1w to complete an exercise of 2w{" "}
+          </li>
+          <li> One operation to put off 1w and complete an exercise of 1w </li>
+          <li>One operation to put off 1w and empty the stack </li>
+        </ul>
+
+        <p>
+          The number of exercises and weights are always different, nevertheless
+          in order to achieve an optimal way of loading and unloading weights
+          it’s imperative to find a set of common weights that never left the
+          stock. In other words that set of weights must belong the intersection
+          of all the exercises requirements.{" "}
+        </p>
+        <p>
+          Then, we should define a differential (dp) as optimal way to do the
+          movements through all exercises. Keep in mind that the starting and
+          finishing point must be the same; out of the common set of weights.
+          The “dp” are represented by the blue arrows in the illustration above.
+          Notice that they change on every interval, so they depend on the
+          position.{" "}
+        </p>
+        <p>
+          Even though the possible movements are less than before, there are
+          several options, so what we should do it’s to calculate the shorter
+          one.{" "}
+        </p>
+
+        <h3> Solution (Dart) </h3>
+        <CopyBlock
+          text={`import 'dart:io';
+
+          dynamic solve(INF) {
+            dynamic temporal = stdin.readLineSync().split(" ");
+            int e = int.parse(temporal[0]);
+            int w = int.parse(temporal[1]);
+            List<dynamic> allExcercises = [];
+            List<dynamic> dp = [];
+          
+            for (int i = 0; i < e; i++) {
+              allExcercises.add(stdin.readLineSync().split(" ").map(int.parse).toList());
+            }
+          
+            for (int i = 0; i < e; i++) {
+              dp.add([]);
+              for (int j = 0; j < e; j++) {
+                dp[i].add(0);
+              }
+            }
+          
+            List<dynamic> current = [];
+          
+            for (int i = 0; i < e; i++) {
+              current = [];
+              for (int l = 0; l < w; l++) {
+                current.add(INF);
+              }
+              for (int j = i; j < e; j++) {
+                for (int k = 0; k < w; k++) {
+                  if (allExcercises[j][k] < current[k]) {
+                    current[k] = allExcercises[j][k];
+                  }
+                }
+                dp[i][j] = current.reduce((value, element) => value + element);
+              }
+            }
+            List dpDouble = [];
+          
+            for (int i = 0; i < e; i++) {
+              dpDouble.add([]);
+              for (int j = 0; j < e; j++) {
+                dpDouble[i].add(INF);
+              }
+            }
+            for (int row = 0; row < e; row++) {
+              dpDouble[row][row] = 2 * dp[row][row];
+          
+              for (int revRow = row; revRow >= 0; revRow--) {
+                for (int k = revRow; k < row; k++) {
+                  int minval;
+                  for (int min = revRow; min <row; min++){
+                    if (min == revRow){
+                      minval = dpDouble[revRow][min]+dpDouble[min+1][row]-2*dp[revRow][row];
+                    } else{
+                      int curr = dpDouble[revRow][min]+dpDouble[min+1][row]-2*dp[revRow][row];
+                      if (curr < minval) {
+                        minval = curr;
+                      }
+                    }          
+                  }
+                  dpDouble[revRow][row] = minval;
+                }
+              }
+            }
+            return dpDouble[0][e-1];
+          }
+          
+          void main() {
+            num INF = (999999999999999999);
+          
+            int cases = int.parse(stdin.readLineSync());
+          
+            List resultsArray = [];
+          
+            for (int i = 0; i < cases; i++) {
+              resultsArray.add(solve(INF));
+            }
+            for (int i = 0; i < cases; i++) {
+              print("Case #$\{i + 1}: $\{resultsArray[i]}");
+            }
+          }
+    `}
+          language={"dart"}
+          showLineNumbers={true}
+          startingLineNumber={0}
+          theme={dracula}
+          wrapLines
+        />
+        <h3>Contribution </h3>
+        <p>
+          {" "}
+          I made the translation to Dart in conjunction with a teammate. Dart is
+          one of the slowest programming languages in comparison to Python,
+          TypeScript and Kotlin so deep optimization was needed in order for the
+          program to pass speed tests.{" "}
         </p>
       </>
     ),

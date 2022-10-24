@@ -35,6 +35,12 @@
   border-bottom: thin rgb(184, 184, 184) solid;
   padding-bottom: 5px;
 }
+.teclog-body h4 {
+  font-weight: bold;
+  border: thin solid transparent;
+  border-bottom: thin rgb(224, 224, 224) solid;
+  padding-bottom: 5px;
+}
 
 .teclog-text p {
   margin: 30px 0;
@@ -48,10 +54,12 @@
 
 .teclog-img {
   display: flex;
+  width: 100%;
+  margin: auto;
 }
 
 .teclog-body img {
-  width: 40vw;
+  width: 30vw;
   margin: auto;
   box-shadow: 0 0 15px grey;
   border-radius: 5px;
@@ -85,4 +93,39 @@
 }
 .punched-cards {
   text-align: center !important;
+}
+.teclog2-menu {
+  background-color: rgba(0, 0, 0, 0.05);
+  color: black;
+  position: fixed;
+  right: 0;
+  width: fit-content;
+  padding: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  transition: 0.5s;
+}
+.teclog2-menu:nth-child(1) {
+  top: 25vh;
+}
+.teclog2-menu:nth-child(2) {
+  writing-mode: vertical-lr;
+}
+.teclog2-menu:hover {
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
+}
+.teclog2-menu ul {
+  display: flex;
+  flex-direction: column;
+}
+.teclog2-menu li {
+  list-style: none;
+}
+.teclog2-menu:hover > ul > li > a {
+  color: white;
+}
+.teclog2-menu a {
+  text-decoration: none;
+  color: black;
 }
