@@ -41,3 +41,27 @@
 .entry-figure {
   text-align: center !important;
 }
+.tec-log-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.tec-log-btn {
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+  border: solid thin transparent;
+  border-radius: 10px;
+  transition: 0.5s;
+  box-shadow: 0 0 5px grey;
+}
+
+.tec-log-btn:hover {
+  background-color: black;
+  box-shadow: -5px 5px 0 #161616;
+  color: white;
+}
+.tec-log-btn:first-child {
+  margin-right: 15px;
+}

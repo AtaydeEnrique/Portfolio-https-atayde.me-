@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 export const entries = [
   {
     link: "/Week-1",
@@ -504,9 +505,15 @@ export const entries = [
           seek a solution we could study and then implement it with our own
           code. All the solutions and explanations can be further explored here:
         </p>
-        <a>Individual Technical Log</a>
-        <br />
-        <a>Group Technical Log</a>
+        <div className="tec-log-buttons">
+          <Link className="tec-log-btn" to="/TecLog-1">
+            Individual Technical Log
+          </Link>
+          <br />
+          <Link to="/TecLog-2" className="tec-log-btn">
+            Group Technical Log
+          </Link>
+        </div>
         <p>
           Through the week I also spent an hour a day refreshing my knowledge on
           data structures and algorithms, which was really helpful to not get
