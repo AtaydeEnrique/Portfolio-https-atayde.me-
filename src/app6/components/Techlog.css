@@ -1,7 +1,10 @@
 .teclog-entry {
   display: flex;
   flex-direction: column;
+  overflow-y: scroll !important;
+  overflow-x: hidden;
 }
+
 .teclog-teclog {
   display: flex;
   flex-direction: column;

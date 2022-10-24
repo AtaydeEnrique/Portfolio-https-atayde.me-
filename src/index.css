@@ -50,9 +50,7 @@ body {
   --spinner-duration: 1.4s;
   --title-font: 5vw;
 }
-
 ::-webkit-scrollbar {
-  /* width: 7px; */
   display: none;
 }
 
